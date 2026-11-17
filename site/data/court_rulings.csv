@@ -1,0 +1,29 @@
+date,level,case_type,defendant,decision,japan_protest,source
+2018-10-30,supreme,forced_labor,Nippon Steel,plaintiff_win,yes,https://www.mofa.go.jp/mofaj/a_o/na/kr/page4_004516.html
+2018-11-29,supreme,forced_labor,Mitsubishi Heavy Industries,plaintiff_win,yes,https://mobile.newsis.com/view/NISX20181129_0000487676
+2019-01-03,district,forced_labor,Nippon Steel,enforcement,yes,https://newsinfo.inquirer.net/1071116/south-korea-orders-seizure-of-japan-assets-over-forced-labor
+2019-03-22,district,forced_labor,Mitsubishi Heavy Industries,enforcement,unknown,https://m.lawtimes.co.kr/Content/Article?serial=173194
+2020-08-04,district,forced_labor,Nippon Steel,enforcement,unknown,
+2021-01-08,district,comfort_women,Government of Japan,plaintiff_win,yes,https://www.mofa.go.jp/mofaj/area/korea/index.html
+2021-04-21,district,comfort_women,Government of Japan,dismissed,no,https://en.wikipedia.org/wiki/Seoul_High_Court
+2021-06-07,district,forced_labor,16 Japanese companies,dismissed,no,https://imnews.imbc.com/news/2021/society/article/6247147_34873.html
+2021-08-11,district,forced_labor,Mitsubishi Materials,plaintiff_loss,no,https://m.hankookilbo.com/News/Read/A2021081117170003898
+2021-09-08,district,forced_labor,Nippon Steel,plaintiff_loss,no,https://imnews.imbc.com/replay/2021/nwdesk/article/6299411_34936.html
+2021-09-27,district,forced_labor,Mitsubishi Heavy Industries,enforcement,yes,https://m.lawtimes.co.kr/Content/Article?serial=173194
+2023-02-14,district,forced_labor,Nishimatsu Construction,plaintiff_loss,no,https://www.seoul.co.kr/news/society/law/2023/02/14/20230214500185
+2023-11-23,high,comfort_women,Government of Japan,plaintiff_win,yes,https://www.mofa.go.jp/mofaj/area/korea/index.html
+2023-12-21,supreme,forced_labor,Mitsubishi Heavy Industries; Nippon Steel,plaintiff_win,yes,https://v.daum.net/v/20231221185527880
+2023-12-28,supreme,forced_labor,Hitachi Zosen,plaintiff_win,yes,https://www.mofa.go.jp/mofaj/a_o/na/kr/page4_004516.html
+2024-01-11,supreme,forced_labor,Nippon Steel,plaintiff_win,yes,https://www.khan.co.kr/article/202401111114001
+2024-01-25,supreme,forced_labor,Japanese companies,plaintiff_win,yes,https://www.mofa.go.jp/mofaj/a_o/na/kr/page4_004516.html
+2024-02-20,district,forced_labor,Hitachi Zosen,enforcement,yes,https://www.mofa.go.jp/mofaj/a_o/na/kr/page4_004516.html
+2025-04-25,district,comfort_women,Government of Japan,plaintiff_win,yes,https://www.khan.co.kr/article/202504271034011
+2025-12-11,unknown,forced_labor,Nippon Steel,plaintiff_win,yes,https://www.mofa.go.jp/mofaj/a_o/na/kr/page4_004516.html
+2025-12-24,unknown,forced_labor,Nishimatsu Construction,plaintiff_win,yes,https://www.mofa.go.jp/mofaj/a_o/na/kr/page4_004516.html
+2026-01-15,unknown,forced_labor,Mitsubishi Heavy Industries,plaintiff_win,yes,https://www.mofa.go.jp/mofaj/a_o/na/kr/page4_004516.html
+2026-01-29,supreme,forced_labor,Kumagai Gumi,plaintiff_win,yes,https://www.fnnews.com/news/202601292135417794
+2026-02-12,supreme,forced_labor,16 Japanese companies,procedural_win,no,https://www.mt.co.kr/society/2026/03/26/2026032612184899460
+2026-05-15,high,forced_labor,Mitsubishi Heavy Industries,plaintiff_win,no,https://v.daum.net/v/20260815073154803
+2026-08-12,supreme,forced_labor,Nippon Steel,plaintiff_win,yes,https://www.insight.co.kr/news/568010
+2026-10-30,supreme,forced_labor,Mitsubishi Heavy Industries,plaintiff_win,yes,https://www.mofa.go.jp/mofaj/a_o/na/kr/page4_004516.html
+2026-11-07,district_appeal,forced_labor,Fujikoshi,plaintiff_win,no,https://v.daum.net/v/20260815073154803

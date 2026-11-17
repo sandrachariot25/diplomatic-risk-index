@@ -1,0 +1,45 @@
+# Python / environment
+__pycache__/
+*.pyc
+.venv/
+/.venv/
+*.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm
+*.log
+
+# Large archives
+/app.zip
+
+# ---------------------------------------------------------------------------
+# data/: whitelist. Everything is excluded except aggregated, non-text outputs.
+# Internal materials never leave this computer (author decision): full texts of
+# parliamentary records (dri.sqlite3, kr_hearings_*, corpus, units, queues),
+# annotations and their summaries, blind-check and expert workbooks, translations,
+# raw downloads and backups.
+# ---------------------------------------------------------------------------
+/data/*
+!/data/*_monthly.csv
+!/data/trade_*.csv
+!/data/market_*.csv
+!/data/gdelt_kor_jpn_daily.csv
+!/data/gdelt_kor_jpn_errors.csv
+!/data/court_rulings.csv
+!/data/court_pipeline.csv
+!/data/dri_trigger_calendar.csv
+!/data/dri_event_truth.csv
+!/data/dri_event_calendar.csv
+!/data/dri_v2_courts.json
+!/data/dri_v2_court_rules.json
+!/data/dri_v2_triggers.json
+!/data/dri_v2_episodes.json
+!/data/dri_v2_forecast.json
+!/data/dri_v2_forecast_gdelt.json
+
+# Internal review material outside data/
+/docs/REVIEW_TABLE.html
+/config/kr_hearings_semantic_review.tsv
+/config/dri_v01_review.json
+
+# Site build intermediates (site/public and site/data are the published outputs)
+/site/artifact.html

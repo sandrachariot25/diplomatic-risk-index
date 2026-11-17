@@ -1,0 +1,13 @@
+[project]
+name = "diplomatic-risk-index"
+version = "0.1.0"
+description = "Auditable official-document collection for DRI"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+web = ["streamlit==1.52.2", "altair==5.5.0"]
+analytics = ["kiwipiepy==0.22.2", "kiwipiepy_model==0.22.1", "Janome==0.5.0", "matplotlib==3.10.7", "numpy==2.3.5"]
+
+[tool.setuptools.packages.find]
+include = ["dri*"]

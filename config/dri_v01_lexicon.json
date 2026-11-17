@@ -1,0 +1,582 @@
+{
+  "version": "seed-0.1",
+  "development": "Generic seed phrases chosen by the requested seven categories before corpus calculation; no crisis-date calibration; not a validated political classifier.",
+  "entries": [
+    {
+      "id": "diplomatic_condemnation.en.1",
+      "language": "en",
+      "category": "diplomatic_condemnation",
+      "expression": "strongly condemn",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "Japan reportedly used the expression \"strongly condemn\" about North Korea. Quoted foreign or third-country positions are not the speaker's directed hostility."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "diplomatic_condemnation.en.2",
+      "language": "en",
+      "category": "diplomatic_condemnation",
+      "expression": "condemn",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "Japan reportedly used the expression \"condemn\" about North Korea. Quoted foreign or third-country positions are not the speaker's directed hostility."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "diplomatic_condemnation.ko.1",
+      "language": "ko",
+      "category": "diplomatic_condemnation",
+      "expression": "강력히 규탄하다",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "일본이 북한에 대해 「강력히 규탄하다」라고 주장했다는 보도. 인용·제삼국 입장을 대일 비난으로 세지 않는다."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "diplomatic_condemnation.ko.2",
+      "language": "ko",
+      "category": "diplomatic_condemnation",
+      "expression": "규탄하다",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "일본이 북한에 대해 「규탄하다」라고 주장했다는 보도. 인용·제삼국 입장을 대일 비난으로 세지 않는다."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "diplomatic_condemnation.ja.1",
+      "language": "ja",
+      "category": "diplomatic_condemnation",
+      "expression": "強く非難する",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "韓国が北朝鮮について「強く非難する」と述べたとの報道。引用・第三国への発言は対韓非難ではない。"
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "diplomatic_condemnation.ja.2",
+      "language": "ja",
+      "category": "diplomatic_condemnation",
+      "expression": "非難する",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "韓国が北朝鮮について「非難する」と述べたとの報道。引用・第三国への発言は対韓非難ではない。"
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "accusations_protests.en.1",
+      "language": "en",
+      "category": "accusations_protests",
+      "expression": "lodge a protest",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "Japan reportedly used the expression \"lodge a protest\" about North Korea. Quoted foreign or third-country positions are not the speaker's directed hostility."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "accusations_protests.en.2",
+      "language": "en",
+      "category": "accusations_protests",
+      "expression": "strongly protest",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "Japan reportedly used the expression \"strongly protest\" about North Korea. Quoted foreign or third-country positions are not the speaker's directed hostility."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "accusations_protests.en.3",
+      "language": "en",
+      "category": "accusations_protests",
+      "expression": "violation of international law",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "Japan reportedly used the expression \"violation of international law\" about North Korea. Quoted foreign or third-country positions are not the speaker's directed hostility."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "accusations_protests.ko.1",
+      "language": "ko",
+      "category": "accusations_protests",
+      "expression": "강력히 항의하다",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "일본이 북한에 대해 「강력히 항의하다」라고 주장했다는 보도. 인용·제삼국 입장을 대일 비난으로 세지 않는다."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "accusations_protests.ko.2",
+      "language": "ko",
+      "category": "accusations_protests",
+      "expression": "국제법 위반",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "일본이 북한에 대해 「국제법 위반」라고 주장했다는 보도. 인용·제삼국 입장을 대일 비난으로 세지 않는다."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "accusations_protests.ja.1",
+      "language": "ja",
+      "category": "accusations_protests",
+      "expression": "厳重に抗議する",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "韓国が北朝鮮について「厳重に抗議する」と述べたとの報道。引用・第三国への発言は対韓非難ではない。"
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "accusations_protests.ja.2",
+      "language": "ja",
+      "category": "accusations_protests",
+      "expression": "強く抗議する",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "韓国が北朝鮮について「強く抗議する」と述べたとの報道。引用・第三国への発言は対韓非難ではない。"
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "accusations_protests.ja.3",
+      "language": "ja",
+      "category": "accusations_protests",
+      "expression": "国際法違反",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "韓国が北朝鮮について「国際法違反」と述べたとの報道。引用・第三国への発言は対韓非難ではない。"
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "threats_warnings.en.1",
+      "language": "en",
+      "category": "threats_warnings",
+      "expression": "take countermeasures",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "Japan reportedly used the expression \"take countermeasures\" about North Korea. Quoted foreign or third-country positions are not the speaker's directed hostility."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "threats_warnings.en.2",
+      "language": "en",
+      "category": "threats_warnings",
+      "expression": "stern warning",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "Japan reportedly used the expression \"stern warning\" about North Korea. Quoted foreign or third-country positions are not the speaker's directed hostility."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "threats_warnings.ko.1",
+      "language": "ko",
+      "category": "threats_warnings",
+      "expression": "대응 조치를 취하다",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "일본이 북한에 대해 「대응 조치를 취하다」라고 주장했다는 보도. 인용·제삼국 입장을 대일 비난으로 세지 않는다."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "threats_warnings.ko.2",
+      "language": "ko",
+      "category": "threats_warnings",
+      "expression": "엄중히 경고하다",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "일본이 북한에 대해 「엄중히 경고하다」라고 주장했다는 보도. 인용·제삼국 입장을 대일 비난으로 세지 않는다."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "threats_warnings.ja.1",
+      "language": "ja",
+      "category": "threats_warnings",
+      "expression": "対抗措置を取る",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "韓国が北朝鮮について「対抗措置を取る」と述べたとの報道。引用・第三国への発言は対韓非難ではない。"
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "threats_warnings.ja.2",
+      "language": "ja",
+      "category": "threats_warnings",
+      "expression": "厳重に警告する",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "韓国が北朝鮮について「厳重に警告する」と述べたとの報道。引用・第三国への発言は対韓非難ではない。"
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "economic_restrictions.en.1",
+      "language": "en",
+      "category": "economic_restrictions",
+      "expression": "export restrictions",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards; requires explicit negative evaluation cue in the same sentence; a neutral description is suppressed",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "Japan reportedly used the expression \"export restrictions\" about North Korea. Quoted foreign or third-country positions are not the speaker's directed hostility."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "economic_restrictions.en.2",
+      "language": "en",
+      "category": "economic_restrictions",
+      "expression": "impose sanctions",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "Japan reportedly used the expression \"impose sanctions\" about North Korea. Quoted foreign or third-country positions are not the speaker's directed hostility."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "economic_restrictions.ko.1",
+      "language": "ko",
+      "category": "economic_restrictions",
+      "expression": "수출 규제",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards; requires explicit negative evaluation cue in the same sentence; a neutral description is suppressed",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "일본이 북한에 대해 「수출 규제」라고 주장했다는 보도. 인용·제삼국 입장을 대일 비난으로 세지 않는다."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "economic_restrictions.ko.2",
+      "language": "ko",
+      "category": "economic_restrictions",
+      "expression": "제재를 부과하다",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "일본이 북한에 대해 「제재를 부과하다」라고 주장했다는 보도. 인용·제삼국 입장을 대일 비난으로 세지 않는다."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "economic_restrictions.ja.1",
+      "language": "ja",
+      "category": "economic_restrictions",
+      "expression": "輸出規制",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards; requires explicit negative evaluation cue in the same sentence; a neutral description is suppressed",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "韓国が北朝鮮について「輸出規制」と述べたとの報道。引用・第三国への発言は対韓非難ではない。"
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "economic_restrictions.ja.2",
+      "language": "ja",
+      "category": "economic_restrictions",
+      "expression": "制裁を科す",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "韓国が北朝鮮について「制裁を科す」と述べたとの報道。引用・第三国への発言は対韓非難ではない。"
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "territorial_disputes.en.1",
+      "language": "en",
+      "category": "territorial_disputes",
+      "expression": "territorial provocation",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "Japan reportedly used the expression \"territorial provocation\" about North Korea. Quoted foreign or third-country positions are not the speaker's directed hostility."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "territorial_disputes.en.2",
+      "language": "en",
+      "category": "territorial_disputes",
+      "expression": "unjust territorial claim",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "Japan reportedly used the expression \"unjust territorial claim\" about North Korea. Quoted foreign or third-country positions are not the speaker's directed hostility."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "territorial_disputes.ko.1",
+      "language": "ko",
+      "category": "territorial_disputes",
+      "expression": "영토 도발",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "일본이 북한에 대해 「영토 도발」라고 주장했다는 보도. 인용·제삼국 입장을 대일 비난으로 세지 않는다."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "territorial_disputes.ko.2",
+      "language": "ko",
+      "category": "territorial_disputes",
+      "expression": "부당한 영유권 주장",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "일본이 북한에 대해 「부당한 영유권 주장」라고 주장했다는 보도. 인용·제삼국 입장을 대일 비난으로 세지 않는다."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "territorial_disputes.ja.1",
+      "language": "ja",
+      "category": "territorial_disputes",
+      "expression": "領土挑発",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "韓国が北朝鮮について「領土挑発」と述べたとの報道。引用・第三国への発言は対韓非難ではない。"
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "territorial_disputes.ja.2",
+      "language": "ja",
+      "category": "territorial_disputes",
+      "expression": "不当な領有権の主張",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "韓国が北朝鮮について「不当な領有権の主張」と述べたとの報道。引用・第三国への発言は対韓非難ではない。"
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "negative_bilateral_actions.en.1",
+      "language": "en",
+      "category": "negative_bilateral_actions",
+      "expression": "unacceptable",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "Japan reportedly used the expression \"unacceptable\" about North Korea. Quoted foreign or third-country positions are not the speaker's directed hostility."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "negative_bilateral_actions.en.2",
+      "language": "en",
+      "category": "negative_bilateral_actions",
+      "expression": "deep regret",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "Japan reportedly used the expression \"deep regret\" about North Korea. Quoted foreign or third-country positions are not the speaker's directed hostility."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "negative_bilateral_actions.en.3",
+      "language": "en",
+      "category": "negative_bilateral_actions",
+      "expression": "grave concern",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "Japan reportedly used the expression \"grave concern\" about North Korea. Quoted foreign or third-country positions are not the speaker's directed hostility."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "negative_bilateral_actions.ko.1",
+      "language": "ko",
+      "category": "negative_bilateral_actions",
+      "expression": "용납할 수 없다",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": true,
+      "false_positive_examples": [
+        "일본이 북한에 대해 「용납할 수 없다」라고 주장했다는 보도. 인용·제삼국 입장을 대일 비난으로 세지 않는다."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "negative_bilateral_actions.ko.2",
+      "language": "ko",
+      "category": "negative_bilateral_actions",
+      "expression": "깊은 유감",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "일본이 북한에 대해 「깊은 유감」라고 주장했다는 보도. 인용·제삼국 입장을 대일 비난으로 세지 않는다."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "negative_bilateral_actions.ko.3",
+      "language": "ko",
+      "category": "negative_bilateral_actions",
+      "expression": "심각한 우려",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "일본이 북한에 대해 「심각한 우려」라고 주장했다는 보도. 인용·제삼국 입장을 대일 비난으로 세지 않는다."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "negative_bilateral_actions.ja.1",
+      "language": "ja",
+      "category": "negative_bilateral_actions",
+      "expression": "容認できない",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": true,
+      "false_positive_examples": [
+        "韓国が北朝鮮について「容認できない」と述べたとの報道。引用・第三国への発言は対韓非難ではない。"
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "negative_bilateral_actions.ja.2",
+      "language": "ja",
+      "category": "negative_bilateral_actions",
+      "expression": "深い遺憾",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "韓国が北朝鮮について「深い遺憾」と述べたとの報道。引用・第三国への発言は対韓非難ではない。"
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "negative_bilateral_actions.ja.3",
+      "language": "ja",
+      "category": "negative_bilateral_actions",
+      "expression": "極めて遺憾",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "韓国が北朝鮮について「極めて遺憾」と述べたとの報道。引用・第三国への発言は対韓非難ではない。"
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "negative_bilateral_actions.ja.4",
+      "language": "ja",
+      "category": "negative_bilateral_actions",
+      "expression": "深刻な懸念",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "韓国が北朝鮮について「深刻な懸念」と述べたとの報道。引用・第三国への発言は対韓非難ではない。"
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "termination_cooperation.en.1",
+      "language": "en",
+      "category": "termination_cooperation",
+      "expression": "suspend cooperation",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "Japan reportedly used the expression \"suspend cooperation\" about North Korea. Quoted foreign or third-country positions are not the speaker's directed hostility."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "termination_cooperation.en.2",
+      "language": "en",
+      "category": "termination_cooperation",
+      "expression": "terminate the agreement",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "Japan reportedly used the expression \"terminate the agreement\" about North Korea. Quoted foreign or third-country positions are not the speaker's directed hostility."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "termination_cooperation.ko.1",
+      "language": "ko",
+      "category": "termination_cooperation",
+      "expression": "협력을 중단하다",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "일본이 북한에 대해 「협력을 중단하다」라고 주장했다는 보도. 인용·제삼국 입장을 대일 비난으로 세지 않는다."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "termination_cooperation.ko.2",
+      "language": "ko",
+      "category": "termination_cooperation",
+      "expression": "협정을 종료하다",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "일본이 북한에 대해 「협정을 종료하다」라고 주장했다는 보도. 인용·제삼국 입장을 대일 비난으로 세지 않는다."
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "termination_cooperation.ja.1",
+      "language": "ja",
+      "category": "termination_cooperation",
+      "expression": "協力を停止する",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "韓国が北朝鮮について「協力を停止する」と述べたとの報道。引用・第三国への発言は対韓非難ではない。"
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    },
+    {
+      "id": "termination_cooperation.ja.2",
+      "language": "ja",
+      "category": "termination_cooperation",
+      "expression": "協定を終了する",
+      "match_rule": "consecutive_content_lemmas_within_one_sentence; full morpheme/word boundaries; longest nonoverlapping match; explicit counterpart; context guards",
+      "intrinsic_negation": false,
+      "false_positive_examples": [
+        "韓国が北朝鮮について「協定を終了する」と述べたとの報道。引用・第三国への発言は対韓非難ではない。"
+      ],
+      "interpretation": "Lexical feature, not a threat probability; restrictions may be described rather than endorsed."
+    }
+  ]
+}

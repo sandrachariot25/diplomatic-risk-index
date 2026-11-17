@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "records": [
+    {
+      "document_id": 1,
+      "url": "https://www.mofa.go.kr/eng/brd/m_5676/view.do?seq=315568",
+      "body_sha256": "9de18425434fdd0a53fa51931376908bf4618862231b2ca034dedbe643653b35",
+      "raw_path": "raw/8c/8c003f3d93530456e7470d58dd2d3beaafaaea26cc1421164a8b9b673ebe2158.bin",
+      "raw_sha256": "8c003f3d93530456e7470d58dd2d3beaafaaea26cc1421164a8b9b673ebe2158",
+      "published_date": "2015-08-15",
+      "language": "en",
+      "text_completeness": "complete_published_body",
+      "observation_type": "official_institutional_statement",
+      "usage": "internal_research_only_no_publication_permission_inferred",
+      "evidence": "Retained official HTML bo_con reparsed with KoreaMOFA; exact body, title, date and URL match. Explicit spokesperson commentary, not a meeting summary. No length heuristic.",
+      "reviewer": "agent_local_provenance_check_not_independent_human"
+    },
+    {
+      "document_id": 2,
+      "url": "https://www.mofa.go.kr/eng/brd/m_5676/view.do?seq=315569",
+      "body_sha256": "64ef0a76e1819afe3d5d4462e3e99c4ba93b649ab5da523121fda6f5c7f84d06",
+      "raw_path": "raw/ff/ff0492761a2e54774b079009ccd65abf8a6dbbac960af491c21dca6c386f0806.bin",
+      "raw_sha256": "ff0492761a2e54774b079009ccd65abf8a6dbbac960af491c21dca6c386f0806",
+      "published_date": "2015-08-15",
+      "language": "en",
+      "text_completeness": "complete_published_body",
+      "observation_type": "official_institutional_statement",
+      "usage": "internal_research_only_no_publication_permission_inferred",
+      "evidence": "Retained official HTML bo_con reparsed with KoreaMOFA; exact body, title, date and URL match. Explicit spokesperson commentary, not a meeting summary. No length heuristic.",
+      "reviewer": "agent_local_provenance_check_not_independent_human"
+    }
+  ],
+  "previous_calculation": {
+    "included_units": 1017,
+    "main_complete_units": 11,
+    "diagnostic_partial_units": 1006,
+    "counted_expressions": 36,
+    "monthly_states": {
+      "insufficient_volume": 158,
+      "no_data": 1102,
+      "supported": 18
+    },
+    "supported_main_component_months": 1,
+    "core_input_sha256": "7d693db0dd6f705d2bf8e24be733afdb2a487e197ddefa73a2c111f352349f87",
+    "result_sha256": "b1fd7d21c98b898167b66a197352f435393db34204e2a7bc83d57398176ee115",
+    "database_file_sha256": "e8e02da5cae21a6f578450bbb58a95a245739211fdecfb8375e43460721b9a42",
+    "token_count": 44666
+  }
+}

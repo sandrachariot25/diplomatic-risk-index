@@ -1,0 +1,163 @@
+{
+ "hit_rates": {
+  "recurring": {
+   "episodes_with_trigger": 7,
+   "of": 14,
+   "share_all_months": 0.776
+  },
+  "election": {
+   "episodes_with_trigger": 3,
+   "of": 14,
+   "share_all_months": 0.24
+  },
+  "court": {
+   "episodes_with_trigger": 6,
+   "of": 14,
+   "share_all_months": 0.288
+  }
+ },
+ "comparison": {
+  "layers": {
+   "auc": 0.62,
+   "brier": 0.2221
+  },
+  "calendar": {
+   "auc": 0.539,
+   "brier": 0.2272
+  },
+  "calendar_no_court": {
+   "auc": 0.566,
+   "brier": 0.2231
+  },
+  "both": {
+   "auc": 0.581,
+   "brier": 0.2367
+  },
+  "base_rate": {
+   "brier": 0.221
+  }
+ },
+ "test_months": 91,
+ "positives": 30,
+ "per_episode": [
+  {
+   "month": "2017-01",
+   "triggers": {}
+  },
+  {
+   "month": "2017-06",
+   "triggers": {
+    "election": [
+     "Выборы президента РК"
+    ]
+   }
+  },
+  {
+   "month": "2018-01",
+   "triggers": {}
+  },
+  {
+   "month": "2018-10",
+   "triggers": {
+    "recurring": [
+     "Ясукуни, осенний фестиваль"
+    ],
+    "court": [
+     "Верховный суд РК: Nippon Steel — победа истцов"
+    ]
+   }
+  },
+  {
+   "month": "2019-07",
+   "triggers": {
+    "recurring": [
+     "Сессия Комитета всемирного наследия ЮНЕСКО"
+    ],
+    "election": [
+     "Выборы в верхнюю палату Японии"
+    ]
+   }
+  },
+  {
+   "month": "2020-03",
+   "triggers": {
+    "recurring": [
+     "1 марта",
+     "Проверка японских учебников"
+    ]
+   }
+  },
+  {
+   "month": "2021-01",
+   "triggers": {
+    "court": [
+     "Сеульский центральный окружной суд: Правительство Японии — победа истцов"
+    ]
+   }
+  },
+  {
+   "month": "2021-09",
+   "triggers": {
+    "recurring": [
+     "15 августа"
+    ],
+    "court": [
+     "Сеульский центральный окружной суд: Nippon Steel — отказ истцам",
+     "Окружной суд Тэджон: Mitsubishi Heavy Industries — исполнение (арест/продажа активов)"
+    ]
+   }
+  },
+  {
+   "month": "2022-01",
+   "triggers": {}
+  },
+  {
+   "month": "2022-10",
+   "triggers": {
+    "recurring": [
+     "Ясукуни, осенний фестиваль"
+    ]
+   }
+  },
+  {
+   "month": "2023-12",
+   "triggers": {
+    "court": [
+     "Верховный суд РК: Mitsubishi Heavy Industries; Nippon Steel — победа истцов",
+     "Верховный суд РК: Hitachi Zosen — победа истцов"
+    ]
+   }
+  },
+  {
+   "month": "2024-11",
+   "triggers": {
+    "recurring": [
+     "Поминовение на Садо"
+    ],
+    "election": [
+     "Выборы в нижнюю палату Японии"
+    ]
+   }
+  },
+  {
+   "month": "2025-12",
+   "triggers": {
+    "court": [
+     "Корейский суд: Nippon Steel — победа истцов",
+     "Корейский суд: Nishimatsu Construction — победа истцов"
+    ]
+   }
+  },
+  {
+   "month": "2026-08",
+   "triggers": {
+    "recurring": [
+     "15 августа"
+    ],
+    "court": [
+     "Верховный суд РК: Nippon Steel — победа истцов"
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,1159 @@
+<title>Korea–Japan Risk Monitor</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Diplomatic Risk Index: Korea–Japan tension index, 3-month flare-up risk from scheduled triggers, and the underlying statistics">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: an app shell with three tabs. Monitor = bento of verdict cards, one wide chart, then reasons;
+   Statistics = watchlist on the left, detail on the right; Method = long-form page. */
+/* Palette "Iris & Aqua": iris-violet accent with an aqua second stop, soft mesh background, liquid-glass surfaces. */
+:root {
+  --bg: #eef0f8; --surface: #ffffff; --surface-2: rgba(255,255,255,.55); --border: rgba(20,24,60,.09); --ink: #0e1124; --muted: #565d76; --faint: #8a90a8;
+  --accent: #5b5bf6; --accent-2: #17bfc7; --accent-soft: rgba(91,91,246,.12); --on-accent: #ffffff;
+  --glass: rgba(255,255,255,.56); --glass-hi: rgba(255,255,255,.85); --glass-edge: rgba(255,255,255,.75);
+  --shadow: 0 10px 30px rgba(36,40,110,.09), 0 2px 6px rgba(36,40,110,.05);
+  --blob1: rgba(124,131,253,.38); --blob2: rgba(61,214,208,.30); --blob3: rgba(255,170,130,.26);
+  --high: #e5484d; --high-soft: #fdecec; --watch: #d98a0b; --watch-soft: #fdf3e1; --normal: #7d8794; --normal-soft: #eef0f3;
+  --tense: #e5484d; --calm: #3a7bd5; --good: #12a06a;
+  --t-courts: #2a78d6; --t-heritage: #eb6834; --t-econ: #1baf7a; --t-other: #898781;
+  --sans: "Onest", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono: var(--sans);
+  --r: 14px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #090a14; --surface: #151729; --surface-2: rgba(255,255,255,.05); --border: rgba(255,255,255,.09); --ink: #eceefa; --muted: #9ea3bf; --faint: #6d7290;
+  --accent: #8b8cff; --accent-2: #3de0d8; --accent-soft: rgba(139,140,255,.16); --on-accent: #0b0c1a;
+  --glass: rgba(30,33,58,.52); --glass-hi: rgba(255,255,255,.14); --glass-edge: rgba(255,255,255,.12);
+  --shadow: 0 12px 34px rgba(0,0,0,.40), 0 2px 6px rgba(0,0,0,.25);
+  --blob1: rgba(108,110,255,.30); --blob2: rgba(40,200,195,.20); --blob3: rgba(230,110,160,.16);
+  --high: #ff6b6f; --high-soft: #3a1a1c; --watch: #f2b544; --watch-soft: #36290f; --normal: #9aa3b0; --normal-soft: #1f242d;
+  --tense: #ff6b6f; --calm: #5d9cea; --good: #3cc492;
+  --t-courts: #5d9cea; --t-heritage: #f08a5c; --t-econ: #3cc492; --t-other: #a3a19c; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #090a14; --surface: #151729; --surface-2: rgba(255,255,255,.05); --border: rgba(255,255,255,.09); --ink: #eceefa; --muted: #9ea3bf; --faint: #6d7290;
+  --accent: #8b8cff; --accent-2: #3de0d8; --accent-soft: rgba(139,140,255,.16); --on-accent: #0b0c1a;
+  --glass: rgba(30,33,58,.52); --glass-hi: rgba(255,255,255,.14); --glass-edge: rgba(255,255,255,.12);
+  --shadow: 0 12px 34px rgba(0,0,0,.40), 0 2px 6px rgba(0,0,0,.25);
+  --blob1: rgba(108,110,255,.30); --blob2: rgba(40,200,195,.20); --blob3: rgba(230,110,160,.16);
+  --high: #ff6b6f; --high-soft: #3a1a1c; --watch: #f2b544; --watch-soft: #36290f; --normal: #9aa3b0; --normal-soft: #1f242d;
+  --tense: #ff6b6f; --calm: #5d9cea; --good: #3cc492;
+  --t-courts: #5d9cea; --t-heritage: #f08a5c; --t-econ: #3cc492; --t-other: #a3a19c; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 400 14.5px/1.5 var(--sans); margin: 0; -webkit-font-smoothing: antialiased; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+button { font: inherit; color: inherit; }
+.num { font-variant-numeric: tabular-nums; }
+.mono { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.wrap { max-width: 1240px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+/* app bar */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface); }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--surface) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+.bar .wrap { display: flex; align-items: center; gap: 18px; height: 60px; }
+.logo { display: flex; align-items: center; gap: 10px; font-weight: 600; white-space: nowrap; }
+.logo .mark { width: 28px; height: 28px; border-radius: 8px; background: var(--ink); color: var(--surface); display: grid; place-items: center; font: 600 11px var(--mono); letter-spacing: .02em; }
+.logo small { color: var(--muted); font-weight: 400; font-size: 13px; }
+.tabs { display: flex; gap: 2px; padding: 3px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px; margin-left: 8px; }
+.tabs a { padding: 6px 14px; border-radius: 999px; color: var(--muted); font-weight: 500; font-size: 13.5px; white-space: nowrap; }
+.tabs a:hover { text-decoration: none; color: var(--ink); }
+.tabs a[aria-current="page"] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 2px rgba(0,0,0,.08), 0 0 0 1px var(--border); }
+.bar .right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+.live { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--muted); white-space: nowrap; }
+.live i { width: 7px; height: 7px; border-radius: 50%; background: var(--good); box-shadow: 0 0 0 3px color-mix(in srgb, var(--good) 22%, transparent); }
+.lang { display: inline-flex; border: 1px solid var(--border); border-radius: 999px; padding: 2px; }
+.lang button { border: 0; background: transparent; padding: 4px 9px; border-radius: 999px; font: 500 12px var(--mono); color: var(--muted); cursor: pointer; }
+.lang button[aria-pressed="true"] { background: var(--ink); color: var(--surface); }
+
+main { padding-block: 22px 48px; }
+.view[hidden] { display: none !important; }
+.grid { display: grid; gap: 14px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); padding: 20px; min-width: 0; }
+.card h2 { font-size: 16px; font-weight: 600; margin: 0; letter-spacing: -.005em; }
+.card .sub { color: var(--muted); margin: 4px 0 0; font-size: 13.5px; }
+.card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+.label { font-size: 13.5px; font-weight: 500; color: var(--muted); }
+.pill { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; padding: 3px 9px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--border); color: var(--muted); white-space: nowrap; }
+.pill i { width: 7px; height: 7px; border-radius: 50%; }
+
+/* hero */
+.hero { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: "hr hn hn" "risk k1 k2"; row-gap: 10px; }
+.hero .hh-risk { grid-area: hr; } .hero .hh-now { grid-area: hn; } .hero .risk { grid-area: risk; }
+.hero .kpi:nth-of-type(1) { grid-area: k1; } .hero .kpi:nth-of-type(2) { grid-area: k2; }
+.hh { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; padding: 8px 2px 6px; border-bottom: 2px solid var(--ink); font-size: 15px; font-weight: 600; }
+.hh span { font-size: 13px; font-weight: 400; color: var(--muted); }
+.hh-risk { border-bottom-color: var(--accent); }
+.risk { display: flex; flex-direction: column; gap: 14px; }
+.risk h1 { font-size: clamp(28px, 3.6vw, 38px); line-height: 1.12; font-weight: 600; letter-spacing: -.01em; margin: 0; text-wrap: balance; }
+.risk .why { color: var(--muted); margin: 0; max-width: 62ch; font-size: 15px; }
+.now { background: var(--high-soft); border-radius: 10px; padding: 12px 14px; font-size: 14px; line-height: 1.5; }
+.now b { color: var(--high); }
+.now span { color: var(--muted); display: block; margin-top: 4px; font-size: 13.5px; }
+.meter { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; margin-top: auto; }
+.meter div { height: 6px; border-radius: 3px; background: var(--normal-soft); }
+.meter-l { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; font-size: 12px; color: var(--faint); margin-top: -8px; }
+.meter-l span.on { color: var(--ink); font-weight: 500; }
+.kpi { display: flex; flex-direction: column; gap: 8px; }
+.kpi .big { font-size: 40px; font-weight: 600; line-height: 1.05; }
+.kpi .big small { font-size: 15px; color: var(--muted); font-weight: 500; }
+.kpi .delta { font-size: 14px; color: var(--ink); }
+.scale { margin-top: auto; padding-top: 8px; }
+.scale .track { position: relative; height: 8px; border-radius: 4px; background: linear-gradient(90deg, var(--calm), var(--normal-soft) 50%, var(--tense)); }
+.scale .band { position: absolute; top: 0; bottom: 0; background: color-mix(in srgb, var(--ink) 14%, transparent); border-radius: 4px; }
+.scale .mk { position: absolute; top: -4px; width: 4px; height: 16px; margin-left: -2px; border-radius: 2px; background: var(--ink); box-shadow: 0 0 0 2px var(--surface); }
+.scale .ends { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); margin-top: 6px; }
+.scale.news .track { background: var(--normal-soft); }
+
+/* month bar */
+.monthbar { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.ctl { border: 1px solid var(--border); background: var(--surface); border-radius: 9px; padding: 6px 10px; cursor: pointer; font-size: 13.5px; font-weight: 500; color: var(--ink); }
+.ctl:disabled { opacity: .35; cursor: default; }
+select.ctl { padding-right: 26px; }
+.chips { display: inline-flex; gap: 2px; padding: 2px; border: 1px solid var(--border); border-radius: 9px; background: var(--surface-2); }
+.chips button { border: 0; background: transparent; padding: 5px 10px; border-radius: 7px; cursor: pointer; font-size: 12.5px; color: var(--muted); font-weight: 500; }
+.chips button[aria-pressed="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 0 0 1px var(--border); }
+
+/* charts */
+.chart-box { position: relative; }
+svg.chart { width: 100%; display: block; overflow: visible; touch-action: pan-y; }
+svg.chart.click { cursor: crosshair; }
+svg text { fill: var(--faint); font: 400 11.5px var(--sans); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12.5px; color: var(--muted); margin-top: 12px; }
+.legend i { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: 1px; }
+.legend i.bar { border-radius: 2px; width: 14px; height: 6px; }
+.tip { position: absolute; pointer-events: none; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 9px 11px; font-size: 12.5px; line-height: 1.45; box-shadow: 0 8px 24px rgba(0,0,0,.12); max-width: 270px; z-index: 3; }
+.tip .mono { color: var(--muted); }
+
+/* lists */
+.two { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+ul.rows { list-style: none; margin: 0; padding: 0; }
+ul.rows > li { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 12px; padding: 11px 0; border-top: 1px solid var(--border); align-items: baseline; }
+ul.rows > li:first-child { border-top: 0; padding-top: 2px; }
+ul.rows .when { color: var(--muted); }
+.kind { display: inline-block; font-size: 12px; font-weight: 600; padding: 1px 7px; border-radius: 5px; margin-right: 8px; vertical-align: 1px; }
+.kind.court { background: var(--high-soft); color: var(--high); }
+.kind.heritage { background: var(--watch-soft); color: var(--watch); }
+.kind.recurring, .kind.election { background: var(--normal-soft); color: var(--muted); }
+.empty { color: var(--muted); margin: 0; }
+.subcard { margin-top: 18px; padding: 14px 16px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 11px; }
+.subcard h3 { font-size: 13.5px; font-weight: 600; margin: 0 0 6px; }
+.subcard li { padding: 7px 0; border-top: 1px solid var(--border); font-size: 13.5px; }
+.subcard li:first-child { border-top: 0; }
+.verdict-chip { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+.vc-hit { background: color-mix(in srgb, var(--good) 14%, transparent); color: var(--good); }
+.vc-miss { background: var(--high-soft); color: var(--high); }
+.vc-wait { background: var(--normal-soft); color: var(--muted); }
+.outcome { margin-top: 14px; display: grid; gap: 10px; }
+.outcome .ep { padding: 14px; border: 1px solid var(--border); border-radius: 11px; background: var(--surface-2); }
+.outcome .ep p { margin: 6px 0 0; }
+.outcome .ep .cause { color: var(--muted); font-size: 13.5px; }
+
+/* layers */
+.layers { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 4px 36px; }
+.lg { font-size: 13px; font-weight: 600; color: var(--muted); padding: 12px 0 4px; }
+.lrow { display: grid; grid-template-columns: minmax(0, 1fr) 132px 44px 16px; align-items: center; gap: 10px; padding: 7px 8px; margin: 0 -8px; border-radius: 8px; font-size: 13.5px; border: 0; background: transparent; text-align: left; width: calc(100% + 16px); }
+button.lrow { cursor: pointer; }
+button.lrow:hover { background: var(--surface-2); }
+.lrow .track { position: relative; height: 10px; }
+.lrow .track::before { content: ""; position: absolute; left: 50%; top: -3px; bottom: -3px; width: 1px; background: var(--border); }
+.lrow .b { position: absolute; top: 0; height: 10px; border-radius: 3px; }
+.lrow .val { text-align: right; color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.lrow .go { color: var(--faint); font-size: 13px; }
+.lrow.na { color: var(--faint); }
+
+/* evidence */
+.tbl-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+th { text-align: left; font-size: 12.5px; font-weight: 500; color: var(--muted); padding: 0 12px 8px 0; border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 10px 12px 10px 0; border-bottom: 1px solid var(--border); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+td.who { min-width: 150px; }
+td .meta { color: var(--muted); font-size: 12.5px; white-space: nowrap; }
+.sev { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.sev i { width: 7px; height: 7px; border-radius: 50%; }
+.acts li { grid-template-columns: 88px 14px minmax(0, 1fr) !important; }
+.dir-esc { color: var(--high); } .dir-coo { color: var(--good); } .dir-neu { color: var(--faint); }
+
+/* statistics view */
+.stats { grid-template-columns: 370px minmax(0, 1fr); align-items: start; }
+.watch { padding: 10px; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 74px); max-height: calc(100vh - 100px); overflow: auto; }
+.search { width: 100%; border: 1px solid var(--border); background: var(--surface-2); border-radius: 9px; padding: 8px 10px; font: inherit; color: var(--ink); margin-bottom: 6px; }
+.wg { font-size: 13px; font-weight: 600; color: var(--muted); padding: 12px 8px 4px; }
+.wi { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: center; width: 100%; border: 0; background: transparent; text-align: left; padding: 8px; border-radius: 8px; cursor: pointer; font-size: 13px; }
+.wi:hover { background: var(--surface-2); }
+.wi[aria-current="true"] { background: var(--accent-soft); }
+.wi .n { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; line-height: 1.3; }
+.wi svg { width: 64px; height: 22px; display: block; }
+.wi .v { text-align: right; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.detail .top { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: flex-start; }
+.detail h2 { font-size: 22px; }
+.detail .big { font-size: 36px; font-weight: 600; line-height: 1.1; margin-top: 10px; }
+.detail .big small { font-size: 15px; font-weight: 500; color: var(--muted); }
+.detail .cmp { color: var(--muted); font-size: 13px; margin-top: 4px; }
+.facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border: 1px solid var(--border); border-radius: 11px; margin-top: 18px; }
+.facts div { padding: 12px 14px; }
+.facts div + div { border-left: 1px solid var(--border); }
+.facts b { display: block; font-size: 17px; font-weight: 600; margin-top: 2px; }
+.desc { margin: 18px 0 0; max-width: 72ch; }
+.srcline { margin-top: 10px; font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; }
+.copy { border: 1px solid var(--border); background: var(--surface); border-radius: 9px; padding: 6px 11px; cursor: pointer; font-size: 13px; font-weight: 500; }
+.recent { margin-top: 18px; }
+
+/* economy */
+.kpis { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.kpis .card { padding: 16px 18px; }
+.kpis .big { font-size: 28px; font-weight: 600; margin-top: 6px; }
+.kpis .delta { font-size: 13px; color: var(--muted); margin-top: 2px; }
+table.sectors td.bar { width: 22%; min-width: 120px; }
+.sbar { display: flex; align-items: center; gap: 8px; }
+.sbar span.t { flex: 1; height: 8px; background: var(--normal-soft); border-radius: 4px; position: relative; overflow: hidden; }
+.sbar span.f { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 4px; }
+.sbar b { font-weight: 500; font-size: 13px; min-width: 44px; text-align: right; font-variant-numeric: tabular-nums; }
+.chg-up, .chg-dn { color: var(--muted); white-space: nowrap; }
+table.sectors td { white-space: nowrap; } table.sectors td:first-child { white-space: normal; min-width: 150px; }
+.goods { display: flex; flex-wrap: wrap; gap: 6px; }
+.goods button { border: 1px solid var(--border); background: var(--surface); border-radius: 999px; padding: 6px 12px; font-size: 13px; cursor: pointer; color: var(--muted); }
+.goods button[aria-pressed="true"] { background: var(--ink); color: var(--surface); border-color: var(--ink); }
+.files li { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 12px; align-items: center; padding: 11px 0; border-top: 1px solid var(--border); list-style: none; }
+.files { padding: 0; margin: 10px 0 0; }
+.files li:first-child { border-top: 0; }
+.files .note { display: block; }
+
+/* method */
+.method { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); align-items: start; }
+.prose h2 { font-size: 24px; letter-spacing: -.02em; margin-bottom: 12px; }
+.prose h3 { font-size: 15px; margin: 22px 0 6px; }
+.prose p { margin: 0 0 12px; max-width: 70ch; }
+.rates { display: grid; gap: 10px; margin: 12px 0 8px; }
+.rate { display: grid; grid-template-columns: 96px minmax(0, 1fr) 42px; gap: 10px; align-items: center; font-size: 13.5px; }
+.rate .track { height: 12px; background: var(--normal-soft); border-radius: 4px; position: relative; }
+.rate .fill { display: block; height: 100%; border-radius: 4px; }
+.rate .base { position: absolute; top: -4px; bottom: -4px; width: 2px; background: var(--ink); }
+.note { font-size: 12.5px; color: var(--muted); }
+.srclist li { padding: 8px 0; border-top: 1px solid var(--border); font-size: 13.5px; list-style: none; }
+.srclist { padding: 0; margin: 0; }
+footer { color: var(--muted); font-size: 12.5px; padding-block: 8px 32px; }
+
+@media (max-width: 1000px) {
+  .hero { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: "hr hr" "risk risk" "hn hn" "k1 k2"; }
+  .stats { grid-template-columns: minmax(0, 1fr); }
+  .kpis { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .watch { position: static; max-height: 360px; }
+  .logo small, .live span { display: none; }
+}
+@media (max-width: 760px) {
+  .two, .method, .layers { grid-template-columns: minmax(0, 1fr); }
+  .bar .wrap { height: auto; flex-wrap: wrap; padding-block: 10px; gap: 10px; }
+  .tabs { order: 3; width: 100%; margin-left: 0; justify-content: space-between; }
+  .tabs a { flex: 1 0 auto; text-align: center; padding: 6px 9px; font-size: 13px; }
+  .tabs { overflow-x: auto; scrollbar-width: none; }
+  .facts { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .facts div:nth-child(3) { border-left: 0; }
+  .facts div:nth-child(n+3) { border-top: 1px solid var(--border); }
+}
+@media (max-width: 480px) {
+  .card { padding: 16px; }
+  .hero { grid-template-columns: minmax(0, 1fr); grid-template-areas: "hr" "risk" "hn" "k1" "k2"; }
+  .lrow { grid-template-columns: minmax(0, 1fr) 84px 40px 12px; }
+  ul.rows > li, .acts li { grid-template-columns: 70px minmax(0, 1fr) !important; }
+  .acts .arrow { display: none; }
+  .live { display: none; }
+}
+@media (prefers-reduced-motion: no-preference) { .lrow .b { transition: left .25s, width .25s; } }
+
+/* ---------- liquid glass layer ---------- */
+.bgfx { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; background: var(--bg); }
+.bgfx i { position: absolute; border-radius: 50%; filter: blur(70px); }
+.bgfx i:nth-child(1) { width: 52vw; height: 52vw; left: -12vw; top: -18vw; background: var(--blob1); }
+.bgfx i:nth-child(2) { width: 44vw; height: 44vw; right: -14vw; top: 8vh; background: var(--blob2); }
+.bgfx i:nth-child(3) { width: 40vw; height: 40vw; left: 30vw; bottom: -22vw; background: var(--blob3); }
+body { background: transparent; }
+html { background: var(--bg); }
+.card, .bar, .tip, .glass {
+  background: linear-gradient(150deg, var(--glass-hi) 0%, var(--glass) 38%, var(--glass) 100%);
+  backdrop-filter: blur(24px) saturate(175%); -webkit-backdrop-filter: blur(24px) saturate(175%);
+  border: 1px solid var(--glass-edge);
+  box-shadow: inset 0 1px 0 var(--glass-edge), inset 0 -1px 0 rgba(255,255,255,.06), var(--shadow);
+}
+.card { border-radius: 20px; position: relative; }
+.card.watch { position: sticky; }
+.card::before { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  background: radial-gradient(120% 60% at 0% 0%, rgba(255,255,255,.35), transparent 55%); mix-blend-mode: soft-light; }
+.bar { border-width: 0 0 1px; border-radius: 0; box-shadow: 0 1px 0 var(--glass-edge), 0 6px 24px rgba(20,24,60,.06); }
+body::before { background: var(--bg); }
+.tabs, .chips, .lang { background: var(--surface-2); border: 1px solid var(--glass-edge); box-shadow: inset 0 1px 2px rgba(20,24,60,.06); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.tabs a[aria-current="page"], .chips button[aria-pressed="true"], .lang button[aria-pressed="true"], .goods button[aria-pressed="true"], .btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: var(--on-accent); border-color: transparent;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 6px 18px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+.ctl, .copy, .goods button, .btn-ghost, .search {
+  background: var(--glass); border: 1px solid var(--glass-edge); color: var(--ink);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: inset 0 1px 0 var(--glass-edge), 0 2px 8px rgba(20,24,60,.05);
+}
+.ctl:hover, .copy:hover, .goods button:hover, .btn-ghost:hover { background: var(--glass-hi); }
+.wi[aria-current="true"] { background: var(--accent-soft); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 30%, transparent); }
+.subcard, .outcome .ep, .facts { background: var(--surface-2); border-color: var(--glass-edge); }
+.logo .mark { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: var(--on-accent); }
+.hh-risk { border-bottom-color: var(--accent); }
+.hh { border-bottom-width: 2px; }
+.btn-primary, .btn-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px; border-radius: 999px; font-weight: 600; font-size: 15px; text-decoration: none !important; cursor: pointer; border: 1px solid transparent; }
+.btn-ghost { color: var(--ink); }
+
+/* ---------- favourites ---------- */
+.favlink { display: inline-flex; align-items: center; gap: 6px; padding: 5px 11px; border-radius: 999px; font-size: 13px; font-weight: 500; color: var(--ink); background: var(--glass); border: 1px solid var(--glass-edge); text-decoration: none !important; white-space: nowrap; }
+.favlink b { min-width: 18px; height: 18px; padding: 0 5px; border-radius: 9px; display: inline-grid; place-items: center; font-size: 11.5px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: var(--on-accent); }
+.favlink[aria-current="page"] { box-shadow: 0 0 0 2px var(--accent); }
+.star { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; cursor: pointer; font-size: 13px; font-weight: 500; background: var(--glass); border: 1px solid var(--glass-edge); color: var(--ink); }
+.star .s { color: var(--faint); font-size: 15px; line-height: 1; }
+.star[aria-pressed="true"] .s { color: #f5a524; }
+.star[aria-pressed="true"] { background: color-mix(in srgb, #f5a524 14%, var(--glass)); }
+.saved-list { list-style: none; margin: 8px 0 0; padding: 0; }
+.saved-list li { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 12px; align-items: center; padding: 12px 0; border-top: 1px solid var(--border); }
+.saved-list li:first-child { border-top: 0; }
+.saved-list a { color: inherit; text-decoration: none !important; min-width: 0; }
+.saved-list a:hover b { color: var(--accent); }
+.saved-list .meta { color: var(--muted); font-size: 13px; }
+.saved-list .rm { border: 0; background: transparent; color: var(--faint); cursor: pointer; font-size: 18px; padding: 2px 6px; border-radius: 6px; }
+.saved-list .rm:hover { color: var(--high); background: var(--high-soft); }
+@media (max-width: 480px) { .favlink span { display: none; } }
+@media (max-width: 1340px) { .logo small { display: none; } }
+@media (max-width: 1180px) { .live { display: none; } }
+.bar .wrap { min-width: 0; } .tabs { min-width: 0; }
+
+/* ---------- start page ---------- */
+.home { display: grid; gap: 18px; }
+.home-hero { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 18px; align-items: stretch; }
+.home-hero .intro { padding: clamp(24px, 4vw, 44px); display: flex; flex-direction: column; gap: 18px; }
+.home-hero h1 { font-size: clamp(30px, 4.4vw, 50px); line-height: 1.06; letter-spacing: -.02em; margin: 0; text-wrap: balance; font-weight: 650; }
+.home-hero h1 em { font-style: normal; background: linear-gradient(120deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.home-hero p.lead { font-size: 17px; color: var(--muted); margin: 0; max-width: 58ch; }
+.cta { display: flex; flex-wrap: wrap; gap: 10px; }
+.snap { display: flex; flex-direction: column; gap: 14px; }
+.snap .lvl { font-size: 30px; font-weight: 650; line-height: 1.1; }
+.snap dl { display: grid; grid-template-columns: auto 1fr; gap: 8px 14px; margin: 0; font-size: 14px; }
+.snap dt { color: var(--muted); } .snap dd { margin: 0; font-weight: 500; }
+.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.step .n { width: 30px; height: 30px; border-radius: 10px; display: grid; place-items: center; font-weight: 700; font-size: 14px; background: var(--accent-soft); color: var(--accent); margin-bottom: 12px; }
+.step h3 { margin: 0 0 6px; font-size: 16px; } .step p { margin: 0; color: var(--muted); }
+.facts4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.facts4 b { display: block; font-size: 32px; font-weight: 650; letter-spacing: -.02em; }
+.facts4 span { color: var(--muted); font-size: 14px; }
+.go4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.go4 a { color: inherit; text-decoration: none !important; transition: transform .15s; }
+.go4 a:hover { transform: translateY(-2px); }
+.go4 h3 { margin: 0 0 6px; font-size: 16px; } .go4 p { margin: 0; color: var(--muted); font-size: 14px; }
+.go4 .arr { color: var(--accent); font-weight: 600; margin-top: 10px; display: inline-block; }
+@media (max-width: 1000px) { .home-hero, .steps { grid-template-columns: minmax(0, 1fr); } .facts4, .go4 { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+@media (max-width: 480px) { .facts4, .go4 { grid-template-columns: minmax(0, 1fr); } }
+@media (prefers-reduced-motion: reduce) { .go4 a { transition: none; } }
+</style>
+<div class="bgfx" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<header class="bar"><div class="wrap">
+  <a class="logo" href="#home" style="color:inherit;text-decoration:none"><span class="mark">DRI</span><span data-t="brand"></span><small data-t="pair"></small></a>
+  <nav class="tabs" aria-label="Sections">
+    <a href="#home" data-view="home" data-t="tabHome"></a>
+    <a href="#monitor" data-view="monitor" data-t="tabMonitor"></a>
+    <a href="#data" data-view="data" data-t="tabData"></a>
+    <a href="#economy" data-view="economy" data-t="tabEcon"></a>
+    <a href="#method" data-view="method" data-t="tabMethod"></a>
+  </nav>
+  <div class="right">
+    <span class="live"><i></i><span id="live"></span></span>
+    <a class="favlink" href="#saved" id="favlink"></a>
+    <div class="lang" role="group" aria-label="Language"><button type="button" id="lang-ru" data-lang="ru">RU</button><button type="button" id="lang-en" data-lang="en">EN</button></div>
+  </div>
+</div></header>
+
+<main class="wrap">
+  <!-- HOME -->
+  <div class="view home" id="view-home" hidden></div>
+
+  <!-- MONITOR -->
+  <div class="view grid" id="view-monitor">
+    <div class="grid hero">
+      <div class="hh hh-risk" id="r-pill"></div>
+      <div class="hh hh-now" id="k-head"></div>
+      <div class="card risk">
+        <h1 id="r-title"></h1>
+        <p class="why" id="r-why"></p>
+        <div class="now" id="r-now" hidden></div>
+        <div class="meter" id="meter"><div></div><div></div><div></div></div>
+        <div class="meter-l" id="meter-l"></div>
+      </div>
+      <div class="card kpi">
+        <span class="label" id="k-index-l"></span>
+        <div class="big num" id="k-index"></div>
+        <div class="delta" id="k-index-d"></div>
+        <div class="scale" id="k-index-s"></div>
+      </div>
+      <div class="card kpi">
+        <span class="label" id="k-news-l"></span>
+        <div class="big num" id="k-news"></div>
+        <div class="delta" id="k-news-d"></div>
+        <div class="scale news" id="k-news-s"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div><h2 data-t="chartTitle"></h2><p class="sub" data-t="chartSub"></p></div>
+        <div class="monthbar">
+          <button type="button" class="ctl" id="prev" aria-label="Previous month">‹</button>
+          <label for="month" class="label" style="position:absolute;left:-9999px" data-t="month"></label>
+          <select class="ctl" id="month"></select>
+          <button type="button" class="ctl" id="next" aria-label="Next month">›</button>
+          <div class="chips" id="range"></div>
+          <button type="button" class="star" id="fav-month"></button>
+        </div>
+      </div>
+      <div class="chart-box" id="chart-box"><svg class="chart click" id="chart" role="img"></svg><div class="tip" id="tip" hidden></div></div>
+      <div class="legend" id="legend"></div>
+    </div>
+
+    <div class="grid two">
+      <div class="card">
+        <div class="card-head"><div><h2 data-t="aheadTitle"></h2><p class="sub" id="ahead-sub"></p></div></div>
+        <ul class="rows" id="ahead"></ul>
+        <div class="subcard" id="pending" hidden><h3 data-t="pendingTitle"></h3><ul id="pending-list" style="list-style:none;margin:0;padding:0"></ul></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><div><h2 data-t="checkTitle"></h2><p class="sub" id="check-sub"></p></div></div>
+        <div id="check"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><div><h2 data-t="layersTitle"></h2><p class="sub" data-t="layersSub"></p></div></div>
+      <div class="layers" id="layers"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><div><h2 data-t="evTitle"></h2><p class="sub" data-t="evSub"></p></div></div>
+      <div class="grid two" style="gap:28px">
+        <div>
+          <span class="label" data-t="turnsTitle"></span>
+          <div class="tbl-wrap" style="margin-top:10px"><table id="turns-t"><thead><tr><th data-t="thDate"></th><th data-t="thWho"></th><th data-t="thSev"></th><th></th></tr></thead><tbody id="turns"></tbody></table></div>
+          <p class="empty" id="turns-empty" hidden data-t="turnsEmpty" style="margin-top:10px"></p>
+        </div>
+        <div>
+          <span class="label" data-t="actsTitle"></span>
+          <ul class="rows acts" id="acts" style="margin-top:10px"></ul>
+          <p class="empty" id="acts-empty" hidden data-t="actsEmpty" style="margin-top:10px"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATISTICS -->
+  <div class="view grid stats" id="view-data" hidden>
+    <div class="card watch">
+      <label for="q" style="position:absolute;left:-9999px" data-t="search"></label>
+      <input id="q" class="search" type="search" autocomplete="off">
+      <div id="watch"></div>
+    </div>
+    <div class="card detail" id="detail"></div>
+  </div>
+
+  <!-- SAVED -->
+  <div class="view grid" id="view-saved" hidden></div>
+
+  <!-- ECONOMY -->
+  <div class="view grid" id="view-economy" hidden>
+    <div class="grid kpis" id="e-kpis"></div>
+    <div class="card">
+      <div class="card-head">
+        <div><h2 data-t="eTradeTitle"></h2><p class="sub" id="e-trade-sub"></p></div>
+        <div class="monthbar"><div class="chips" id="e-metric"></div><div class="chips" id="e-range"></div></div>
+      </div>
+      <div class="chart-box"><svg class="chart" id="echart"></svg><div class="tip" id="etip" hidden></div></div>
+      <div class="legend" id="e-legend"></div>
+    </div>
+    <div class="card">
+      <div class="card-head"><div><h2 data-t="eSecTitle"></h2><p class="sub" data-t="eSecSub"></p></div></div>
+      <div class="tbl-wrap"><table class="sectors" id="e-sectors"></table></div>
+    </div>
+    <div class="card">
+      <div class="card-head"><div><h2 data-t="eGoodsTitle"></h2><p class="sub" data-t="eGoodsSub"></p></div></div>
+      <div class="goods" id="e-goods"></div>
+      <div class="chart-box" style="margin-top:14px"><svg class="chart" id="gchart"></svg><div class="tip" id="gtip" hidden></div></div>
+      <div class="legend" id="g-legend"></div>
+    </div>
+    <div class="card" id="e-files"></div>
+  </div>
+
+  <!-- METHOD -->
+  <div class="view grid method" id="view-method" hidden>
+    <div class="card prose" id="m-text"></div>
+    <div class="grid">
+      <div class="card"><h2 data-t="mRates"></h2><div class="rates" id="rates"></div><p class="note" id="rates-note"></p></div>
+      <div class="card"><h2 data-t="mCourts"></h2><div class="tbl-wrap" style="margin-top:12px"><table><thead><tr><th data-t="thRulings"></th><th data-t="thN"></th><th data-t="thFollowed"></th></tr></thead><tbody id="courts"></tbody></table></div><p class="note" id="courts-note"></p></div>
+      <div class="card"><h2 data-t="mSources"></h2><ul class="srclist" id="sources" style="margin-top:8px"></ul></div>
+      <div class="card" id="m-files"></div>
+    </div>
+  </div>
+  <footer id="foot"></footer>
+</main>
+
+<script>
+const D = /*__DATA__*/null;
+const T = {
+  ru: {
+    brand: 'Diplomatic Risk Index', pair: 'Республика Корея — Япония',
+    tabHome: 'Обзор', tabMonitor: 'Монитор', tabData: 'Показатели', tabMethod: 'Методология', tabEcon: 'Экономика',
+    eTradeTitle: 'Торговля Республики Корея и Японии по месяцам', eSecTitle: 'Отрасли: насколько страны зависят друг от друга',
+    eSecSub: 'Импорт из страны-партнёра по отраслям и доля партнёра во всём импорте отрасли, ОЭСР, годовые данные. Изменение — к 2015 г.',
+    eGoodsTitle: 'Критические товары', eGoodsSub: 'Доля партнёра в импорте отдельных товаров (UN Comtrade, по месяцам). Выберите товар.',
+    live: m => `данные по ${m}`,
+    kIndex: 'Индекс напряжённости', kNews: 'Конфликтность в новостях',
+    chartTitle: 'Индекс напряжённости и обострения', chartSub: 'Щёлкните по графику, чтобы выбрать месяц.', month: 'Месяц',
+    ranges: [['all', 'Всё'], ['5', '5 лет'], ['2', '2 года']],
+    aheadTitle: 'Поводы впереди', pendingTitle: 'Дела, ожидающие решения (дата не назначена)',
+    checkTitle: 'Сбылась ли оценка',
+    layersTitle: 'Из чего складывается индекс', layersSub: 'Отклонение каждого показателя от обычного уровня 2016–2026 гг. Вправо — напряжённее нормы. Нажмите на строку, чтобы открыть ряд целиком.',
+    evTitle: 'Основания', evSub: 'Самые жёсткие заявления в парламентах и проверенные дипломатические шаги за последние три месяца.',
+    turnsTitle: 'Заявления в парламентах', actsTitle: 'Дипломатические шаги',
+    thDate: 'Дата', thWho: 'Кто', thSev: 'Жёсткость', open: 'Стенограмма', source: 'Источник',
+    turnsEmpty: 'Жёстких заявлений за этот период нет.', actsEmpty: 'Проверенных шагов за этот период нет.',
+    search: 'Поиск показателя', searchPh: 'Найти показатель',
+    mRates: 'Как часто после оценки было обострение', mCourts: 'Решения корейских судов', mSources: 'Источники данных',
+    thRulings: 'Решения', thN: 'Число', thFollowed: 'Обострение следом',
+    kr: 'РК', jp: 'Япония', inIndex: 'входит в индекс', copy: 'Скопировать ряд (CSV)', copied: 'Скопировано',
+    latestV: 'Последнее значение', yearAgo: 'год назад', min: 'Минимум', max: 'Максимум', mean: 'Среднее', cover: 'Покрытие',
+    recent: 'Последние 12 месяцев', atMonth: 'в выбранном месяце',
+    risk: { high: 'повышен', watch: 'внимание', normal: 'обычный' },
+    riskTitle: { high: 'Риск нового обострения повышен', watch: 'Риск нового обострения: внимание', normal: 'Риск нового обострения обычный' },
+    kinds: { court: 'суд', heritage: 'наследие', recurring: 'дата', election: 'выборы' },
+    months: ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'],
+    monthsG: ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'],
+    monthsShort: ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'],
+    pp: ' п.п.',
+  },
+  en: {
+    brand: 'Diplomatic Risk Index', pair: 'Republic of Korea — Japan',
+    tabHome: 'Overview', tabMonitor: 'Monitor', tabData: 'Statistics', tabMethod: 'Methodology', tabEcon: 'Economy',
+    eTradeTitle: 'Korea–Japan trade by month', eSecTitle: 'Industries: how dependent each side is',
+    eSecSub: 'Imports from the partner by industry and the partner\'s share of all imports of that industry, OECD, annual. Change versus 2015.',
+    eGoodsTitle: 'Critical goods', eGoodsSub: 'Partner\'s share of imports of individual goods (UN Comtrade, monthly). Pick a product.',
+    live: m => `data to ${m}`,
+    kIndex: 'Tension index', kNews: 'Conflict in the news',
+    chartTitle: 'Tension index and flare-ups', chartSub: 'Click the chart to pick a month.', month: 'Month',
+    ranges: [['all', 'All'], ['5', '5Y'], ['2', '2Y']],
+    aheadTitle: 'Triggers ahead', pendingTitle: 'Cases awaiting a ruling (no date set)',
+    checkTitle: 'Did the outlook hold?',
+    layersTitle: 'What drives the index', layersSub: 'How far each indicator sits from its usual 2016–2026 level. Right means tenser than normal. Click a row to open the full series.',
+    evTitle: 'Evidence', evSub: 'The toughest parliamentary statements and verified diplomatic steps of the past three months.',
+    turnsTitle: 'Parliamentary statements', actsTitle: 'Diplomatic steps',
+    thDate: 'Date', thWho: 'Speaker', thSev: 'Severity', open: 'Record', source: 'Source',
+    turnsEmpty: 'No hard-line statements in this period.', actsEmpty: 'No verified steps in this period.',
+    search: 'Search statistics', searchPh: 'Find a statistic',
+    mRates: 'How often a flare-up followed', mCourts: 'Korean court rulings', mSources: 'Data sources',
+    thRulings: 'Rulings', thN: 'Count', thFollowed: 'Flare-up followed',
+    kr: 'Korea', jp: 'Japan', inIndex: 'part of the index', copy: 'Copy series (CSV)', copied: 'Copied',
+    latestV: 'Latest value', yearAgo: 'a year earlier', min: 'Minimum', max: 'Maximum', mean: 'Mean', cover: 'Coverage',
+    recent: 'Last 12 months', atMonth: 'in the selected month',
+    risk: { high: 'elevated', watch: 'watch', normal: 'normal' },
+    riskTitle: { high: 'Risk of a new flare-up is elevated', watch: 'Risk of a new flare-up: watch', normal: 'Risk of a new flare-up is normal' },
+    kinds: { court: 'court', heritage: 'heritage', recurring: 'date', election: 'election' },
+    months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+    monthsG: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+    monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    pp: ' pp',
+  },
+};
+const LAST_KNOWN = '2026-07'; // last month whose next three months are already observed
+const months = D.months, MS = months.map(m => m.m), byM = Object.fromEntries(months.map(m => [m.m, m]));
+const LATEST = MS[MS.length - 1];
+let lang = 'ru', cur = LATEST, view = 'monitor', range = 'all', statId = 'conflict-share', statRange = 'all', query = '';
+try { const s = localStorage.getItem('dri-lang'); if (s === 'en' || s === 'ru') lang = s; } catch (e) {}
+const t = k => T[lang][k], li = () => (lang === 'ru' ? 0 : 1);
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const dec = (v, d = 1) => v.toFixed(d).replace('.', lang === 'ru' ? ',' : '.').replace('-', '−');
+const pct = v => Math.round(100 * v) + '%';
+const signed = (v, d = 1) => (v > 0 ? '+' : '') + dec(v, d);
+const mAdd = (m, k) => { const [y, mm] = m.split('-').map(Number); const n = y * 12 + mm - 1 + k; return `${Math.floor(n / 12)}-${String(n % 12 + 1).padStart(2, '0')}`; };
+const mName = m => { const [y, mm] = m.split('-'); return `${t('months')[+mm - 1]} ${y}`; };
+const mShort = m => { const [y, mm] = m.split('-'); return `${t('monthsShort')[+mm - 1]} ${y}`; };
+const dName = d => { const [y, mm, dd] = d.split('-'); return lang === 'ru' ? `${dd}.${mm}.${y}` : `${+dd} ${t('monthsShort')[+mm - 1]} ${y}`; };
+const typeVar = k => `var(--t-${k})`;
+
+/* ---------- units ---------- */
+const scale = (s, v) => v === null ? null : s.unit === 'pct' || s.unit === 'pp' ? 100 * v : s.unit === 'yoy' ? 100 * (Math.exp(v) - 1) : v;
+function fmtStat(s, v, short) {
+  if (v === null || v === undefined) return '—';
+  const x = scale(s, v);
+  if (s.unit === 'pct') return dec(x, x < 10 ? 1 : 0) + '%';
+  if (s.unit === 'pts') return dec(x, 0) + '%';
+  if (s.unit === 'yoy') return signed(x, Math.abs(x) < 10 ? 1 : 0) + '%';
+  if (s.unit === 'pp') return signed(x, 1) + (short ? '' : t('pp'));
+  if (s.unit === 'int') return String(Math.round(x));
+  return dec(x, Math.abs(x) >= 100 ? 0 : 1);
+}
+
+/* ---------- generic line chart ---------- */
+function lineChart(svg, vals, o) {
+  const box = svg.parentElement, W = Math.max(280, Math.round(box.clientWidth)), H = o.h(W);
+  const ml = o.ml ?? 40, mr = 8, mt = 10, mb = o.mb ?? 26, n = vals.length;
+  const ok = vals.concat(o.faint || [], ...(o.lines || []).map(l => l.vals)).filter(v => v !== null && v !== undefined);
+  let lo = o.lo ?? Math.min(...ok), hi = o.hi ?? Math.max(...ok);
+  if (o.zero) { lo = Math.min(lo, 0); hi = Math.max(hi, 0); }
+  if (hi === lo) { hi += 1; lo -= 1; }
+  const pad = o.lo === undefined ? (hi - lo) * .06 : 0; lo -= o.zero && lo === 0 ? 0 : pad; hi += pad;
+  const ph = H - mt - mb - (o.ribbon ? 14 : 0);
+  const x = i => ml + (W - ml - mr) * (n === 1 ? .5 : i / (n - 1)), y = v => mt + ph * (1 - (v - lo) / (hi - lo));
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`); svg.setAttribute('height', H);
+  let s = '';
+  const ticks = o.ticks || niceTicks(lo, hi, 4);
+  for (const g of ticks) s += `<line x1="${ml}" x2="${W - mr}" y1="${y(g)}" y2="${y(g)}" stroke="var(--border)"/><text x="${ml - 8}" y="${y(g) + 3.5}" text-anchor="end">${esc(o.tickFmt ? o.tickFmt(g) : g)}</text>`;
+  if (o.zero && lo < 0) s += `<line x1="${ml}" x2="${W - mr}" y1="${y(0)}" y2="${y(0)}" stroke="var(--faint)"/>`;
+  const base = mt + ph + (o.ribbon ? 14 : 0);
+  let lastYear = '';
+  o.months.forEach((m, i) => {
+    const yr = m.slice(0, 4), every = n > 60 ? (W < 560 ? 2 : 1) : 1;
+    if (m.endsWith('-01') || (i === 0 && n <= 30)) { if (yr !== lastYear && (+yr % every === 0 || n <= 30)) s += `<text x="${x(i)}" y="${H - 6}" text-anchor="middle">${yr}</text>`; lastYear = yr; s += `<line x1="${x(i)}" x2="${x(i)}" y1="${base}" y2="${base + 4}" stroke="var(--border)"/>`; }
+  });
+  if (o.ribbon) {
+    const bw = (W - ml - mr) / Math.max(1, n - 1), ry = mt + ph + 5;
+    o.ribbon.forEach((r, i) => { if (r !== 'normal') s += `<rect x="${x(i) - bw / 2 + .5}" y="${ry}" width="${Math.max(1, bw - 1)}" height="6" rx="1" fill="var(--${r})"/>`; });
+  }
+  const segs = []; let curSeg = '';
+  vals.forEach((v, i) => { if (v === null) { if (curSeg) segs.push(curSeg); curSeg = ''; } else curSeg += (curSeg ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(v).toFixed(1); });
+  if (curSeg) segs.push(curSeg);
+  if (o.area && segs.length) {
+    vals.forEach(() => {});
+    const first = vals.findIndex(v => v !== null), last = vals.length - 1 - [...vals].reverse().findIndex(v => v !== null);
+    s += `<defs><linearGradient id="${svg.id}-g" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="var(--accent)" stop-opacity=".18"/><stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient></defs>`;
+    if (segs.length === 1) s += `<path d="${segs[0]}L${x(last)} ${mt + ph}L${x(first)} ${mt + ph}Z" fill="url(#${svg.id}-g)"/>`;
+  }
+  if (o.faint) { const fs = o.faint.map((v, i) => (i ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(v).toFixed(1)).join(''); s += `<path d="${fs}" fill="none" stroke="var(--accent)" stroke-opacity=".3" stroke-width="1.1"/>`; }
+  segs.forEach(p => { s += `<path d="${p}" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`; });
+  (o.lines || []).forEach(l => {
+    let d = '', on = false;
+    l.vals.forEach((v, i) => { if (v === null || v === undefined) { on = false; return; } d += (on ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(v).toFixed(1); on = true; });
+    s += `<path d="${d}" fill="none" stroke="${l.color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
+  });
+  if (o.extra) s += o.extra({ x, y, mt, ph, base });
+  s += `<line id="${svg.id}-hl" y1="${mt}" y2="${base}" stroke="var(--faint)" stroke-dasharray="3 3" style="display:none"/>`;
+  svg.innerHTML = s;
+  svg._geo = { x, n, ml, mr, W };
+}
+function niceTicks(lo, hi, k) {
+  const span = hi - lo, step0 = span / k, mag = Math.pow(10, Math.floor(Math.log10(step0))), err = step0 / mag;
+  const step = (err >= 7.5 ? 10 : err >= 3.5 ? 5 : err >= 1.5 ? 2 : 1) * mag, out = [];
+  for (let v = Math.ceil(lo / step) * step; v <= hi + 1e-9; v += step) out.push(+v.toFixed(10));
+  return out;
+}
+function spark(svg, vals, colour) {
+  const W = 200, H = 48, ok = vals.map((v, i) => [v, i]).filter(p => p[0] !== null);
+  if (!ok.length) { svg.innerHTML = ''; return; }
+  const lo = Math.min(...ok.map(p => p[0])), hi = Math.max(...ok.map(p => p[0])) || 1, n = vals.length;
+  const x = i => 2 + (W - 4) * i / Math.max(1, n - 1), y = v => 4 + (H - 8) * (1 - (v - lo) / ((hi - lo) || 1));
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  const d = ok.map((p, k) => (k ? 'L' : 'M') + x(p[1]).toFixed(1) + ' ' + y(p[0]).toFixed(1)).join('');
+  const last = ok[ok.length - 1];
+  svg.innerHTML = `<path d="${d}" fill="none" stroke="${colour || 'var(--accent)'}" stroke-width="1.6" vector-effect="non-scaling-stroke" stroke-linejoin="round"/><circle cx="${x(last[1])}" cy="${y(last[0])}" r="2.6" fill="${colour || 'var(--accent)'}"/>`;
+}
+function hoverIndex(svg, evt) {
+  const g = svg._geo, r = svg.getBoundingClientRect(), px = (evt.clientX - r.left) * g.W / r.width;
+  return Math.max(0, Math.min(g.n - 1, Math.round((px - g.ml) / (g.W - g.ml - g.mr) * (g.n - 1))));
+}
+function showTip(svg, tip, i, html) {
+  const g = svg._geo, hl = $(svg.id + '-hl');
+  if (hl) { hl.setAttribute('x1', g.x(i)); hl.setAttribute('x2', g.x(i)); hl.style.display = ''; }
+  tip.hidden = false; tip.innerHTML = html;
+  const r = svg.getBoundingClientRect(), px = g.x(i) * r.width / g.W, w = tip.offsetWidth;
+  tip.style.left = Math.max(0, px + 14 + w > r.width ? px - w - 14 : px + 14) + 'px'; tip.style.top = '6px';
+}
+function hideTip(svg, tip) { tip.hidden = true; const hl = $(svg.id + '-hl'); if (hl) hl.style.display = 'none'; }
+
+/* ---------- monitor ---------- */
+function rangeStart(r) { if (r === 'all') return 0; const k = MS.length - 12 * +r; return Math.max(0, k); }
+function riskWhy(m) {
+  const c = D.courts.groups[0], ru = lang === 'ru';
+  if (m.risk === 'high') {
+    const court = m.trig.filter(x => x[1] === 'court' && x[2].startsWith('Верховный суд')).sort((a, b) => a[0].localeCompare(b[0]))[0];
+    return ru
+      ? `Ожидается решение Верховного суда РК по делам колониального периода: ${D.triggers[court[2]][0]} (${mName(court[0])}). После таких решений обострение начиналось в ${pct(D.check.high)} случаев, в среднем — ${pct(D.check.base)}.`
+      : `Korea's Supreme Court is due to rule on a colonial-era case: ${D.triggers[court[2]][1]} (${mName(court[0])}). A flare-up followed in ${pct(D.check.high)} of such cases, against ${pct(D.check.base)} on average.`;
+  }
+  if (m.risk === 'watch') {
+    const court = m.trig.find(x => x[1] === 'court');
+    const what = court ? (ru ? `решение суда (${D.triggers[court[2]][0]}, ${mName(court[0])})` : `a court ruling (${D.triggers[court[2]][1]}, ${mName(court[0])})`)
+      : (ru ? 'дата, связанная с колониальным наследием (сессия ЮНЕСКО или поминовение на руднике Садо)' : 'a heritage date (a UNESCO session or the Sado mine memorial)');
+    return ru
+      ? `Впереди ${what}. Такие поводы стоит отслеживать, но сами по себе обострений чаще обычного не дают: ${pct(D.check.watch)} при среднем ${pct(D.check.base)}.`
+      : `Coming up: ${what}. Worth watching, but on their own such triggers are not followed by flare-ups more often than usual: ${pct(D.check.watch)} against ${pct(D.check.base)} on average.`;
+  }
+  return ru
+    ? `Острых поводов в календаре на три месяца вперёд нет. Обострения случаются и без них: так было после ${pct(D.check.normal)} таких месяцев.`
+    : `No sharp triggers are scheduled for the next three months. Flare-ups still happen without them: after ${pct(D.check.normal)} of such months.`;
+}
+function renderMonitor() {
+  const m = byM[cur], i = MS.indexOf(cur), ru = lang === 'ru';
+  $('month').value = cur; $('prev').disabled = i === 0; $('next').disabled = i === MS.length - 1;
+  $('fav-month').setAttribute('aria-pressed', String(isFav('months', cur))); $('fav-month').innerHTML = starHtml(isFav('months', cur));
+  $('r-pill').innerHTML = ru ? `Прогноз на ${esc(mName(mAdd(cur, 1)))} — ${esc(mName(mAdd(cur, 3)))}<span>по данным за ${esc(mName(cur))}</span>` : `Outlook for ${esc(mName(mAdd(cur, 1)))} – ${esc(mName(mAdd(cur, 3)))}<span>based on data to ${esc(mName(cur))}</span>`;
+  const word = t('risk')[m.risk];
+  $('r-title').innerHTML = esc(t('riskTitle')[m.risk]).replace(esc(word), `<span style="color:var(--${m.risk})">${esc(word)}</span>`);
+  $('r-why').textContent = riskWhy(m);
+  // The index describes now; the risk is about a NEW flare-up in the next three months. Say so when they diverge.
+  const epNow = D.episodes[cur], nowBox = $('r-now'), hiIdx = Math.round(m.idx) >= 80;
+  nowBox.hidden = !(epNow || hiIdx);
+  if (epNow || hiIdx) {
+    const head = epNow
+      ? (ru ? `Сейчас идёт обострение: ${epNow.ru[0]}` : `A flare-up is under way: ${epNow.en[0]}`)
+      : (ru ? `Сейчас напряжённость очень высокая: месяц напряжённее ${Math.round(m.idx)}% остальных.` : `Tension is very high now: tenser than ${Math.round(m.idx)}% of months.`);
+    nowBox.innerHTML = `<b>${esc(ru ? 'Сейчас' : 'Now')}</b> · ${esc(head.replace(/^Сейчас /, '').replace(/^A /, 'a '))}<span>${esc(ru
+      ? `Индекс показывает, что происходит в этом месяце. Риск — начнётся ли новое обострение в ближайшие три месяца. Высокий индекс сам по себе его не предвещает: после месяцев с индексом 70 и выше новое обострение было в ${pct(D.check.idx70)} случаев, в среднем — ${pct(D.check.base)}.`
+      : `The index shows what is happening this month. The risk is about whether a new flare-up starts in the next three months. A high index does not foreshadow one: after months with an index of 70+, a new flare-up followed in ${pct(D.check.idx70)} of cases, against ${pct(D.check.base)} on average.`)}</span>`;
+  }
+  const lvl = { normal: 0, watch: 1, high: 2 }[m.risk];
+  [...$('meter').children].forEach((d, k) => { d.style.background = k <= lvl ? `var(--${m.risk})` : ''; });
+  $('meter-l').innerHTML = ['normal', 'watch', 'high'].map((k, j) => `<span class="${j === lvl ? 'on' : ''}">${esc(t('risk')[k])}</span>`).join('');
+  const idx = Math.round(m.idx);
+  $('k-head').innerHTML = ru ? `Состояние за ${esc(mName(cur))}<span>что происходит в выбранном месяце</span>` : `State in ${esc(mName(cur))}<span>what is happening in the selected month</span>`;
+  $('k-index-l').textContent = t('kIndex');
+  $('k-news-l').textContent = t('kNews');
+  $('k-index').innerHTML = `${idx}<small> ${ru ? 'из' : 'of'} 100</small>`;
+  $('k-index-d').textContent = idx >= 50
+    ? (ru ? `Напряжённее, чем ${idx}% месяцев 2016–2026 гг.` : `Tenser than ${idx}% of months in 2016–2026.`)
+    : (ru ? `Спокойнее, чем ${100 - idx}% месяцев 2016–2026 гг.` : `Calmer than ${100 - idx}% of months in 2016–2026.`);
+  $('k-index-s').innerHTML = `<div class="track"><span class="mk" style="left:${idx}%"></span></div><div class="ends"><span>${ru ? 'спокойно' : 'calm'}</span><span>${ru ? 'напряжённо' : 'tense'}</span></div>`;
+  const gs = months.map(x => x.g).sort((a, b) => a - b), q = p => gs[Math.floor(p * (gs.length - 1))], gmax = gs[gs.length - 1];
+  $('k-news').textContent = pct(m.g);
+  $('k-news-d').textContent = ru ? `событий Корея–Япония в мировых новостях — конфликтные (протесты, угрозы, давление). Обычно — ${pct(q(.5))}.` : `of Korea–Japan events in world news are conflictual (protests, threats, pressure). Typically ${pct(q(.5))}.`;
+  const pos = v => Math.min(100, 100 * v / gmax);
+  $('k-news-s').innerHTML = `<div class="track"><span class="band" style="left:${pos(q(.25))}%;width:${pos(q(.75)) - pos(q(.25))}%"></span><span class="mk" style="left:${pos(m.g)}%"></span></div><div class="ends"><span>0%</span><span>${ru ? 'серая зона — обычный уровень' : 'grey band: usual level'}</span><span>${pct(gmax)}</span></div>`;
+  renderMainChart(); renderAhead(m); renderCheck(m); renderLayers(m); renderEvidence(m);
+}
+function renderMainChart() {
+  const s0 = rangeStart(range), sub = months.slice(s0), svg = $('chart');
+  const smooth = sub.map((m, k) => { const j = s0 + k, w = months.slice(Math.max(0, j - 2), j + 1); return w.reduce((a, b) => a + b.idx, 0) / w.length; });
+  lineChart(svg, smooth, {
+    months: sub.map(m => m.m), lo: 0, hi: 100, ticks: [0, 25, 50, 75, 100], ribbon: sub.map(m => m.risk), faint: sub.map(m => m.idx),
+    h: W => (W < 560 ? 240 : 320), ml: 30, mb: 24,
+    extra: ({ x, y, mt, base }) => {
+      let e = '';
+      sub.forEach((m, k) => { const ep = D.episodes[m.m]; if (ep) e += `<circle cx="${x(k)}" cy="${y(m.idx)}" r="5.5" fill="${typeVar(ep.type)}" stroke="var(--surface)" stroke-width="2"/>`; });
+      const ci = sub.findIndex(m => m.m === cur);
+      if (ci >= 0) e += `<line x1="${x(ci)}" x2="${x(ci)}" y1="${mt}" y2="${base}" stroke="var(--ink)" stroke-width="1.2"/><circle cx="${x(ci)}" cy="${y(sub[ci].idx)}" r="4.5" fill="var(--surface)" stroke="var(--ink)" stroke-width="2"/>`;
+      return e;
+    },
+  });
+  svg._sub = sub;
+}
+function renderAhead(m) {
+  const ru = lang === 'ru';
+  $('ahead-sub').textContent = ru ? `${mName(mAdd(cur, 1))} — ${mName(mAdd(cur, 3))}: суды, даты наследия, годовщины, выборы.` : `${mName(mAdd(cur, 1))} – ${mName(mAdd(cur, 3))}: courts, heritage dates, anniversaries, elections.`;
+  const order = { court: 0, heritage: 1, election: 2, recurring: 3 };
+  const rows = m.trig.slice().sort((a, b) => a[0].localeCompare(b[0]) || order[a[1]] - order[b[1]]);
+  $('ahead').innerHTML = rows.length ? rows.map(([mm, kind, key]) => `<li><span class="when mono">${esc(mShort(mm))}</span><span><span class="kind ${kind}">${esc(t('kinds')[kind] || kind)}</span>${esc(D.triggers[key][li()])}</span></li>`).join('')
+    : `<li style="display:block"><p class="empty">${ru ? 'В календаре поводов нет.' : 'Nothing in the calendar.'}</p></li>`;
+  $('pending').hidden = cur !== LATEST;
+  $('pending-list').innerHTML = D.pipeline.map(p => { const [court, def, note] = p[lang]; return `<li><b>${esc(def)}</b> · ${esc(court)}<br><span class="note">${esc(note)}</span></li>`; }).join('');
+}
+function renderCheck(m) {
+  const ru = lang === 'ru', a = mAdd(cur, 1), b = mAdd(cur, 3), flagged = m.risk !== 'normal';
+  $('check-sub').textContent = ru ? `Началось ли новое обострение в ${mShort(a)} — ${mShort(b)} после оценки «${t('risk')[m.risk]}».` : `Did a new flare-up start in ${mShort(a)} – ${mShort(b)} after a '${t('risk')[m.risk]}' outlook?`;
+  let chip, body = '';
+  if (m.out.length) {
+    chip = flagged ? ['hit', ru ? 'Да — оценка подтвердилась' : 'Yes — the outlook held'] : ['miss', ru ? 'Да — обострение без повода в календаре' : 'Yes — a flare-up with no scheduled trigger'];
+    body = '<div class="outcome">' + m.out.map(em => { const e = D.episodes[em]; return `<div class="ep"><span class="pill"><i style="background:${typeVar(e.type)}"></i>${esc(mName(em))} · ${esc(D.types[e.type][li()])}</span><p>${esc(e[lang][0])}</p><p class="cause">${esc((ru ? 'Глубинная причина: ' : 'Underlying cause: ') + e[lang][1])}</p></div>`; }).join('') + '</div>';
+  } else if (cur <= LAST_KNOWN) {
+    chip = flagged ? ['miss', ru ? 'Нет — обострения не было' : 'No — no flare-up'] : ['hit', ru ? 'Нет — оценка подтвердилась' : 'No — the outlook held'];
+    body = `<p class="empty" style="margin-top:12px">${ru ? 'Конфликтность в новостях не поднималась заметно выше нормы.' : 'Conflict in the news did not rise clearly above normal.'}</p>`;
+  } else {
+    const [by, bm] = b.split('-');
+    chip = ['wait', ru ? `Станет известно после ${t('monthsG')[+bm - 1]} ${by}` : `Known after ${mName(b)}`];
+    body = `<p class="empty" style="margin-top:12px">${ru ? 'Обострение фиксируется по доле конфликтных событий в новостях GDELT.' : 'Flare-ups are detected from the conflict share of GDELT news events.'}</p>`;
+  }
+  $('check').innerHTML = `<span class="verdict-chip vc-${chip[0]}">${esc(chip[1])}</span>` + body;
+}
+function renderLayers(m) {
+  const lim = 3, byG = {};
+  D.layers.forEach(([col, ru, en, g], k) => (byG[g] = byG[g] || []).push({ col, label: lang === 'ru' ? ru : en, z: m.z[k], stat: D.stats.find(s => s.layer === col) }));
+  $('layers').innerHTML = Object.entries(byG).map(([g, rows]) => `<div><div class="lg">${esc(D.groups[g][li()])}</div>` + rows.map(r => {
+    const tag = r.stat ? 'button' : 'div', attrs = r.stat ? ` type="button" data-stat="${r.stat.id}"` : '';
+    if (r.z === null) return `<${tag} class="lrow na"${attrs}><span>${esc(r.label)}</span><span class="track"></span><span class="val">—</span><span class="go">${r.stat ? '›' : ''}</span></${tag}>`;
+    const v = Math.max(-lim, Math.min(lim, r.z)), w = Math.abs(v) / lim * 50, left = v >= 0 ? 50 : 50 - w;
+    return `<${tag} class="lrow"${attrs}><span>${esc(r.label)}</span><span class="track"><span class="b" style="left:${left}%;width:${Math.max(w, .8)}%;background:${r.z >= 0 ? 'var(--tense)' : 'var(--calm)'}"></span></span><span class="val">${signed(r.z)}</span><span class="go">${r.stat ? '›' : ''}</span></${tag}>`;
+  }).join('') + '</div>').join('');
+}
+const sevColor = r => r >= 5 ? 'var(--high)' : r === 4 ? 'var(--watch)' : 'var(--faint)';
+function renderEvidence(m) {
+  $('turns').innerHTML = m.turns.map(([d, c, sp, lv, r, url]) => `<tr><td class="mono">${esc(dName(d))}</td><td class="who">${esc(sp || '—')}<br><span class="meta">${esc(t(c))} · ${esc((D.levels[lv] || ['', ''])[li()])}</span></td><td><span class="sev"><i style="background:${sevColor(r)}"></i>${esc(D.rungs[r][li()])}</span></td><td>${url ? `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(t('open'))}&nbsp;↗</a>` : ''}</td></tr>`).join('');
+  $('turns-empty').hidden = m.turns.length > 0; $('turns-t').hidden = !m.turns.length;
+  const acts = m.acts.map(d => D.actions[d]);
+  $('acts').innerHTML = acts.map(a => `<li><span class="when mono">${esc(dName(a.d))}</span><span class="arrow dir-${a.dir}">${a.dir === 'esc' ? '▲' : a.dir === 'coo' ? '▼' : '•'}</span><span>${esc(a[lang])} <a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(t('source'))}&nbsp;↗</a></span></li>`).join('');
+  $('acts-empty').hidden = acts.length > 0;
+}
+function renderLegend() {
+  const items = Object.entries(D.types).map(([k, v]) => `<span><i style="background:${typeVar(k)}"></i>${esc(v[li()])}</span>`);
+  items.push(`<span><i class="bar" style="background:var(--high)"></i>${esc(lang === 'ru' ? 'риск повышен' : 'elevated risk')}</span>`, `<span><i class="bar" style="background:var(--watch)"></i>${esc(t('risk').watch)}</span>`);
+  items.push(`<span style="color:var(--faint)">${esc(lang === 'ru' ? 'тонкая линия — по месяцам, толстая — среднее за 3 месяца' : 'thin line monthly, thick line 3-month average')}</span>`);
+  $('legend').innerHTML = items.join('');
+}
+
+/* ---------- statistics ---------- */
+function renderWatch() {
+  const q = query.trim().toLowerCase(), byG = {};
+  D.stats.forEach(s => { if (!q || s[lang][0].toLowerCase().includes(q) || s[lang][1].toLowerCase().includes(q)) (byG[s.group] = byG[s.group] || []).push(s); });
+  const ci = MS.indexOf(cur);
+  $('watch').innerHTML = Object.entries(byG).map(([g, list]) => `<div class="wg">${esc(D.stat_groups[g][li()])}</div>` + list.map(s => {
+    const last = lastVal(s, ci);
+    return `<button type="button" class="wi" data-stat="${s.id}" aria-current="${s.id === statId}"><span class="n">${esc(s[lang][0])}</span><span class="v">${esc(fmtStat(s, last ? last[0] : null, true))}</span></button>`;
+  }).join('')).join('') || `<p class="empty" style="padding:8px">${lang === 'ru' ? 'Ничего не найдено.' : 'No matches.'}</p>`;
+}
+const ofN = (s, i) => {
+  if (!s.n || i === null || s.n[i] === null || s.v[i] === null) return '';
+  const n = s.n[i];
+  return lang === 'ru' ? `выборка: ${n} выступл.` : `sample: ${n} statements`;
+};
+function lastVal(s, upto) { for (let i = upto; i >= 0; i--) if (s.v[i] !== null) return [s.v[i], i]; return null; }
+function renderDetail() {
+  const s = D.stats.find(x => x.id === statId) || D.stats[0], ru = lang === 'ru', ci = MS.indexOf(cur);
+  const src = D.sources[s.src], last = lastVal(s, ci), ago = last ? s.v[last[1] - 12] ?? null : null;
+  const ok = s.v.map((v, i) => [scale(s, v), i]).filter(p => p[0] !== null), xs = ok.map(p => p[0]);
+  const mn = ok.reduce((a, b) => (b[0] < a[0] ? b : a)), mx = ok.reduce((a, b) => (b[0] > a[0] ? b : a));
+  const mean = xs.reduce((a, b) => a + b, 0) / xs.length;
+  const raw = v => fmtStat(s, s.unit === 'pct' || s.unit === 'pp' ? v / 100 : s.unit === 'yoy' ? Math.log(1 + v / 100) : v);
+  const recent = [];
+  for (let i = ci; i >= 0 && recent.length < 12; i--) recent.push([MS[i], s.v[i], i]);
+  $('detail').innerHTML = `
+    <div class="top">
+      <div><span class="label">${esc(D.stat_groups[s.group][li()])}</span><h2 style="margin-top:6px">${esc(s[lang][0])}</h2>
+        ${s.layer ? `<span class="pill" style="margin-top:8px"><i style="background:var(--accent)"></i>${esc(t('inIndex'))}</span>` : ''}</div>
+      <div class="monthbar"><button type="button" class="star" id="fav-stat" aria-pressed="${isFav('stats', s.id)}">${starHtml(isFav('stats', s.id))}</button>
+      <div class="chips" id="srange">${t('ranges').map(([k, l]) => `<button type="button" data-r="${k}" aria-pressed="${k === statRange}">${esc(l)}</button>`).join('')}</div></div>
+    </div>
+    <div class="big num">${esc(fmtStat(s, last ? last[0] : null))}${last && s.n ? ` <small>${esc(ofN(s, last[1]))}</small>` : ''}</div>
+    <div class="cmp">${last ? esc(mName(MS[last[1]])) : ''}${last && last[1] !== ci ? esc(ru ? ' (последние данные)' : ' (latest data)') : ''}${ago !== null ? ' · ' + esc(t('yearAgo')) + ': ' + esc(fmtStat(s, ago)) : ''}</div>
+    <div class="chart-box" style="margin-top:14px"><svg class="chart" id="schart"></svg><div class="tip" id="stip" hidden></div></div>
+    <div class="facts">
+      <div><span class="label">${esc(t('min'))}</span><b class="num">${esc(raw(mn[0]))}</b><span class="note">${esc(mShort(MS[mn[1]]))}</span></div>
+      <div><span class="label">${esc(t('max'))}</span><b class="num">${esc(raw(mx[0]))}</b><span class="note">${esc(mShort(MS[mx[1]]))}</span></div>
+      <div><span class="label">${esc(t('mean'))}</span><b class="num">${esc(raw(mean))}</b><span class="note">2016–2026</span></div>
+      <div><span class="label">${esc(t('cover'))}</span><b class="num">${xs.length}</b><span class="note">${esc(ru ? `мес., ${mShort(MS[ok[0][1]])} — ${mShort(MS[ok[ok.length - 1][1]])}` : `months, ${mShort(MS[ok[0][1]])} – ${mShort(MS[ok[ok.length - 1][1]])}`)}</span></div>
+    </div>
+    <p class="desc">${esc(s[lang][1])}${s.n ? esc(ru ? ' Выборка за месяц небольшая (до 25 выступлений в РК и до 15 в Японии), поэтому значения скачут. На графике толстая линия — среднее за три месяца, тонкая — по месяцам.' : ' The monthly sample is small (up to 25 statements in Korea, 15 in Japan), so values jump. On the chart the thick line is a three-month average, the thin line monthly values.') : ''}</p>
+    <div class="srcline"><span>${esc(t('source'))}: <a href="${esc(src[2])}" target="_blank" rel="noopener">${esc(src[li()])}&nbsp;↗</a></span><button type="button" class="copy" id="copy">${esc(t('copy'))}</button></div>
+    <div class="recent"><span class="label">${esc(t('recent'))}</span>
+      <div class="tbl-wrap" style="margin-top:8px"><table><tbody>${recent.map(([m, v, i]) => `<tr><td class="mono">${esc(mName(m))}</td>${s.n ? `<td class="note">${esc(ofN(s, i))}</td>` : ''}<td class="num" style="text-align:right">${esc(fmtStat(s, v))}</td></tr>`).join('')}</tbody></table></div></div>`;
+  const s0 = rangeStart(statRange), vals = s.v.slice(s0).map(v => scale(s, v)), svg = $('schart'), tip = $('stip');
+  const tf = g => (s.unit === 'pct' || s.unit === 'pts' || s.unit === 'yoy') ? dec(g, Math.abs(g) < 10 && g % 1 ? 1 : 0) : dec(g, Math.abs(g) < 10 && g % 1 ? 1 : 0);
+  let main = vals, faint;
+  if (s.n) {  // small monthly samples: draw the sample-weighted 3-month average, monthly values faint
+    faint = vals.map(v => v ?? 0);
+    main = vals.map((_, k) => { let a = 0, w = 0; for (let j = Math.max(0, s0 + k - 2); j <= s0 + k; j++) if (s.v[j] !== null && s.n[j]) { a += s.v[j] * s.n[j]; w += s.n[j]; } return w ? 100 * a / w : null; });
+  }
+  lineChart(svg, main, { months: MS.slice(s0), faint, h: W => (W < 560 ? 220 : 280), zero: s.unit === 'yoy' || s.unit === 'pp', area: !(s.unit === 'yoy' || s.unit === 'pp'), tickFmt: tf, ml: 44,
+    extra: ({ x, y, mt, base }) => { const k = ci - s0; return k >= 0 ? `<line x1="${x(k)}" x2="${x(k)}" y1="${mt}" y2="${base}" stroke="var(--ink)" stroke-width="1" stroke-dasharray="2 3"/>` : ''; } });
+  svg.onmousemove = evt => { const i = hoverIndex(svg, evt), m = MS[s0 + i]; showTip(svg, tip, i, `<span class="mono">${esc(mName(m))}</span><br><b>${esc(fmtStat(s, s.v[s0 + i]))}</b>`); };
+  svg.onmouseleave = () => hideTip(svg, tip);
+  $('srange').onclick = e => { const b = e.target.closest('button'); if (b) { statRange = b.dataset.r; renderDetail(); } };
+  $('copy').onclick = () => {
+    const csv = `month,${s.id}\n` + MS.map((m, i) => `${m},${s.v[i] ?? ''}`).join('\n'), btn = $('copy');
+    const done = () => { btn.textContent = t('copied'); setTimeout(() => { btn.textContent = t('copy'); }, 1600); };
+    const fallback = () => { const ta = document.createElement('textarea'); ta.value = csv; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); } catch (e) {} ta.remove(); done(); };
+    try { navigator.clipboard.writeText(csv).then(done, fallback); } catch (e) { fallback(); }
+  };
+}
+
+/* ---------- favourites (kept in this browser only) ---------- */
+let fav = { months: [], stats: [] };
+try { const s = JSON.parse(localStorage.getItem('dri-fav') || 'null'); if (s && Array.isArray(s.months) && Array.isArray(s.stats)) fav = { months: s.months.filter(m => byM[m]), stats: s.stats.filter(id => D.stats.some(x => x.id === id)) }; } catch (e) {}
+const saveFav = () => { try { localStorage.setItem('dri-fav', JSON.stringify(fav)); } catch (e) {} renderFavLink(); };
+const isFav = (kind, id) => fav[kind].includes(id);
+function toggleFav(kind, id) { fav[kind] = isFav(kind, id) ? fav[kind].filter(x => x !== id) : [...fav[kind], id]; saveFav(); }
+function starHtml(on) { const ru = lang === 'ru'; return `<span class="s">${on ? '★' : '☆'}</span>${esc(on ? (ru ? 'В избранном' : 'Saved') : (ru ? 'В избранное' : 'Save'))}`; }
+function renderFavLink() {
+  const n = fav.months.length + fav.stats.length;
+  $('favlink').innerHTML = `★ <span>${esc(lang === 'ru' ? 'Избранное' : 'Saved')}</span>${n ? `<b>${n}</b>` : ''}`;
+  $('favlink').setAttribute('aria-current', view === 'saved' ? 'page' : 'false');
+}
+function renderSaved() {
+  const ru = lang === 'ru';
+  const ms = fav.months.slice().sort().reverse(), ss = fav.stats.map(id => D.stats.find(s => s.id === id));
+  const ci = MS.length - 1;
+  const monthRows = ms.map(m => { const x = byM[m]; return `<li><a href="#${m}"><b>${esc(mName(m))}</b><div class="meta">${esc(ru ? `индекс ${Math.round(x.idx)} из 100 · риск нового обострения: ${t('risk')[x.risk]}` : `index ${Math.round(x.idx)} of 100 · risk of a new flare-up: ${t('risk')[x.risk]}`)}${D.episodes[m] ? esc(ru ? ' · месяц обострения' : ' · flare-up month') : ''}</div></a><span class="pill"><i style="background:var(--${x.risk})"></i>${esc(t('risk')[x.risk])}</span><button type="button" class="rm" data-rm="months" data-id="${m}" aria-label="${ru ? 'Убрать' : 'Remove'}">×</button></li>`; }).join('');
+  const statRows = ss.map(s => { const l = lastVal(s, ci); return `<li><a href="#data-${s.id}"><b>${esc(s[lang][0])}</b><div class="meta">${esc(D.stat_groups[s.group][li()])}${l ? ' · ' + esc(mName(MS[l[1]])) : ''}</div></a><span class="num">${esc(fmtStat(s, l ? l[0] : null))}</span><button type="button" class="rm" data-rm="stats" data-id="${s.id}" aria-label="${ru ? 'Убрать' : 'Remove'}">×</button></li>`; }).join('');
+  const empty = (txt) => `<p class="empty" style="margin-top:8px">${esc(txt)}</p>`;
+  $('view-saved').innerHTML = `
+    <div class="card"><h2 style="font-size:22px">${ru ? 'Избранное' : 'Saved'}</h2>
+      <p class="sub">${ru ? 'Месяцы и показатели, которые вы отметили звёздочкой. Список хранится только в этом браузере; после появления личного кабинета его можно будет перенести.' : 'Months and statistics you starred. The list is kept in this browser only; it can be moved to a personal account once accounts launch.'}</p></div>
+    <div class="grid two">
+      <div class="card"><h2>${ru ? 'Месяцы' : 'Months'} <span class="meta" style="color:var(--muted);font-weight:400">${ms.length || ''}</span></h2>
+        ${ms.length ? `<ul class="saved-list">${monthRows}</ul>` : empty(ru ? 'Пока пусто. В мониторе нажмите «☆ В избранное» рядом с выбором месяца.' : 'Nothing yet. In the monitor, press "☆ Save" next to the month picker.')}</div>
+      <div class="card"><h2>${ru ? 'Показатели' : 'Statistics'} <span class="meta" style="color:var(--muted);font-weight:400">${ss.length || ''}</span></h2>
+        ${ss.length ? `<ul class="saved-list">${statRows}</ul>` : empty(ru ? 'Пока пусто. На вкладке «Показатели» нажмите «☆ В избранное» у нужного ряда.' : 'Nothing yet. On the Statistics tab, press "☆ Save" on a series.')}</div>
+    </div>`;
+}
+document.addEventListener('click', e => {
+  const rm = e.target.closest('button[data-rm]');
+  if (rm) { toggleFav(rm.dataset.rm, rm.dataset.id); renderSaved(); return; }
+  const st = e.target.closest('#fav-stat');
+  if (st) { toggleFav('stats', statId); st.setAttribute('aria-pressed', String(isFav('stats', statId))); st.innerHTML = starHtml(isFav('stats', statId)); }
+});
+
+/* ---------- start page ---------- */
+function renderHome() {
+  const ru = lang === 'ru', m = byM[LATEST], c = D.check;
+  const next = m.trig.slice().sort((a, b) => a[0].localeCompare(b[0])).find(x => x[1] === 'court' || x[1] === 'heritage');
+  const nStats = D.stats.length, nEp = Object.keys(D.episodes).length;
+  $('view-home').innerHTML = ru ? `
+    <div class="home-hero">
+      <div class="card intro">
+        <span class="label">Diplomatic Risk Index · Республика Корея — Япония</span>
+        <h1>Ранний сигнал <em>дипломатических обострений</em> между Кореей и Японией</h1>
+        <p class="lead">Монитор каждый месяц оценивает, насколько напряжены отношения двух стран, и предупреждает о риске нового обострения на три месяца вперёд. Основа — новости, заявления парламентов, экономика и календарь судебных решений по делам колониального периода.</p>
+        <div class="cta"><a class="btn-primary" href="#monitor">Открыть монитор →</a><a class="btn-ghost" href="#method">Как это работает</a></div>
+      </div>
+      <div class="card snap">
+        <span class="label">Сейчас · данные за ${esc(mName(LATEST))}</span>
+        <div class="lvl" style="color:var(--${m.risk})">Риск: ${esc(t('risk')[m.risk])}</div>
+        <dl>
+          <dt>Прогноз на</dt><dd>${esc(mName(mAdd(LATEST, 1)))} — ${esc(mName(mAdd(LATEST, 3)))}</dd>
+          <dt>Индекс</dt><dd>${Math.round(m.idx)} из 100</dd>
+          <dt>Ближайший повод</dt><dd>${next ? esc(D.triggers[next[2]][0] + ', ' + mName(next[0])) : 'острых поводов нет'}</dd>
+        </dl>
+        <a class="btn-ghost" href="#${LATEST}" style="align-self:flex-start;margin-top:auto">Подробнее в мониторе</a>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="card step"><div class="n">1</div><h3>Собираем сигналы</h3><p>${nStats} показателя: события в мировых новостях (GDELT), стенограммы парламентов обеих стран, торговля и рынки (МВФ, ООН, ОЭСР), реестр решений корейских судов.</p></div>
+      <div class="card step"><div class="n">2</div><h3>Оцениваем состояние</h3><p>Индекс напряжённости 0–100 показывает, насколько напряжён месяц по сравнению со всеми месяцами 2016–2026 гг. и из чего складывается это напряжение.</p></div>
+      <div class="card step"><div class="n">3</div><h3>Смотрим вперёд</h3><p>Риск нового обострения на три месяца выставляется по поводам, известным заранее. Самый сильный — решения Верховного суда РК по делам о принудительном труде.</p></div>
+    </div>
+    <div class="card"><div class="facts4">
+      <div><b>${months.length}</b><span>месяцев наблюдений, с 2015 г.</span></div>
+      <div><b>${nEp}</b><span>обострений с причинами по оценке эксперта-востоковеда</span></div>
+      <div><b>${pct(c.high)}</b><span>месяцев с риском «повышен» привели к обострению (в среднем ${pct(c.base)})</span></div>
+      <div><b>${nStats}</b><span>показателей с источниками и открытыми данными</span></div>
+    </div></div>
+    <div class="go4">
+      <a class="card" href="#monitor"><h3>Монитор</h3><p>Выберите любой месяц с 2015 г.: индекс, риск, поводы впереди и чем всё закончилось.</p><span class="arr">Открыть →</span></a>
+      <a class="card" href="#data"><h3>Показатели</h3><p>Каждый ряд целиком: график, описание, источник, копирование в CSV.</p><span class="arr">Открыть →</span></a>
+      <a class="card" href="#economy"><h3>Экономика</h3><p>Торговля по месяцам, взаимная зависимость отраслей и критических товаров.</p><span class="arr">Открыть →</span></a>
+      <a class="card" href="#method"><h3>Методология</h3><p>Как считаются индекс и риск, насколько им можно доверять, открытые данные.</p><span class="arr">Открыть →</span></a>
+    </div>
+    <p class="note" style="margin:4px 2px 0">Исследовательский прототип. Оценка риска — ориентир, а не вероятность: около половины обострений вызваны поводами, которые нельзя знать заранее.</p>` : `
+    <div class="home-hero">
+      <div class="card intro">
+        <span class="label">Diplomatic Risk Index · Republic of Korea — Japan</span>
+        <h1>An early signal of <em>diplomatic flare-ups</em> between Korea and Japan</h1>
+        <p class="lead">Every month the monitor gauges how tense relations are and warns of the risk of a new flare-up three months ahead. It draws on news, parliamentary statements, the economy and the calendar of court rulings on colonial-era cases.</p>
+        <div class="cta"><a class="btn-primary" href="#monitor">Open the monitor →</a><a class="btn-ghost" href="#method">How it works</a></div>
+      </div>
+      <div class="card snap">
+        <span class="label">Now · data to ${esc(mName(LATEST))}</span>
+        <div class="lvl" style="color:var(--${m.risk})">Risk: ${esc(t('risk')[m.risk])}</div>
+        <dl>
+          <dt>Outlook for</dt><dd>${esc(mName(mAdd(LATEST, 1)))} – ${esc(mName(mAdd(LATEST, 3)))}</dd>
+          <dt>Index</dt><dd>${Math.round(m.idx)} of 100</dd>
+          <dt>Next trigger</dt><dd>${next ? esc(D.triggers[next[2]][1] + ', ' + mName(next[0])) : 'no sharp triggers'}</dd>
+        </dl>
+        <a class="btn-ghost" href="#${LATEST}" style="align-self:flex-start;margin-top:auto">Details in the monitor</a>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="card step"><div class="n">1</div><h3>Collect signals</h3><p>${nStats} statistics: events in world news (GDELT), records of both parliaments, trade and markets (IMF, UN, OECD), and a docket of Korean court rulings.</p></div>
+      <div class="card step"><div class="n">2</div><h3>Gauge the state</h3><p>The 0–100 tension index shows how tense a month is compared with every month of 2016–2026, and what drives that tension.</p></div>
+      <div class="card step"><div class="n">3</div><h3>Look ahead</h3><p>The three-month risk of a new flare-up is set by triggers known in advance. The strongest is a ruling by Korea's Supreme Court on forced labour.</p></div>
+    </div>
+    <div class="card"><div class="facts4">
+      <div><b>${months.length}</b><span>months observed, since 2015</span></div>
+      <div><b>${nEp}</b><span>flare-ups with causes assessed by an area-studies expert</span></div>
+      <div><b>${pct(c.high)}</b><span>of 'elevated' months led to a flare-up (average ${pct(c.base)})</span></div>
+      <div><b>${nStats}</b><span>statistics with sources and open data</span></div>
+    </div></div>
+    <div class="go4">
+      <a class="card" href="#monitor"><h3>Monitor</h3><p>Pick any month since 2015: index, risk, triggers ahead and how it turned out.</p><span class="arr">Open →</span></a>
+      <a class="card" href="#data"><h3>Statistics</h3><p>Every series in full: chart, description, source, CSV copy.</p><span class="arr">Open →</span></a>
+      <a class="card" href="#economy"><h3>Economy</h3><p>Monthly trade and the mutual dependence of industries and critical goods.</p><span class="arr">Open →</span></a>
+      <a class="card" href="#method"><h3>Methodology</h3><p>How the index and risk are built, how far to trust them, open data.</p><span class="arr">Open →</span></a>
+    </div>
+    <p class="note" style="margin:4px 2px 0">Research prototype. The risk is a guide, not a probability: about half of flare-ups come from triggers no one can know in advance.</p>`;
+}
+
+/* ---------- economy ---------- */
+const KR = 'var(--t-courts)', JP = 'var(--t-heritage)';
+let eMetric = 'flows', eRange = 'all', goodsCode = '854232';
+const usd = v => v === null || v === undefined ? '—' : (lang === 'ru' ? `${dec(v, 1)} млрд $` : `$${dec(v, 1)} bn`);
+const share = v => v === null || v === undefined ? '—' : dec(100 * v, 100 * v < 10 ? 1 : 0) + '%';
+const lastIdx = arr => { for (let i = arr.length - 1; i >= 0; i--) if (arr[i] !== null && arr[i] !== undefined) return i; return -1; };
+const pName = p => mName(p);
+function renderEconomy() {
+  const E = D.economy, tr = E.trade, P = tr.periods, ru = lang === 'ru';
+  const k = lastIdx(tr.KOR.imports_usd), j = lastIdx(tr.JPN.import_share);
+  const turn = i => tr.KOR.exports_usd[i] + tr.KOR.imports_usd[i];
+  const yoy = k >= 12 ? turn(k) / turn(k - 12) - 1 : null;
+  const kp = [
+    [ru ? `Оборот торговли, ${pName(P[k])}` : `Trade turnover, ${pName(P[k])}`, usd(turn(k)), yoy === null ? '' : (ru ? `${signed(100 * yoy, 0)}% к ${t('monthsShort')[+P[k].slice(5) - 1]} ${+P[k].slice(0, 4) - 1}` : `${signed(100 * yoy, 0)}% y/y`)],
+    [ru ? 'Сальдо Кореи с Японией' : "Korea's balance with Japan", usd(tr.KOR.balance_usd[k]), tr.KOR.balance_usd[k] < 0 ? (ru ? 'дефицит Кореи' : 'Korean deficit') : (ru ? 'профицит Кореи' : 'Korean surplus')],
+    [ru ? 'Доля Японии в импорте Кореи' : "Japan's share of Korea's imports", share(tr.KOR.import_share[k]), (ru ? 'год назад: ' : 'a year earlier: ') + share(tr.KOR.import_share[k - 12])],
+    [ru ? 'Доля Кореи в импорте Японии' : "Korea's share of Japan's imports", share(tr.JPN.import_share[j]), (ru ? `${pName(P[j])}, год назад: ` : `${pName(P[j])}, a year earlier: `) + share(tr.JPN.import_share[j - 12])],
+  ];
+  $('e-kpis').innerHTML = kp.map(([l, v, d]) => `<div class="card"><span class="label">${esc(l)}</span><div class="big num">${esc(v)}</div><div class="delta">${esc(d)}</div></div>`).join('');
+  const metrics = ru ? [['flows', 'Экспорт и импорт'], ['balance', 'Сальдо'], ['shares', 'Доли в импорте']] : [['flows', 'Exports and imports'], ['balance', 'Balance'], ['shares', 'Import shares']];
+  $('e-metric').innerHTML = metrics.map(([k2, l]) => `<button type="button" data-m="${k2}" aria-pressed="${k2 === eMetric}">${esc(l)}</button>`).join('');
+  $('e-range').innerHTML = t('ranges').map(([k2, l]) => `<button type="button" data-r="${k2}" aria-pressed="${k2 === eRange}">${esc(l)}</button>`).join('');
+  $('e-trade-sub').textContent = ru ? 'По данным Кореи (МВФ IMTS; последние месяцы — таможенная служба Кореи), доли — по данным каждой страны. Текущие цены.' : "Korean data (IMF IMTS; latest months from Korea Customs); shares as reported by each country. Current prices.";
+  const s0 = eRange === 'all' ? 0 : Math.max(0, P.length - 12 * +eRange), sl = a => a.slice(s0);
+  let lines, fmtV, zero = false;
+  if (eMetric === 'flows') { lines = [{ vals: sl(tr.KOR.exports_usd), color: KR, label: ru ? 'Экспорт Кореи в Японию' : "Korea's exports to Japan" }, { vals: sl(tr.KOR.imports_usd), color: JP, label: ru ? 'Импорт Кореи из Японии' : "Korea's imports from Japan" }]; fmtV = usd; }
+  else if (eMetric === 'balance') { lines = [{ vals: sl(tr.KOR.balance_usd), color: 'var(--ink)', label: ru ? 'Сальдо Кореи (минус — дефицит)' : "Korea's balance (negative = deficit)" }]; fmtV = usd; zero = true; }
+  else { lines = [{ vals: sl(tr.KOR.import_share).map(v => v === null ? null : 100 * v), color: JP, label: ru ? 'Доля Японии в импорте Кореи' : "Japan's share of Korea's imports" }, { vals: sl(tr.JPN.import_share).map(v => v === null ? null : 100 * v), color: KR, label: ru ? 'Доля Кореи в импорте Японии' : "Korea's share of Japan's imports" }]; fmtV = v => v === null ? '—' : dec(v, 1) + '%'; }
+  const svg = $('echart'), tip = $('etip'), Ps = P.slice(s0);
+  lineChart(svg, Ps.map(() => null), { months: Ps, lines, zero, h: W => (W < 560 ? 220 : 280), ml: 40, tickFmt: g => dec(g, Math.abs(g) < 10 && g % 1 ? 1 : 0) });
+  $('e-legend').innerHTML = lines.map(l => `<span><i style="background:${l.color}"></i>${esc(l.label)}</span>`).join('') + `<span style="color:var(--faint)">${esc(eMetric === 'shares' ? '%' : (ru ? 'млрд долларов США' : 'US$ bn'))}</span>`;
+  svg.onmousemove = evt => { const i = hoverIndex(svg, evt); showTip(svg, tip, i, `<span class="mono">${esc(pName(Ps[i]))}</span>` + lines.map(l => `<br><span style="color:${l.color}">●</span> ${esc(eMetric === 'shares' ? fmtV(l.vals[i]) : usd(l.vals[i]))}`).join('')); };
+  svg.onmouseleave = () => hideTip(svg, tip);
+  // industries
+  const codes = [...new Set(E.sectors.map(s => s.code))];
+  const rowOf = (c, rep) => E.sectors.find(s => s.code === c && s.rep === rep);
+  const cell = (s, colour) => {
+    if (!s) return '<td>—</td><td class="bar">—</td><td>—</td>';
+    const n = s.share.length - 1, sh = s.share[n], ch = s.share[0] !== null && sh !== null ? 100 * (sh - s.share[0]) : null;
+    return `<td class="num">${esc(usd(s.usd[n]))}</td><td class="bar"><span class="sbar"><span class="t"><span class="f" style="width:${Math.min(100, 100 * sh / .5)}%;background:${colour}"></span></span><b>${esc(share(sh))}</b></span></td><td class="num ${ch > 0 ? 'chg-up' : 'chg-dn'}">${ch === null ? '—' : esc(signed(ch, 1) + t('pp'))}</td>`;
+  };
+  const yr = (rowOf(codes[0], 'KOR') || rowOf(codes[0], 'JPN')).years.slice(-1)[0];
+  const order = codes.slice().sort((a, b) => ((rowOf(b, 'KOR') || {}).share?.slice(-1)[0] || 0) - ((rowOf(a, 'KOR') || {}).share?.slice(-1)[0] || 0));
+  $('e-sectors').innerHTML = `<thead><tr><th>${ru ? 'Отрасль' : 'Industry'}</th><th>${ru ? `Корея: импорт из Японии, ${yr}` : `Korea: imports from Japan, ${yr}`}</th><th>${ru ? 'доля Японии' : "Japan's share"}</th><th>${ru ? 'изм.' : 'change'}</th><th>${ru ? `Япония: импорт из Кореи, ${yr}` : `Japan: imports from Korea, ${yr}`}</th><th>${ru ? 'доля Кореи' : "Korea's share"}</th><th>${ru ? 'изм.' : 'change'}</th></tr></thead><tbody>` +
+    order.map(c => { const a = rowOf(c, 'KOR'), b = rowOf(c, 'JPN'), lab = (a || b)[lang]; return `<tr><td>${esc(lab)}</td>${cell(a, JP)}${cell(b, KR)}</tr>`; }).join('') + '</tbody>';
+  // critical goods
+  const G = E.goods, item = G.items.find(g => g.code === goodsCode) || G.items[0];
+  $('e-goods').innerHTML = G.items.map(g => `<button type="button" data-g="${g.code}" aria-pressed="${g.code === item.code}">${esc(g[lang])}</button>`).join('');
+  const gl = [{ vals: item.KOR.map(x => x[0] === null ? null : 100 * x[0]), color: JP, label: ru ? 'Доля Японии в импорте Кореи' : "Japan's share of Korea's imports", usd: item.KOR.map(x => x[1]) },
+              { vals: item.JPN.map(x => x[0] === null ? null : 100 * x[0]), color: KR, label: ru ? 'Доля Кореи в импорте Японии' : "Korea's share of Japan's imports", usd: item.JPN.map(x => x[1]) }];
+  const gsvg = $('gchart'), gtip = $('gtip');
+  lineChart(gsvg, G.periods.map(() => null), { months: G.periods, lines: gl, lo: 0, h: W => (W < 560 ? 200 : 250), ml: 40, tickFmt: g => dec(g, 0) });
+  $('g-legend').innerHTML = gl.map(l => `<span><i style="background:${l.color}"></i>${esc(l.label)}</span>`).join('') + `<span style="color:var(--faint)">%, HS ${item.code}</span>`;
+  gsvg.onmousemove = evt => { const i = hoverIndex(gsvg, evt); showTip(gsvg, gtip, i, `<span class="mono">${esc(pName(G.periods[i]))}</span>` + gl.map(l => `<br><span style="color:${l.color}">●</span> ${l.vals[i] === null ? '—' : dec(l.vals[i], 1) + '%'}${l.usd[i] !== null ? ` · ${dec(l.usd[i], 0)} ${ru ? 'млн $' : 'US$ m'}` : ''}`).join('')); };
+  gsvg.onmouseleave = () => hideTip(gsvg, gtip);
+  renderFiles($('e-files'));
+}
+const FILE_DESC = {
+  'dri_monthly.csv': ['Индекс, риск и все 28 показателей по месяцам', 'Index, risk and all 28 statistics by month'],
+  'trade_monthly.csv': ['Торговля Корея–Япония по месяцам: экспорт, импорт, сальдо, доли', 'Korea–Japan trade by month: exports, imports, balance, shares'],
+  'trade_industries.csv': ['Импорт из партнёра по отраслям и доля партнёра, по годам (ОЭСР)', 'Imports from the partner by industry and partner share, annual (OECD)'],
+  'trade_critical_goods.csv': ['Критические товары HS6: доля партнёра и объём импорта по месяцам', 'Critical HS6 goods: partner share and import value by month'],
+  'court_rulings.csv': ['Реестр решений корейских судов 2018–2026 со ссылками на источники', 'Docket of Korean court rulings 2018–2026 with sources'],
+};
+function renderFiles(el) {
+  const ru = lang === 'ru';
+  el.innerHTML = `<h2>${ru ? 'Открытые данные' : 'Open data'}</h2><p class="sub">${ru ? 'Все ряды сайта в CSV (UTF-8), можно открыть в Excel, R или Python. Лицензии источников — на их сайтах.' : 'Every series on the site as CSV (UTF-8) for Excel, R or Python. Source licences apply.'}</p><ul class="files">` +
+    D.files.map(f => `<li><span><b>${esc(f)}</b><span class="note">${esc((FILE_DESC[f] || ['', ''])[li()])}</span></span><a href="data/${esc(f)}" target="_blank" rel="noopener">${ru ? 'Открыть' : 'Open'}&nbsp;↗</a><button type="button" class="copy" data-file="${esc(f)}">${ru ? 'Скопировать' : 'Copy'}</button></li>`).join('') + '</ul>';
+}
+document.addEventListener('click', e => {
+  const b = e.target.closest('button[data-file]'); if (!b) return;
+  const done = () => { b.textContent = t('copied'); setTimeout(() => { b.textContent = lang === 'ru' ? 'Скопировать' : 'Copy'; }, 1600); };
+  fetch('data/' + b.dataset.file).then(r => r.text()).then(txt => navigator.clipboard.writeText(txt)).then(done, () => { b.textContent = lang === 'ru' ? 'Не удалось' : 'Failed'; });
+});
+
+/* ---------- method ---------- */
+function renderMethod() {
+  const c = D.check, g = D.courts.groups, ru = lang === 'ru';
+  $('m-text').innerHTML = ru ? `
+    <h2>Как устроен монитор</h2>
+    <p>Монитор отвечает на два вопроса: насколько напряжены отношения Республики Корея и Японии сейчас и есть ли впереди повод для обострения в ближайшие три месяца.</p>
+    <h3>Индекс напряжённости</h3>
+    <p>Сводит десять показателей: конфликтность событий Корея–Япония в мировых новостях (GDELT), жёсткость заявлений в парламентах обеих стран, торговый баланс, соперничество на рынке чипов, цикл корейской памяти, враждебные действия Китая и КНДР. Каждый показатель переводится в отклонение от своей нормы; индекс — место месяца среди всех месяцев 2016–2026 гг. (100 — самый напряжённый).</p>
+    <p>Индекс описывает состояние, но <b>сам обострений не предсказывает</b>: при индексе 70 и выше обострение в следующие три месяца было в ${pct(c.idx70)} случаев при средней частоте ${pct(c.base)}. Ни один из показателей не опережал обострения надёжно.</p>
+    <h3>Риск на три месяца</h3>
+    <p>Выставляется по поводам, известным заранее. <b>«Повышен»</b> — в ближайшие три месяца решение Верховного суда РК по делам о принудительном труде или «женщинах для утешения»: после таких месяцев обострение было в ${pct(c.high)} случаев против ${pct(c.base)} в среднем; в месяц решения конфликтность в новостях в среднем на ${dec(g[1].mean_gap_sd)} стандартного отклонения выше нормы. <b>«Внимание»</b> — решения нижестоящих судов в пользу истцов и даты наследия (ЮНЕСКО, рудник Садо): их стоит отслеживать, но обострений чаще обычного они не дают (${pct(c.watch)}). Отказы истцам не вызвали ни одного обострения (0 из 8 месяцев). Годовщины и выборы проверены и риска не повышают.</p>
+    <p class="note">Правило выбрано сравнением 11 вариантов (scripts/court_rules_v2.py) на тех же 14 эпизодах; разница для Верховного суда устойчива в 2016–2021 и 2022–2026 гг. (75% и 73%), но эпизодов мало. Дата оглашения решения Верховного суда обычно становится известна за несколько недель, а сами дела в очереди — заранее.</p>
+    <h3>Обострения</h3>
+    <p>${c.episodes} месяцев 2017–2026 гг., когда доля конфликтных событий в GDELT заметно превышала норму предыдущего года. Причину каждого обострения определил эксперт-востоковед: суды и история — 7, наследие и символы — 3, экономика и рынки — 2, внутренняя политика — 1, здравоохранение — 1. Около половины обострений вызваны не судами, поэтому оценка — ориентир, а не вероятность.</p>
+    <h3>Заявления в парламентах</h3>
+    <p>Выступления о соседней стране размечены по шкале DRI: протест, требование, предупреждение, угроза конкретной мерой, объявление меры. Полные тексты и разметка — внутренние материалы проекта; на сайте — только ссылки на официальные стенограммы.</p>
+    <h3>Ограничения</h3>
+    <p>Торговая статистика выходит с задержкой в 1–2 месяца, стенограммы — с задержкой в несколько недель, поэтому последние месяцы по этим показателям неполные. Реестр судов собран по сообщениям СМИ и может не включать решения нижних судов.</p>` : `
+    <h2>How the monitor works</h2>
+    <p>The monitor answers two questions: how tense relations between the Republic of Korea and Japan are now, and whether a trigger for a flare-up lies ahead in the next three months.</p>
+    <h3>Tension index</h3>
+    <p>It combines ten indicators: the conflict share of Korea–Japan events in world news (GDELT), the severity of statements in both parliaments, the trade balance, chip-market rivalry, the Korean memory-chip cycle, and hostile actions by China and North Korea. Each is expressed as a deviation from its norm; the index ranks the month among all months of 2016–2026 (100 is the tensest).</p>
+    <p>The index describes the current state but <b>does not predict flare-ups on its own</b>: with an index of 70 or more, a flare-up followed within three months in ${pct(c.idx70)} of cases, against a base rate of ${pct(c.base)}. None of the indicators reliably led flare-ups.</p>
+    <h3>Three-month risk</h3>
+    <p>Set by triggers known in advance. <b>'Elevated'</b> means a ruling by Korea's Supreme Court on forced labour or 'comfort women' is due within three months: such months were followed by a flare-up in ${pct(c.high)} of cases against ${pct(c.base)} on average, and in the month of the ruling conflict in the news runs ${dec(g[1].mean_gap_sd)} standard deviations above normal. <b>'Watch'</b> marks lower-court rulings for plaintiffs and heritage dates (UNESCO, the Sado mine): worth following, but not followed by flare-ups more often than usual (${pct(c.watch)}). Rulings against plaintiffs were followed by no flare-up at all (0 of 8 months). Anniversaries and elections were tested and do not raise the risk.</p>
+    <p class="note">The rule was chosen by comparing 11 variants (scripts/court_rules_v2.py) on the same 14 episodes; the Supreme Court effect holds in both 2016–2021 and 2022–2026 (75% and 73%), but episodes are few. The date of a Supreme Court ruling is usually announced a few weeks ahead; pending cases are known well in advance.</p>
+    <h3>Flare-ups</h3>
+    <p>The ${c.episodes} months of 2017–2026 when the GDELT conflict share clearly exceeded the previous year's norm. An area-studies expert identified each cause: courts and history 7, heritage and symbols 3, economy and markets 2, domestic politics 1, public health 1. About half were not driven by courts, so the outlook is a guide, not a probability.</p>
+    <h3>Parliamentary statements</h3>
+    <p>Statements about the other country are coded on the DRI scale: protest, demand, warning, threat of a specific measure, measure announced. Full texts and annotations are internal; the site links only to official records.</p>
+    <h3>Limitations</h3>
+    <p>Trade statistics arrive one to two months late and parliamentary records several weeks late, so the latest months are incomplete for these indicators. The court docket is compiled from press reports and may miss lower-court rulings.</p>`;
+  $('rates').innerHTML = [['high', c.high], ['watch', c.watch], ['normal', c.normal]].map(([k, v]) => `<div class="rate"><span>${esc(t('risk')[k])}</span><span class="track"><span class="fill" style="width:${100 * v}%;background:var(--${k})"></span><span class="base" style="left:${100 * c.base}%"></span></span><span class="num mono">${pct(v)}</span></div>`).join('');
+  $('rates-note').textContent = ru ? `Доля месяцев, после которых в следующие три месяца было обострение; ${c.months} месяцев 2016–2026 гг. Чёрная черта — в среднем (${pct(c.base)}).` : `Share of months followed by a flare-up within three months; ${c.months} months of 2016–2026. Black tick: average (${pct(c.base)}).`;
+  $('courts').innerHTML = g.map(r => `<tr><td>${esc(r[lang])}</td><td class="mono">${r.n}</td><td class="mono">${pct(r.share)}</td></tr>`).join('');
+  $('courts-note').textContent = ru ? `Обострение в том же или следующем месяце; в обычный месяц — ${pct(D.courts.base)}. Реестр: ${g[0].n} решений 2018–2026 гг. со всеми исходами.` : `Flare-up in the same or next month; ${pct(D.courts.base)} of ordinary months. Docket: ${g[0].n} rulings, 2018–2026, all outcomes.`;
+  renderFiles($('m-files'));
+  $('sources').innerHTML = Object.values(D.sources).map(s => `<li><a href="${esc(s[2])}" target="_blank" rel="noopener">${esc(s[li()])}&nbsp;↗</a></li>`).join('');
+}
+
+/* ---------- shell ---------- */
+function applyStatic() {
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-t]').forEach(el => { const v = t(el.dataset.t); if (typeof v === 'string') el.textContent = v; });
+  document.querySelectorAll('.lang button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+  $('live').textContent = t('live')(mName(LATEST));
+  $('q').placeholder = t('searchPh');
+  $('month').innerHTML = MS.slice().reverse().map(m => `<option value="${m}">${esc(mName(m))}</option>`).join('');
+  $('range').innerHTML = t('ranges').map(([k, l]) => `<button type="button" data-r="${k}" aria-pressed="${k === range}">${esc(l)}</button>`).join('');
+  $('foot').innerHTML = lang === 'ru' ? 'Исследовательский прототип, 2026. Diplomatic Risk Index: Республика Корея — Япония; другие пары стран — в разработке.' : 'Research prototype, 2026. Diplomatic Risk Index: Republic of Korea — Japan; more country pairs are in development.';
+  renderLegend(); renderMethod();
+}
+function render() {
+  ['home', 'monitor', 'data', 'economy', 'method', 'saved'].forEach(v => { $('view-' + v).hidden = v !== view; });
+  document.querySelectorAll('.tabs a').forEach(a => a.setAttribute('aria-current', a.dataset.view === view ? 'page' : 'false'));
+  renderFavLink();
+  if (view === 'home') renderHome();
+  if (view === 'saved') renderSaved();
+  if (view === 'monitor') renderMonitor();
+  if (view === 'data') { renderWatch(); renderDetail(); }
+  if (view === 'economy') renderEconomy();
+  const h = view === 'monitor' ? cur : view === 'data' ? 'data-' + statId : view;
+  if (location.hash.slice(1) !== h) { try { history.replaceState(null, '', '#' + h); } catch (e) {} }
+}
+function route() {
+  const h = location.hash.slice(1), before = view;
+  setTimeout(() => { if (view !== before) window.scrollTo(0, 0); }, 0);
+  if (byM[h]) { view = 'monitor'; cur = h; }
+  else if (h === 'monitor') view = 'monitor';
+  else if (h === '' || h === 'home') view = 'home';
+  else if (h === 'method') view = 'method';
+  else if (h === 'economy') view = 'economy';
+  else if (h === 'saved') view = 'saved';
+  else if (h === 'data') view = 'data';
+  else if (h.startsWith('data-') && D.stats.some(s => s.id === h.slice(5))) { view = 'data'; statId = h.slice(5); }
+  render();
+}
+function setLang(l) { lang = l; try { localStorage.setItem('dri-lang', l); } catch (e) {} applyStatic(); render(); }
+document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+$('month').addEventListener('change', e => { cur = e.target.value; render(); });
+$('fav-month').addEventListener('click', () => { toggleFav('months', cur); $('fav-month').setAttribute('aria-pressed', String(isFav('months', cur))); $('fav-month').innerHTML = starHtml(isFav('months', cur)); });
+$('prev').addEventListener('click', () => { const i = MS.indexOf(cur); if (i > 0) { cur = MS[i - 1]; render(); } });
+$('next').addEventListener('click', () => { const i = MS.indexOf(cur); if (i < MS.length - 1) { cur = MS[i + 1]; render(); } });
+$('range').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; range = b.dataset.r; $('range').querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', String(x === b))); renderMainChart(); });
+$('layers').addEventListener('click', e => { const b = e.target.closest('[data-stat]'); if (b) { statId = b.dataset.stat; view = 'data'; render(); window.scrollTo(0, 0); } });
+$('watch').addEventListener('click', e => { const b = e.target.closest('[data-stat]'); if (b) { statId = b.dataset.stat; render(); } });
+$('q').addEventListener('input', e => { query = e.target.value; renderWatch(); });
+$('e-metric').addEventListener('click', e => { const b = e.target.closest('button'); if (b) { eMetric = b.dataset.m; renderEconomy(); } });
+$('e-range').addEventListener('click', e => { const b = e.target.closest('button'); if (b) { eRange = b.dataset.r; renderEconomy(); } });
+$('e-goods').addEventListener('click', e => { const b = e.target.closest('button'); if (b) { goodsCode = b.dataset.g; renderEconomy(); } });
+const chart = $('chart'), tip = $('tip');
+chart.addEventListener('mousemove', evt => {
+  const i = hoverIndex(chart, evt), m = chart._sub[i], e = D.episodes[m.m];
+  showTip(chart, tip, i, `<span class="mono">${esc(mName(m.m))}</span><br>${esc(t('kIndex'))}: <b>${Math.round(m.idx)}</b> · ${esc(t('risk')[m.risk])}` + (e ? `<br><span style="color:${typeVar(e.type)}">●</span> ${esc(e[lang][0])}` : ''));
+});
+chart.addEventListener('mouseleave', () => hideTip(chart, tip));
+chart.addEventListener('click', evt => { cur = chart._sub[hoverIndex(chart, evt)].m; render(); });
+window.addEventListener('hashchange', route);
+let rz, lastW = 0; const ro = new ResizeObserver(es => { const w = Math.round(es[0].contentRect.width); if (w === lastW) return; lastW = w; clearTimeout(rz); rz = setTimeout(() => { if (view === 'monitor') renderMainChart(); if (view === 'data') renderDetail(); if (view === 'economy') renderEconomy(); }, 100); });
+ro.observe(document.querySelector('main'));
+applyStatic(); route();
+</script>

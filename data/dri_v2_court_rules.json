@@ -1,0 +1,128 @@
+{
+ "months": 127,
+ "base_rate": 0.331,
+ "episodes": 14,
+ "rules": [
+  {
+   "rule": "A. любое решение суда, 1–3 мес. (текущее правило)",
+   "months": 45,
+   "with_flareup": 18,
+   "share": 0.4,
+   "share_other_months": 0.293,
+   "lift": 1.21,
+   "episodes_warned": 6,
+   "p_fisher": 0.151,
+   "flagged_last_24": 14
+  },
+  {
+   "rule": "B. любое решение в следующем месяце",
+   "months": 21,
+   "with_flareup": 8,
+   "share": 0.381,
+   "share_other_months": 0.321,
+   "lift": 1.15,
+   "episodes_warned": 6,
+   "p_fisher": 0.382,
+   "flagged_last_24": 6
+  },
+  {
+   "rule": "C. любое решение через 2–3 мес.",
+   "months": 24,
+   "with_flareup": 10,
+   "share": 0.417,
+   "share_other_months": 0.311,
+   "lift": 1.26,
+   "episodes_warned": 6,
+   "p_fisher": 0.224,
+   "flagged_last_24": 8
+  },
+  {
+   "rule": "D. Верховный суд, 1–3 мес.",
+   "months": 15,
+   "with_flareup": 11,
+   "share": 0.733,
+   "share_other_months": 0.277,
+   "lift": 2.22,
+   "episodes_warned": 4,
+   "p_fisher": 0.001,
+   "flagged_last_24": 7
+  },
+  {
+   "rule": "E. решение в пользу истцов (победа, исполнение), 1–3 мес.",
+   "months": 37,
+   "with_flareup": 18,
+   "share": 0.486,
+   "share_other_months": 0.267,
+   "lift": 1.47,
+   "episodes_warned": 6,
+   "p_fisher": 0.015,
+   "flagged_last_24": 14
+  },
+  {
+   "rule": "F. только отказы истцам / отклонения, 1–3 мес.",
+   "months": 8,
+   "with_flareup": 0,
+   "share": 0.0,
+   "share_other_months": 0.353,
+   "lift": 0.0,
+   "episodes_warned": 0,
+   "p_fisher": 1.0,
+   "flagged_last_24": 0
+  },
+  {
+   "rule": "G. в пользу истцов в следующем месяце",
+   "months": 17,
+   "with_flareup": 7,
+   "share": 0.412,
+   "share_other_months": 0.318,
+   "lift": 1.25,
+   "episodes_warned": 6,
+   "p_fisher": 0.308,
+   "flagged_last_24": 6
+  },
+  {
+   "rule": "H. Верховный суд или иск к правительству Японии, 1–3 мес.",
+   "months": 22,
+   "with_flareup": 14,
+   "share": 0.636,
+   "share_other_months": 0.267,
+   "lift": 1.92,
+   "episodes_warned": 5,
+   "p_fisher": 0.001,
+   "flagged_last_24": 10
+  },
+  {
+   "rule": "I. исполнение (арест / продажа активов), 1–3 мес.",
+   "months": 14,
+   "with_flareup": 4,
+   "share": 0.286,
+   "share_other_months": 0.336,
+   "lift": 0.86,
+   "episodes_warned": 2,
+   "p_fisher": 0.746,
+   "flagged_last_24": 0
+  },
+  {
+   "rule": "J. два и более решения в окне 1–3 мес.",
+   "months": 18,
+   "with_flareup": 12,
+   "share": 0.667,
+   "share_other_months": 0.275,
+   "lift": 2.02,
+   "episodes_warned": 5,
+   "p_fisher": 0.002,
+   "flagged_last_24": 5
+  },
+  {
+   "rule": "K. первое решение после паузы ≥ 6 мес.",
+   "months": 18,
+   "with_flareup": 8,
+   "share": 0.444,
+   "share_other_months": 0.312,
+   "lift": 1.34,
+   "episodes_warned": 3,
+   "p_fisher": 0.2,
+   "flagged_last_24": 6
+  }
+ ]
+}

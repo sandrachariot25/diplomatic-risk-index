@@ -1,0 +1,183 @@
+{
+  "version": "context-frames-0.2.0",
+  "status": "Conservative experimental predicate frames, not expert labels. Missing or conflicting ownership/targets abstain. Coverage and accuracy are not established.",
+  "development": "Language-specific predicate/argument frames; not calibrated against crises or historical outcomes. Intensity is a preliminary annotation rubric. Neutral requires positive evidence, never absence of conflict words. Internal development inspection is not held-out expert validation; e.g. a neighbour/partner formula followed by a demand must remain mixed, not automatically cooperative.",
+  "rules": [
+    {
+      "id": "en_protest",
+      "language": "en",
+      "pattern": "(?P<act>(?:strongly |sternly )?protests?|condemns?|denounces?)\\s+(?:against\\s+)?(?:the\\s+)?(?:Japanese|Japan|South Korean|Republic of Korea|ROK)",
+      "direction": "confrontational",
+      "intensity": 2
+    },
+    {
+      "id": "en_demand",
+      "language": "en",
+      "pattern": "(?P<act>demands?|urges?|calls? on)\\s+(?:the\\s+)?(?:Japanese|Japan|South Korean|Republic of Korea|ROK)(?: government)?\\s+to\\s+(?:withdraw|reverse|correct|stop|cease|resolve|refrain)",
+      "direction": "confrontational",
+      "intensity": 2
+    },
+    {
+      "id": "en_evaluation",
+      "language": "en",
+      "pattern": "(?:Japan(?:ese)?|South Korea|ROK).{0,100}?(?P<act>(?:is|are|was|were)\\s+(?:clearly |totally |completely )?(?:unacceptable|unjustifiable|unreasonable|unjust|regrettable))",
+      "direction": "confrontational",
+      "intensity": 1
+    },
+    {
+      "id": "en_concern",
+      "language": "en",
+      "pattern": "(?P<act>(?:express(?:es)?|have|has)\\s+(?:deep |grave |serious )?(?:concern|regret))\\s+(?:over|about|at)\\s+(?:the\\s+)?(?:Japanese|Japan|South Korean|Republic of Korea|ROK)",
+      "direction": "confrontational",
+      "intensity": 1
+    },
+    {
+      "id": "en_own_restriction",
+      "language": "en",
+      "pattern": "(?:we|our government|the ROK government|the Japanese government)\\s+(?:will|must|shall)\\s+(?P<act>impose sanctions|terminate cooperation|suspend cooperation|sever diplomatic relations)\\s+(?:on|with|against)\\s+(?:Japan|South Korea|the ROK)",
+      "direction": "confrontational",
+      "intensity": 3
+    },
+    {
+      "id": "en_cooperation",
+      "language": "en",
+      "pattern": "(?:we|I|our government|the ROK government|the Japanese government)\\s+(?:will |must |should |intend to |continue to |wish to )?(?P<act>strengthen|promote|deepen|expand|continue)\\s+(?:mutually beneficial |bilateral |our )?(?:cooperation|relations|partnership)\\s+with\\s+(?:Japan|South Korea|the ROK)",
+      "direction": "cooperative",
+      "intensity": 0
+    },
+    {
+      "id": "en_welcome",
+      "language": "en",
+      "pattern": "(?:we|I|our government)\\s+(?P<act>welcome|support)\\s+(?:the\\s+)?(?:Japan|Japanese|South Korea|ROK).{0,50}(?:cooperation|dialogue|agreement)",
+      "direction": "cooperative",
+      "intensity": 0
+    },
+    {
+      "id": "en_neutral_meeting",
+      "language": "en",
+      "pattern": "(?:we|I|our minister)\\s+(?P<act>met|held a meeting|held talks)\\s+with\\s+(?:the\\s+)?(?:Japanese|Japan|South Korean|ROK)",
+      "direction": "neutral",
+      "intensity": 0
+    },
+    {
+      "id": "ko_assessment",
+      "language": "ko",
+      "pattern": "일본(?:정부)?의(?P<act>(?:과도하고)?(?:불합리한|부당한|과도한|잘못된))조치",
+      "direction": "confrontational",
+      "intensity": 1
+    },
+    {
+      "id": "ko_protest",
+      "language": "ko",
+      "pattern": "일본.{0,70}?(?P<act>(?:강력히|강하게|엄중히)?(?:항의|규탄))(?:하|합|했|해|한다|합니다)",
+      "direction": "confrontational",
+      "intensity": 2
+    },
+    {
+      "id": "ko_withdrawal_demand",
+      "language": "ko",
+      "pattern": "(?P<act>(?:조치.{0,20})?(?:철회|시정).{0,15}(?:촉구|요구))(?:하|합|했|해|중|한다|합니다)",
+      "direction": "confrontational",
+      "intensity": 2,
+      "inherit_target": true
+    },
+    {
+      "id": "ko_criticism",
+      "language": "ko",
+      "pattern": "일본.{0,70}?(?P<act>(?:심각한|깊은|강한)?(?:우려|유감))(?:을|를)?(?:표명|표시|나타내|표하)",
+      "direction": "confrontational",
+      "intensity": 1
+    },
+    {
+      "id": "ko_restriction_advocacy",
+      "language": "ko",
+      "pattern": "(?P<act>(?:강력한)?보복조치|상응하는조치|협력중단|협정종료|제재).{0,30}(?:해야합니다|해야한다|필요합니다|필요하다고|경고하는것이옳다고)",
+      "direction": "confrontational",
+      "intensity": 3
+    },
+    {
+      "id": "ko_cooperation",
+      "language": "ko",
+      "pattern": "(?:일본과|한일(?:간|양국간)?).{0,45}?(?P<act>(?:협력|관계|소통|교류).{0,12}(?:강화|발전|증진|확대|개선|지속)).{0,25}(?:하겠습니다|해야합니다|해야한다|해나가|합시다|하고자|바랍니다)",
+      "direction": "cooperative",
+      "intensity": 0
+    },
+    {
+      "id": "ko_partner",
+      "language": "ko",
+      "pattern": "일본은.{0,45}?(?P<act>(?:협력|협력해야할).{0,12}(?:파트너|동반자))",
+      "direction": "cooperative",
+      "intensity": 0
+    },
+    {
+      "id": "ko_neutral_meeting",
+      "language": "ko",
+      "pattern": "(?:저는|우리는).{0,25}일본.{0,30}(?P<act>(?:회담|면담|의견교환))(?:을|를)?(?:했습니다|가졌습니다|하였습니다)",
+      "direction": "neutral",
+      "intensity": 0
+    },
+    {
+      "id": "ja_protest",
+      "language": "ja",
+      "pattern": "韓国.{0,70}?(?P<act>(?:強く|厳重に)?(?:抗議|非難))(?:し|いた|を行|する)",
+      "direction": "confrontational",
+      "intensity": 2
+    },
+    {
+      "id": "ja_unacceptable",
+      "language": "ja",
+      "pattern": "韓国.{0,70}?(?P<act>(?:容認できない|受け入れられない|極めて遺憾|深い懸念))",
+      "direction": "confrontational",
+      "intensity": 1
+    },
+    {
+      "id": "ja_demand",
+      "language": "ja",
+      "pattern": "韓国.{0,70}?(?P<act>(?:撤回|是正|中止).{0,15}(?:求め|要求))(?:て|ま|る|た|続け)",
+      "direction": "confrontational",
+      "intensity": 2
+    },
+    {
+      "id": "ja_own_restriction",
+      "language": "ja",
+      "pattern": "(?:我々|我が国|日本政府|政府として).{0,40}(?P<act>(?:韓国への制裁|韓国との協力停止|韓国との協定破棄)).{0,20}(?:実施する|行うべき|すべき|検討すべき)",
+      "direction": "confrontational",
+      "intensity": 3
+    },
+    {
+      "id": "ja_cooperation",
+      "language": "ja",
+      "pattern": "(?:日韓|韓国との).{0,45}?(?P<act>(?:連携|協力|関係|交流).{0,15}(?:強化|推進|改善|発展|深め)).{0,30}(?:いく|まいり|重要|必要|べき|たい|ます)",
+      "direction": "cooperative",
+      "intensity": 0
+    },
+    {
+      "id": "ja_partner",
+      "language": "ja",
+      "pattern": "韓国は.{0,30}(?P<act>(?:重要な|大切な)(?:隣国|パートナー))",
+      "direction": "cooperative",
+      "intensity": 0
+    },
+    {
+      "id": "ja_neutral_meeting",
+      "language": "ja",
+      "pattern": "(?:私は|我々は|我が国は).{0,35}韓国.{0,35}(?P<act>(?:会談|協議|意見交換)).{0,10}(?:行いました|実施しました|いたしました)",
+      "direction": "neutral",
+      "intensity": 0
+    },
+    {
+      "id": "ja_response_demand",
+      "language": "ja",
+      "pattern": "韓国.{0,100}?(?P<act>適切な対応を(?:強く)?求め)(?:て|ま|る|た)",
+      "direction": "confrontational",
+      "intensity": 2
+    },
+    {
+      "id": "ja_neutral_bilateral_meeting",
+      "language": "ja",
+      "pattern": "(?:日韓|韓国).{0,55}?(?P<act>(?:会談|協議|意見交換)).{0,25}(?:実施をいたしまして|行ったわけ|行いました|実施しました|開催しました)",
+      "direction": "neutral",
+      "intensity": 0
+    }
+  ]
+}

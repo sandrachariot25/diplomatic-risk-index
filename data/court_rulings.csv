@@ -1,0 +1,29 @@
+date,court,level,case_type,defendant,decision,japan_protest,confidence,source,note
+2018-10-30,Верховный суд РК,supreme,forced_labor,Nippon Steel,plaintiff_win,yes,high,https://www.mofa.go.jp/mofaj/a_o/na/kr/page4_004516.html,"Решение пленума; заявление министра ИД Японии"
+2018-11-29,Верховный суд РК,supreme,forced_labor,Mitsubishi Heavy Industries,plaintiff_win,yes,high,https://mobile.newsis.com/view/NISX20181129_0000487676,"Два дела: женский трудовой отряд и мобилизованные в Хиросиму"
+2019-01-03,Окружной суд Тэгу (Пхохан),district,forced_labor,Nippon Steel,enforcement,yes,medium,https://newsinfo.inquirer.net/1071116/south-korea-orders-seizure-of-japan-assets-over-forced-labor,"Арест акций СП PNR; Япония 09.01 запросила консультации по соглашению 1965 г."
+2019-03-22,Окружной суд Тэджон,district,forced_labor,Mitsubishi Heavy Industries,enforcement,unknown,medium,https://m.lawtimes.co.kr/Content/Article?serial=173194,"Арест товарных знаков и патентов (дата по памяти модели — сверить)"
+2020-08-04,Окружной суд Тэгу (Пхохан),district,forced_labor,Nippon Steel,enforcement,unknown,medium,,"Вступление в силу публичного уведомления об аресте акций PNR (сверить источник)"
+2021-01-08,Сеульский центральный окружной суд,district,comfort_women,Правительство Японии,plaintiff_win,yes,high,https://www.mofa.go.jp/mofaj/area/korea/index.html,"Отказ в иммунитете государства"
+2021-04-21,Сеульский центральный окружной суд,district,comfort_women,Правительство Японии,dismissed,no,high,https://en.wikipedia.org/wiki/Seoul_High_Court,"Иск Ли Ён Су и др. отклонён из-за иммунитета государства (отменено Высоким судом 23.11.2023)"
+2021-06-07,Сеульский центральный окружной суд,district,forced_labor,16 японских компаний,dismissed,no,high,https://imnews.imbc.com/news/2021/society/article/6247147_34873.html,"Крупнейший иск (85 истцов) отклонён без рассмотрения по существу"
+2021-08-11,Сеульский центральный окружной суд,district,forced_labor,Mitsubishi Materials,plaintiff_loss,no,high,https://m.hankookilbo.com/News/Read/A2021081117170003898,"Отказ по сроку давности"
+2021-09-08,Сеульский центральный окружной суд,district,forced_labor,Nippon Steel,plaintiff_loss,no,medium,https://imnews.imbc.com/replay/2021/nwdesk/article/6299411_34936.html,"Отказ по сроку давности; точная дата не подтверждена"
+2021-09-27,Окружной суд Тэджон,district,forced_labor,Mitsubishi Heavy Industries,enforcement,yes,high,https://m.lawtimes.co.kr/Content/Article?serial=173194,"Первый приказ о продаже активов (товарные знаки, патенты)"
+2023-02-14,Сеульский центральный окружной суд,district,forced_labor,Nishimatsu Construction,plaintiff_loss,no,high,https://www.seoul.co.kr/news/society/law/2023/02/14/20230214500185,"Отказ по сроку давности"
+2023-11-23,Высокий суд Сеула,high,comfort_women,Правительство Японии,plaintiff_win,yes,high,https://www.mofa.go.jp/mofaj/area/korea/index.html,"Отмена решения 04.2021; Япония вызвала посла"
+2023-12-21,Верховный суд РК,supreme,forced_labor,Mitsubishi Heavy Industries; Nippon Steel,plaintiff_win,yes,high,https://v.daum.net/v/20231221185527880,"«Второй иск»; срок давности не истёк до решения 2018 г."
+2023-12-28,Верховный суд РК,supreme,forced_labor,Hitachi Zosen,plaintiff_win,yes,high,https://www.mofa.go.jp/mofaj/a_o/na/kr/page4_004516.html,
+2024-01-11,Верховный суд РК,supreme,forced_labor,Nippon Steel,plaintiff_win,yes,high,https://www.khan.co.kr/article/202401111114001,
+2024-01-25,Верховный суд РК,supreme,forced_labor,японские компании,plaintiff_win,yes,high,https://www.mofa.go.jp/mofaj/a_o/na/kr/page4_004516.html,
+2024-02-20,Сеульский центральный окружной суд,district,forced_labor,Hitachi Zosen,enforcement,yes,high,https://www.mofa.go.jp/mofaj/a_o/na/kr/page4_004516.html,"Арест депозита и передача истцам; протест Японии 21.02"
+2025-04-25,Окружной суд Чхонджу,district,comfort_women,Правительство Японии,plaintiff_win,yes,high,https://www.khan.co.kr/article/202504271034011,"Третья победа против правительства Японии; вызван посол"
+2025-12-11,Корейский суд,unknown,forced_labor,Nippon Steel,plaintiff_win,yes,high,https://www.mofa.go.jp/mofaj/a_o/na/kr/page4_004516.html,
+2025-12-24,Корейский суд,unknown,forced_labor,Nishimatsu Construction,plaintiff_win,yes,high,https://www.mofa.go.jp/mofaj/a_o/na/kr/page4_004516.html,
+2026-01-15,Корейский суд,unknown,forced_labor,Mitsubishi Heavy Industries,plaintiff_win,yes,high,https://www.mofa.go.jp/mofaj/a_o/na/kr/page4_004516.html,
+2026-01-29,Верховный суд РК,supreme,forced_labor,Kumagai Gumi,plaintiff_win,yes,high,https://www.fnnews.com/news/202601292135417794,"Протест Японии 30.01"
+2026-02-12,Верховный суд РК,supreme,forced_labor,16 японских компаний,procedural_win,no,high,https://www.mt.co.kr/society/2026/03/26/2026032612184899460,"Подтверждена отмена отказа 2021 г.; дело возвращено в первую инстанцию; протеста нет в списке МИД Японии"
+2026-05-15,Высокий суд Кванджу,high,forced_labor,Mitsubishi Heavy Industries,plaintiff_win,no,low,https://v.daum.net/v/20260815073154803,"Победы истцов в мае–июне; точная дата не подтверждена"
+2026-08-12,Верховный суд РК,supreme,forced_labor,Nippon Steel,plaintiff_win,yes,high,https://www.insight.co.kr/news/568010,"Дело Мин Мун Сика: 80 млн вон; протест Японии в тот же день"
+2026-10-30,Верховный суд РК,supreme,forced_labor,Mitsubishi Heavy Industries,plaintiff_win,yes,high,https://www.mofa.go.jp/mofaj/a_o/na/kr/page4_004516.html,
+2026-11-07,Сеульский центральный окружной суд (апелляция),district_appeal,forced_labor,Fujikoshi,plaintiff_win,no,medium,https://v.daum.net/v/20260815073154803,"Победа истцов во второй инстанции"

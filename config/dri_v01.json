@@ -1,0 +1,19 @@
+{
+  "model": "DRI v0.1",
+  "period_start": "2015-01",
+  "period_end": "2026-10",
+  "min_unit_tokens": 5,
+  "min_month_units": 5,
+  "min_month_tokens": 500,
+  "background_window_months": 60,
+  "min_background_months": 12,
+  "min_background_nonzero": 4,
+  "anomaly_robust_deviation_threshold": 3.5,
+  "threshold_basis": "Operational data-support and stability guards fixed before calculating the corpus. Not calibrated to crises or a significance level.",
+  "lexicon": "config/dri_v01_lexicon.json",
+  "aggregation": "none_across_strata",
+  "scale": "nonoverlapping_attributable_lexicon_expressions_per_1000_analyzer_tokens",
+  "ko_tokenizer": "Kiwi 0.22.2, bundled model 0.22.1, model_type=cong, num_workers=1, global_config.space_tolerance=1 (PDF hard wraps; no character repair)",
+  "ja_tokenizer": "Janome 0.5.0, bundled mecab-ipadic-2.7.0-20070801",
+  "en_tokenizer": "Unicode alphabetic word tokens with internal apostrophes; explicit finite inflection map v1"
+}

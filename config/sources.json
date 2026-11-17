@@ -1,0 +1,299 @@
+[
+  {
+    "id": "mofa_kr",
+    "name": "MOFA Republic of Korea",
+    "country": "ROK",
+    "source_type": "primary",
+    "base_url": "https://www.mofa.go.kr",
+    "terms_url": "https://www.mofa.go.kr/www/wpge/m_4190/contents.do",
+    "access_status": "html_verified",
+    "content_policy": "excerpt_only",
+    "reliability": "official_institutional_record",
+    "notes": "Legacy records preserved. Default remains excerpt_only. Expansion collector may retain own press-release prose under MOFA default KOGL Type 1 with attribution; item-specific restrictions and third-party notices take precedence. No attachment/photo licence inferred.",
+    "item_specific_full_text_policy": "https://www.mofa.go.kr/www/wpge/m_4190/contents.do"
+  },
+  {
+    "id": "mofa_jp",
+    "name": "MOFA Japan",
+    "country": "JPN",
+    "source_type": "primary",
+    "base_url": "https://www.mofa.go.jp",
+    "terms_url": "https://www.mofa.go.jp/about/legalmatters.html",
+    "access_status": "blocked_403",
+    "content_policy": "metadata_only",
+    "reliability": "official_institutional_record",
+    "notes": "Prior direct 403; no bypass or speculative API."
+  },
+  {
+    "id": "kantei_jp",
+    "name": "Prime Minister's Office of Japan",
+    "country": "JPN",
+    "source_type": "primary",
+    "base_url": "https://japan.kantei.go.jp",
+    "terms_url": "https://japan.kantei.go.jp/policies/terms_e.html",
+    "access_status": "not_checked",
+    "content_policy": "metadata_only",
+    "reliability": "official_institutional_record",
+    "notes": "PDL 1.0 documented; document accessibility must be verified."
+  },
+  {
+    "id": "president_kr",
+    "name": "Office of the President, Republic of Korea",
+    "country": "ROK",
+    "source_type": "primary",
+    "base_url": "https://www.president.go.kr",
+    "access_status": "not_checked",
+    "content_policy": "metadata_only",
+    "reliability": "official_institutional_record"
+  },
+  {
+    "id": "assembly_kr",
+    "name": "National Assembly of Korea",
+    "country": "ROK",
+    "source_type": "primary",
+    "base_url": "https://www.assembly.go.kr",
+    "access_status": "public_pdf_text_layer_verified",
+    "content_policy": "internal_research_only",
+    "reliability": "official_parliamentary_record",
+    "terms_url": "https://open.assembly.go.kr/portal/policy/copyRightPage.do",
+    "notes": "Verified catalogue methods nzbyfwhwaoanttzje, ncwgseseafwbuheph, VCONFDETAIL; sample page1/5 rows. Public PDF text-layer pilot authorized for internal research only. Only sealed source-reviewed turns imported; interruptions grouped into floor-speaker episodes. Full protocol context retained internally. No public text/raw-file export; no publication licence inferred. See docs/SOURCE_AUDIT.md and data/assembly_pdf_review.json."
+  },
+  {
+    "id": "diet_jp",
+    "name": "House of Representatives Japan",
+    "country": "JPN",
+    "source_type": "primary",
+    "base_url": "https://www.shugiin.go.jp",
+    "access_status": "not_checked",
+    "content_policy": "metadata_only",
+    "reliability": "official_parliamentary_record"
+  },
+  {
+    "id": "mod_jp",
+    "name": "Japan Ministry of Defense",
+    "country": "JPN",
+    "source_type": "primary",
+    "base_url": "https://www.mod.go.jp",
+    "access_status": "not_checked",
+    "content_policy": "metadata_only",
+    "reliability": "official_institutional_record"
+  },
+  {
+    "id": "yonhap",
+    "name": "Yonhap",
+    "country": "ROK",
+    "source_type": "secondary",
+    "base_url": "https://en.yna.co.kr",
+    "terms_url": "https://en.yna.co.kr/view/AEN20200320005600315",
+    "access_status": "licence_required",
+    "content_policy": "metadata_only",
+    "reliability": "news_agency_secondary",
+    "notes": "No full text; recent copyright notice prohibits unpermitted reuse."
+  },
+  {
+    "id": "kbs",
+    "name": "KBS",
+    "country": "ROK",
+    "source_type": "secondary",
+    "base_url": "https://news.kbs.co.kr",
+    "access_status": "not_checked",
+    "content_policy": "metadata_only",
+    "reliability": "broadcaster_secondary",
+    "article_hosts": [
+      "news.kbs.co.kr",
+      "world.kbs.co.kr"
+    ],
+    "verified_feed": "https://world.kbs.co.kr/rss/rss_news.htm?id=Po&lang=e",
+    "feed_mode": "disabled_robots_denied"
+  },
+  {
+    "id": "joongang",
+    "name": "Korea JoongAng Daily",
+    "country": "ROK",
+    "source_type": "secondary",
+    "base_url": "https://koreajoongangdaily.joins.com",
+    "access_status": "not_checked",
+    "content_policy": "metadata_only",
+    "reliability": "newspaper_secondary"
+  },
+  {
+    "id": "korea_herald",
+    "name": "The Korea Herald",
+    "country": "ROK",
+    "source_type": "secondary",
+    "base_url": "https://www.koreaherald.com",
+    "access_status": "not_checked",
+    "content_policy": "metadata_only",
+    "reliability": "newspaper_secondary",
+    "verified_feed": "https://www.koreaherald.com/rss/newsAll",
+    "feed_mode": "metadata_discovery",
+    "terms_url": "https://members.heraldcorp.com/html/custom/copyright.php?lang=en"
+  },
+  {
+    "id": "kyodo",
+    "name": "Kyodo / Kyodo News+",
+    "country": "JPN",
+    "source_type": "secondary",
+    "base_url": "https://english.kyodonews.net",
+    "access_status": "not_checked",
+    "content_policy": "metadata_only",
+    "reliability": "news_agency_secondary"
+  },
+  {
+    "id": "nhk",
+    "name": "NHK World",
+    "country": "JPN",
+    "source_type": "secondary",
+    "base_url": "https://www3.nhk.or.jp",
+    "access_status": "not_checked",
+    "content_policy": "metadata_only",
+    "reliability": "broadcaster_secondary"
+  },
+  {
+    "id": "japan_times",
+    "name": "The Japan Times",
+    "country": "JPN",
+    "source_type": "secondary",
+    "base_url": "https://www.japantimes.co.jp",
+    "access_status": "not_checked",
+    "content_policy": "metadata_only",
+    "reliability": "newspaper_secondary",
+    "terms_url": "https://www.japantimes.co.jp/republishing/"
+  },
+  {
+    "id": "asahi",
+    "name": "The Asahi Shimbun",
+    "country": "JPN",
+    "source_type": "secondary",
+    "base_url": "https://www.asahi.com",
+    "access_status": "not_checked",
+    "content_policy": "metadata_only",
+    "reliability": "newspaper_secondary",
+    "article_hosts": [
+      "www.asahi.com",
+      "globe.asahi.com",
+      "smbiz.asahi.com"
+    ]
+  },
+  {
+    "id": "reuters",
+    "name": "Reuters",
+    "country": null,
+    "source_type": "secondary",
+    "base_url": "https://www.reuters.com",
+    "terms_url": "https://www.reutersconnect.com/general-terms",
+    "access_status": "licence_required",
+    "content_policy": "metadata_only",
+    "reliability": "news_agency_secondary",
+    "notes": "Connect terms restrict automated collection; do not assume API access or a licence."
+  },
+  {
+    "id": "ap",
+    "name": "Associated Press",
+    "country": null,
+    "source_type": "secondary",
+    "base_url": "https://apnews.com",
+    "access_status": "not_checked",
+    "content_policy": "metadata_only",
+    "reliability": "news_agency_secondary"
+  },
+  {
+    "id": "afp",
+    "name": "AFP",
+    "country": null,
+    "source_type": "secondary",
+    "base_url": "https://www.afp.com",
+    "access_status": "not_checked",
+    "content_policy": "metadata_only",
+    "reliability": "news_agency_secondary"
+  },
+  {
+    "id": "gdelt",
+    "name": "GDELT: DOC discovery; separate Events/Mentions/GKG archives",
+    "country": null,
+    "source_type": "discovery",
+    "base_url": "https://gdeltproject.org",
+    "terms_url": "https://gdeltproject.org/data.html",
+    "access_status": "rate_limited_429",
+    "content_policy": "metadata_only",
+    "reliability": "automated_discovery_or_event_extraction",
+    "notes": "DOC previously returned 429 and was not retried. Official archive ZIPs verified separately; typed gdelt_events/gdelt_mentions/gdelt_gkg are not speech records. No source article text licence inferred.",
+    "products": {
+      "doc": "recent discovery only; prior 429",
+      "archives": "https://data.gdeltproject.org/gdeltv2/; separate typed records, raw ZIP and hashes"
+    }
+  },
+  {
+    "id": "kokkai_jp",
+    "name": "National Diet Library speech transcripts",
+    "country": "JPN",
+    "source_type": "primary",
+    "base_url": "https://kokkai.ndl.go.jp",
+    "terms_url": "https://kokkai.ndl.go.jp/api.html",
+    "access_status": "api_verified",
+    "content_policy": "excerpt_only",
+    "reliability": "official_parliamentary_record",
+    "notes": "Public documented API permits sequential requests with several seconds pause. Speech rights retained by speakers; only short original excerpts stored. robots redirects to homepage; exact documented API use justified by explicit API policy. No publication date supplied."
+  },
+  {
+    "id": "korea_times",
+    "name": "The Korea Times",
+    "country": "ROK",
+    "base_url": "https://www.koreatimes.co.kr",
+    "source_type": "secondary",
+    "access_status": "bibliography_only",
+    "content_policy": "metadata_only",
+    "reliability": "newspaper_secondary",
+    "terms_url": "https://w3.koreatimes.co.kr/www2/common/copyrightpolicy_2022.asp"
+  },
+  {
+    "id": "yomiuri",
+    "name": "The Yomiuri Shimbun / The Japan News",
+    "country": "JPN",
+    "base_url": "https://www.yomiuri.co.jp",
+    "source_type": "secondary",
+    "access_status": "bibliography_only",
+    "content_policy": "metadata_only",
+    "reliability": "newspaper_secondary",
+    "article_hosts": [
+      "www.yomiuri.co.jp",
+      "japannews.yomiuri.co.jp"
+    ]
+  },
+  {
+    "id": "korea_government_kr",
+    "name": "Republic of Korea Policy Briefing — official speeches and presidential briefings",
+    "country": "ROK",
+    "source_type": "primary",
+    "base_url": "https://www.korea.kr",
+    "terms_url": "https://www.korea.kr/guide/copyRight.do",
+    "access_status": "html_verified",
+    "content_policy": "item_licence_required",
+    "reliability": "official_institutional_record",
+    "notes": "Only verified speechView/presidentView text. KOGL4 requires explicit noncommercial research authorization; no alterations, commercial use or unlicensed media. No licence: do not retain. Publication date never imputed from speech date."
+  },
+  {
+    "id": "democratic_party_kr",
+    "name": "Democratic Party of Korea",
+    "country": "ROK",
+    "source_type": "primary",
+    "base_url": "https://theminjoo.kr",
+    "terms_url": null,
+    "access_status": "html_verified_rights_unconfirmed",
+    "content_policy": "metadata_only",
+    "reliability": "official_party_publication",
+    "notes": "Official party statement page accessible. Full-text retention not licensed by this audit; do not infer historical governing/opposition status."
+  },
+  {
+    "id": "people_power_party_kr",
+    "name": "People Power Party",
+    "country": "ROK",
+    "source_type": "primary",
+    "base_url": "https://www.peoplepowerparty.kr",
+    "terms_url": null,
+    "access_status": "html_verified_rights_unconfirmed",
+    "content_policy": "metadata_only",
+    "reliability": "official_party_publication",
+    "notes": "Official party statement page accessible. Full-text retention not licensed by this audit; do not infer historical governing/opposition status."
+  }
+]

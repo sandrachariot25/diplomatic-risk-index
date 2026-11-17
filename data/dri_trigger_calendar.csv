@@ -1,0 +1,154 @@
+month,kind,trigger,status
+2015-02,recurring,День Такэсимы,draft: verify date
+2015-03,recurring,1 марта,draft: verify date
+2015-04,recurring,«Синяя книга» МИД Японии,draft: verify date
+2015-04,recurring,Проверка японских учебников,draft: verify date
+2015-04,recurring,"Ясукуни, весенний фестиваль",draft: verify date
+2015-07,recurring,Белая книга по обороне Японии,draft: verify date
+2015-07,recurring,Сессия Комитета всемирного наследия ЮНЕСКО,draft: verify date
+2015-08,recurring,15 августа,draft: verify date
+2015-10,recurring,"Ясукуни, осенний фестиваль",draft: verify date
+2016-02,recurring,День Такэсимы,draft: verify date
+2016-03,recurring,1 марта,draft: verify date
+2016-03,recurring,Проверка японских учебников,draft: verify date
+2016-04,election,Выборы в парламент РК,draft: verify date
+2016-04,recurring,«Синяя книга» МИД Японии,draft: verify date
+2016-04,recurring,"Ясукуни, весенний фестиваль",draft: verify date
+2016-07,election,Выборы в верхнюю палату Японии,draft: verify date
+2016-07,recurring,Сессия Комитета всемирного наследия ЮНЕСКО,draft: verify date
+2016-08,recurring,15 августа,draft: verify date
+2016-08,recurring,Белая книга по обороне Японии,draft: verify date
+2016-10,recurring,"Ясукуни, осенний фестиваль",draft: verify date
+2017-02,recurring,День Такэсимы,draft: verify date
+2017-03,recurring,1 марта,draft: verify date
+2017-03,recurring,Проверка японских учебников,draft: verify date
+2017-04,recurring,«Синяя книга» МИД Японии,draft: verify date
+2017-04,recurring,"Ясукуни, весенний фестиваль",draft: verify date
+2017-05,election,Выборы президента РК,draft: verify date
+2017-07,recurring,Сессия Комитета всемирного наследия ЮНЕСКО,draft: verify date
+2017-08,recurring,15 августа,draft: verify date
+2017-08,recurring,Белая книга по обороне Японии,draft: verify date
+2017-10,election,Выборы в нижнюю палату Японии,draft: verify date
+2017-10,recurring,"Ясукуни, осенний фестиваль",draft: verify date
+2018-02,recurring,День Такэсимы,draft: verify date
+2018-03,recurring,1 марта,draft: verify date
+2018-03,recurring,Проверка японских учебников,draft: verify date
+2018-04,recurring,"Ясукуни, весенний фестиваль",draft: verify date
+2018-05,recurring,«Синяя книга» МИД Японии,draft: verify date
+2018-06,election,Местные выборы РК,draft: verify date
+2018-07,recurring,Сессия Комитета всемирного наследия ЮНЕСКО,draft: verify date
+2018-08,recurring,15 августа,draft: verify date
+2018-08,recurring,Белая книга по обороне Японии,draft: verify date
+2018-10,court,Верховный суд РК: Nippon Steel — победа истцов,court docket
+2018-10,recurring,"Ясукуни, осенний фестиваль",draft: verify date
+2018-11,court,Верховный суд РК: Mitsubishi Heavy Industries — победа истцов,court docket
+2019-01,court,Окружной суд Тэгу (Пхохан): Nippon Steel — исполнение (арест/продажа активов),court docket
+2019-02,recurring,День Такэсимы,draft: verify date
+2019-03,court,Окружной суд Тэджон: Mitsubishi Heavy Industries — исполнение (арест/продажа активов),court docket
+2019-03,recurring,1 марта,draft: verify date
+2019-03,recurring,Проверка японских учебников,draft: verify date
+2019-04,recurring,«Синяя книга» МИД Японии,draft: verify date
+2019-04,recurring,"Ясукуни, весенний фестиваль",draft: verify date
+2019-07,election,Выборы в верхнюю палату Японии,draft: verify date
+2019-07,recurring,Сессия Комитета всемирного наследия ЮНЕСКО,draft: verify date
+2019-08,recurring,15 августа,draft: verify date
+2019-09,recurring,Белая книга по обороне Японии,draft: verify date
+2019-10,recurring,"Ясукуни, осенний фестиваль",draft: verify date
+2020-02,recurring,День Такэсимы,draft: verify date
+2020-03,recurring,1 марта,draft: verify date
+2020-03,recurring,Проверка японских учебников,draft: verify date
+2020-04,election,Выборы в парламент РК,draft: verify date
+2020-04,recurring,"Ясукуни, весенний фестиваль",draft: verify date
+2020-05,recurring,«Синяя книга» МИД Японии,draft: verify date
+2020-07,recurring,Белая книга по обороне Японии,draft: verify date
+2020-08,court,Окружной суд Тэгу (Пхохан): Nippon Steel — исполнение (арест/продажа активов),court docket
+2020-08,recurring,15 августа,draft: verify date
+2020-10,recurring,"Ясукуни, осенний фестиваль",draft: verify date
+2021-01,court,Сеульский центральный окружной суд: Правительство Японии — победа истцов,court docket
+2021-02,recurring,День Такэсимы,draft: verify date
+2021-03,recurring,1 марта,draft: verify date
+2021-03,recurring,Проверка японских учебников,draft: verify date
+2021-04,court,Сеульский центральный окружной суд: Правительство Японии — иск отклонён,court docket
+2021-04,recurring,«Синяя книга» МИД Японии,draft: verify date
+2021-04,recurring,"Ясукуни, весенний фестиваль",draft: verify date
+2021-06,court,Сеульский центральный окружной суд: 16 японских компаний — иск отклонён,court docket
+2021-07,recurring,Белая книга по обороне Японии,draft: verify date
+2021-07,recurring,Сессия Комитета всемирного наследия ЮНЕСКО,draft: verify date
+2021-08,court,Сеульский центральный окружной суд: Mitsubishi Materials — отказ истцам,court docket
+2021-08,recurring,15 августа,draft: verify date
+2021-09,court,Окружной суд Тэджон: Mitsubishi Heavy Industries — исполнение (арест/продажа активов),court docket
+2021-09,court,Сеульский центральный окружной суд: Nippon Steel — отказ истцам,court docket
+2021-10,election,Выборы в нижнюю палату Японии,draft: verify date
+2021-10,recurring,"Ясукуни, осенний фестиваль",draft: verify date
+2022-02,recurring,День Такэсимы,draft: verify date
+2022-03,election,Выборы президента РК,draft: verify date
+2022-03,recurring,1 марта,draft: verify date
+2022-03,recurring,Проверка японских учебников,draft: verify date
+2022-04,recurring,«Синяя книга» МИД Японии,draft: verify date
+2022-04,recurring,"Ясукуни, весенний фестиваль",draft: verify date
+2022-06,election,Местные выборы РК,draft: verify date
+2022-07,election,Выборы в верхнюю палату Японии,draft: verify date
+2022-07,recurring,Белая книга по обороне Японии,draft: verify date
+2022-08,recurring,15 августа,draft: verify date
+2022-10,recurring,"Ясукуни, осенний фестиваль",draft: verify date
+2023-02,court,Сеульский центральный окружной суд: Nishimatsu Construction — отказ истцам,court docket
+2023-02,recurring,День Такэсимы,draft: verify date
+2023-03,recurring,1 марта,draft: verify date
+2023-03,recurring,Проверка японских учебников,draft: verify date
+2023-04,recurring,«Синяя книга» МИД Японии,draft: verify date
+2023-04,recurring,"Ясукуни, весенний фестиваль",draft: verify date
+2023-07,recurring,Белая книга по обороне Японии,draft: verify date
+2023-08,recurring,15 августа,draft: verify date
+2023-09,recurring,Сессия Комитета всемирного наследия ЮНЕСКО,draft: verify date
+2023-10,recurring,"Ясукуни, осенний фестиваль",draft: verify date
+2023-11,court,Высокий суд Сеула: Правительство Японии — победа истцов,court docket
+2023-12,court,Верховный суд РК: Hitachi Zosen — победа истцов,court docket
+2023-12,court,Верховный суд РК: Mitsubishi Heavy Industries; Nippon Steel — победа истцов,court docket
+2024-01,court,Верховный суд РК: Nippon Steel — победа истцов,court docket
+2024-01,court,Верховный суд РК: японские компании — победа истцов,court docket
+2024-02,court,Сеульский центральный окружной суд: Hitachi Zosen — исполнение (арест/продажа активов),court docket
+2024-02,recurring,День Такэсимы,draft: verify date
+2024-03,recurring,1 марта,draft: verify date
+2024-03,recurring,Проверка японских учебников,draft: verify date
+2024-04,election,Выборы в парламент РК,draft: verify date
+2024-04,recurring,«Синяя книга» МИД Японии,draft: verify date
+2024-04,recurring,"Ясукуни, весенний фестиваль",draft: verify date
+2024-07,recurring,Белая книга по обороне Японии,draft: verify date
+2024-07,recurring,Сессия Комитета всемирного наследия ЮНЕСКО,draft: verify date
+2024-08,recurring,15 августа,draft: verify date
+2024-10,election,Выборы в нижнюю палату Японии,draft: verify date
+2024-10,recurring,"Ясукуни, осенний фестиваль",draft: verify date
+2024-11,recurring,Поминовение на Садо,draft: verify date
+2025-02,recurring,День Такэсимы,draft: verify date
+2025-03,recurring,1 марта,draft: verify date
+2025-03,recurring,Проверка японских учебников,draft: verify date
+2025-04,court,Окружной суд Чхонджу: Правительство Японии — победа истцов,court docket
+2025-04,recurring,«Синяя книга» МИД Японии,draft: verify date
+2025-04,recurring,"Ясукуни, весенний фестиваль",draft: verify date
+2025-06,election,Выборы президента РК,draft: verify date
+2025-07,election,Выборы в верхнюю палату Японии,draft: verify date
+2025-07,recurring,Белая книга по обороне Японии,draft: verify date
+2025-07,recurring,Сессия Комитета всемирного наследия ЮНЕСКО,draft: verify date
+2025-08,recurring,15 августа,draft: verify date
+2025-09,recurring,Поминовение на Садо,draft: verify date
+2025-10,recurring,"Ясукуни, осенний фестиваль",draft: verify date
+2025-12,court,Корейский суд: Nippon Steel — победа истцов,court docket
+2025-12,court,Корейский суд: Nishimatsu Construction — победа истцов,court docket
+2026-01,court,Верховный суд РК: Kumagai Gumi — победа истцов,court docket
+2026-01,court,Корейский суд: Mitsubishi Heavy Industries — победа истцов,court docket
+2026-02,court,Верховный суд РК: 16 японских компаний — процессуальное решение в пользу истцов,court docket
+2026-02,election,Выборы в нижнюю палату Японии,draft: verify date
+2026-02,recurring,День Такэсимы,draft: verify date
+2026-03,recurring,1 марта,draft: verify date
+2026-03,recurring,Проверка японских учебников,draft: verify date
+2026-04,recurring,«Синяя книга» МИД Японии,draft: verify date
+2026-04,recurring,"Ясукуни, весенний фестиваль",draft: verify date
+2026-05,court,Высокий суд Кванджу: Mitsubishi Heavy Industries — победа истцов,court docket
+2026-06,election,Местные выборы РК,draft: verify date
+2026-07,recurring,Белая книга по обороне Японии,draft: verify date
+2026-07,recurring,Сессия Комитета всемирного наследия ЮНЕСКО,draft: verify date
+2026-08,court,Верховный суд РК: Nippon Steel — победа истцов,court docket
+2026-08,recurring,15 августа,draft: verify date
+2026-10,court,Верховный суд РК: Mitsubishi Heavy Industries — победа истцов,court docket
+2026-10,recurring,"Ясукуни, осенний фестиваль",draft: verify date
+2026-11,court,Сеульский центральный окружной суд (апелляция): Fujikoshi — победа истцов,court docket

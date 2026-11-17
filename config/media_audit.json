@@ -1,0 +1,160 @@
+[
+  {
+    "id": "yonhap",
+    "access": "Библиография; повторное использование требует лицензии",
+    "channels": "RSS в официальном меню; HTML поиск; публичный API не подтверждён",
+    "history": "Статья 2017 проверена; прежние записи 2019/2023/2025. Полнота 2015–2026 неизвестна",
+    "languages": "ko/en; en не считается официальным переводом речи",
+    "evidence": [
+      "https://en.yna.co.kr/view/AEN20200320005600315",
+      "https://en.yna.co.kr/view/AEN20171227005553315"
+    ],
+    "notes": "Прямые слова министра Kang наблюдались, не импортированы; URL/дата доступны, персональный автор неизвестен.",
+    "checked_at": "2026-10-30",
+    "numerical_limits": "not_verified",
+    "fulltext_enabled": false,
+    "quotes_enabled": false
+  },
+  {
+    "id": "kbs",
+    "access": "Библиография; проектный RSS отключён после robots Disallow",
+    "channels": "Официальный RSS прочитан web-инструментом, но прямой проектный клиент остановлен robots; HTML архив/поиск; публичный API статей не подтверждён",
+    "history": "Выборочно 2015 (тематический материал), 2019/2023/2025; текущий RSS 2026. Непрерывность неизвестна",
+    "languages": "ko + World en/другие; редакционные версии",
+    "evidence": [
+      "https://world.kbs.co.kr/service/about_rss.htm?lang=e",
+      "https://world.kbs.co.kr/rss/rss_news.htm?id=Po&lang=e"
+    ],
+    "notes": "Прямая проба проекта 2026-10-30: robots Disallow для feed; запрос ленты НЕ выполнен. Ошибка записана в errors/fetches; обхода нет. RSS author KBS WORLD Radio — издатель, не персональный автор. Часто косвенная речь; цитаты не восстанавливать.",
+    "checked_at": "2026-10-30",
+    "numerical_limits": "not_verified",
+    "fulltext_enabled": false,
+    "quotes_enabled": false
+  },
+  {
+    "id": "korea_herald",
+    "access": "Официальный RSS: обнаружение метаданных; тексты требуют разрешения",
+    "channels": "RSS /rss/newsAll проверен напрямую проектным клиентом: 50 items, 1 кандидат Japan в заголовке; статьи не загружались; публичный API не подтверждён",
+    "history": "Выборочно 2019/2025/2026; отдельная статья 2019 web 403; непрерывность неизвестна",
+    "languages": "en; есть ссылка на ko, эквивалентность статей не проверена",
+    "evidence": [
+      "https://www.koreaherald.com/rss",
+      "https://members.heraldcorp.com/html/custom/copyright.php?lang=en"
+    ],
+    "notes": "Прямые слова Lee в 2025 наблюдались, byline Son Ji-hyoung; статья 2026 кредитует Yonhap. Запрет повторного использования без письменного разрешения; тексты/цитаты отключены.",
+    "checked_at": "2026-10-30",
+    "numerical_limits": "not_verified",
+    "fulltext_enabled": false,
+    "quotes_enabled": false
+  },
+  {
+    "id": "joongang",
+    "access": "Библиографическое обнаружение; статьи автоматически не собирать",
+    "channels": "HTML статьи/поиск; API/RSS не подтверждены",
+    "history": "Выборочно 2015/2018/2023/2025; 2026 не проверен",
+    "languages": "en; отдельные переводы JoongAng Ilbo ko",
+    "evidence": [
+      "https://koreajoongangdaily.joins.com/news/2025-06-19/opinion/editorials/Korea-Japan-leaders-meet-ahead-of-60th-anniversary-of-diplomatic-ties/2333269"
+    ],
+    "notes": "Редакционная статья 2025 помечена generative AI translation + staff editing: не официальный перевод речи. Права на хранение цитат и полный архив не установлены.",
+    "checked_at": "2026-10-30",
+    "numerical_limits": "not_verified",
+    "fulltext_enabled": false,
+    "quotes_enabled": false
+  },
+  {
+    "id": "korea_times",
+    "access": "Библиография; RSS объявлен, загрузка не подтверждена",
+    "channels": "Официальная RSS страница публикует feed.koreatimes.co.kr; XML недоступен web-инструменту; API не подтверждён",
+    "history": "Выборочно 2019/2023; полнота 2015–2026 не проверена",
+    "languages": "en; оригинальный язык речи неизвестен",
+    "evidence": [
+      "https://www.koreatimes.co.kr/rss",
+      "https://w3.koreatimes.co.kr/www2/common/copyrightpolicy_2022.asp"
+    ],
+    "notes": "Повторное использование требует разрешения; сторонний news API не является официальным API газеты. Даты доступны, непроверенные авторы NULL.",
+    "checked_at": "2026-10-30",
+    "numerical_limits": "not_verified",
+    "fulltext_enabled": false,
+    "quotes_enabled": false
+  },
+  {
+    "id": "kyodo",
+    "access": "Ручная проверка / договорный канал",
+    "channels": "english.kyodonews.net: robots denial web-инструмента; публичный API/RSS не подтверждены",
+    "history": "Конкретные статьи 2015–2026 в этом сеансе не проверены",
+    "languages": "ja/en; эквивалентность не проверена",
+    "evidence": [
+      "https://english.kyodonews.net"
+    ],
+    "notes": "0 отобранных статей. Отказ инструмента не является наблюдением HTTP 403 сервера. Условия других подразделений Kyodo не переносятся на News+.",
+    "checked_at": "2026-10-30",
+    "numerical_limits": "not_verified",
+    "fulltext_enabled": false,
+    "quotes_enabled": false
+  },
+  {
+    "id": "nhk",
+    "access": "Ручная проверка",
+    "channels": "nhk.jp: robots denial инструмента; новостной API/RSS текущего хоста не подтверждены",
+    "history": "Доступность исторических статей 2015–2026 не установлена",
+    "languages": "ja/World en; версии не сопоставлены",
+    "evidence": [
+      "https://www.nhk.jp"
+    ],
+    "notes": "School API не является API политических новостей. 0 статей: поля автора, даты и цитат не проверены; архив не объявляется отсутствующим.",
+    "checked_at": "2026-10-30",
+    "numerical_limits": "not_verified",
+    "fulltext_enabled": false,
+    "quotes_enabled": false
+  },
+  {
+    "id": "japan_times",
+    "access": "Библиография; хранение текста требует разрешения",
+    "channels": "RSS упомянут официальной навигацией, рабочий endpoint не проверен; теги/поиск/Digital Archives; публичный API не подтверждён",
+    "history": "Найдены URL 2016; проверены метаданные 2019/2023/2025. Часть страниц web 402; полнота 2015–2026 неизвестна",
+    "languages": "en; журналистская версия слов политиков",
+    "evidence": [
+      "https://www.japantimes.co.jp/republishing/",
+      "https://www.japantimes.co.jp/about-us/sitemap/"
+    ],
+    "notes": "Прямые высказывания наблюдались, авторы двух статей установлены. Republishing требует разрешения; wire content имеет отдельные права. Новых цитат не сохранено.",
+    "checked_at": "2026-10-30",
+    "numerical_limits": "not_verified",
+    "fulltext_enabled": false,
+    "quotes_enabled": false
+  },
+  {
+    "id": "asahi",
+    "access": "Библиография открытых подразделений; платный Cross-Search отдельно",
+    "channels": "AJW: robots denial инструмента; Cross-Search документирован; открытый API/RSS не подтверждены",
+    "history": "Cross-Search: английская БД с 2001, AJW с 2011, не все статьи; открытые GLOBE+/Tsuginojidai 2019/2023",
+    "languages": "ja/AJW en; часть колонок ko/zh; соответствие версий не универсально",
+    "evidence": [
+      "https://xsearch.asahi.com/help/eng/englishdb_naiyou01.html",
+      "https://xsearch.asahi.com/exp/jpn/library/rule.html",
+      "https://support.asahi.com/hc/ja/articles/1500002440362"
+    ],
+    "notes": "Подписка не разрешает выгрузку корпуса. GLOBE+ 2019 — Dong-A Ilbo: перевод/перепечатка, не слова редакции Asahi. Нельзя объявлять проверенным полный AJW.",
+    "checked_at": "2026-10-30",
+    "numerical_limits": "not_verified",
+    "fulltext_enabled": false,
+    "quotes_enabled": false
+  },
+  {
+    "id": "yomiuri",
+    "access": "Ручная проверка / договорный архив",
+    "channels": "yomiuri.co.jp и japannews.yomiuri.co.jp: robots denial инструмента; API/RSS не подтверждены",
+    "history": "Конкретные исторические статьи 2015–2026 не проверены",
+    "languages": "ja/The Japan News en; эквивалентность не установлена",
+    "evidence": [
+      "https://www.yomiuri.co.jp",
+      "https://japannews.yomiuri.co.jp"
+    ],
+    "notes": "0 статей. Права/автор/цитаты/поиск архива требуют проверки с законным доступом; никакого обхода.",
+    "checked_at": "2026-10-30",
+    "numerical_limits": "not_verified",
+    "fulltext_enabled": false,
+    "quotes_enabled": false
+  }
+]

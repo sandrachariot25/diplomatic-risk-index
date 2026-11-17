@@ -1,0 +1,14 @@
+{
+  "model": "DRI v0.2",
+  "period_start": "2015-01",
+  "period_end": "2026-10",
+  "rules": "config/dri_v02_rules.json",
+  "scale": "mean_of_strongest_supported_owned_confrontation_0_to_3_per_statement",
+  "min_classified_units": 5,
+  "min_classified_share": 0.5,
+  "threshold_basis": "Operational coverage flags, not statistical precision or calibrated accuracy. No token threshold; no institution or length weights.",
+  "review_sample_per_stratum": 2,
+  "sampling_seed": "dri-v02-review-before-expert-labels-1",
+  "independent_expert_labels": false,
+  "probability_model": false
+}

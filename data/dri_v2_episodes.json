@@ -1,0 +1,653 @@
+{
+ "rule": "onset gap >= 1.0 SD over 12m norm, >= 4 months apart",
+ "episodes": [
+  {
+   "month": "2017-01",
+   "conflict_share": 0.341,
+   "gap_sd": 1.93,
+   "registry_escalations": [
+    "Япония объявила пакет ответных мер, включая временный отзыв посла и генконсула и приостановление переговоров о валютном свопе."
+   ]
+  },
+  {
+   "month": "2017-06",
+   "conflict_share": 0.276,
+   "gap_sd": 1.09,
+   "registry_escalations": []
+  },
+  {
+   "month": "2018-01",
+   "conflict_share": 0.264,
+   "gap_sd": 1.09,
+   "registry_escalations": []
+  },
+  {
+   "month": "2018-10",
+   "conflict_share": 0.273,
+   "gap_sd": 1.33,
+   "registry_escalations": [
+    "Верховный суд Республики Корея подтвердил решение о компенсации от Nippon Steel & Sumitomo Metal. Решение вызвало официальный дипломатический протест Японии."
+   ]
+  },
+  {
+   "month": "2019-07",
+   "conflict_share": 0.45,
+   "gap_sd": 1.16,
+   "registry_escalations": [
+    "METI объявило переход к индивидуальному экспортному лицензированию трёх групп материалов для Республики Корея. Меры вступили в силу 4 июля."
+   ]
+  },
+  {
+   "month": "2020-03",
+   "conflict_share": 0.397,
+   "gap_sd": 1.37,
+   "registry_escalations": [
+    "Сеул объявил ответное решение приостановить безвизовый въезд и действие ранее выданных японским гражданам виз с 9 марта."
+   ]
+  },
+  {
+   "month": "2021-01",
+   "conflict_share": 0.465,
+   "gap_sd": 2.11,
+   "registry_escalations": [
+    "Суд в Сеуле присудил компенсацию от правительства Японии. За решением последовал официальный дипломатический протест."
+   ]
+  },
+  {
+   "month": "2021-09",
+   "conflict_share": 0.343,
+   "gap_sd": 1.09,
+   "registry_escalations": [
+    "Корейский суд распорядился о продаже активов Mitsubishi Heavy Industries по делу о принудительном труде; последовало официальное возражение Японии."
+   ]
+  },
+  {
+   "month": "2022-01",
+   "conflict_share": 0.287,
+   "gap_sd": 1.11,
+   "registry_escalations": []
+  },
+  {
+   "month": "2022-10",
+   "conflict_share": 0.384,
+   "gap_sd": 2.08,
+   "registry_escalations": []
+  },
+  {
+   "month": "2023-12",
+   "conflict_share": 0.285,
+   "gap_sd": 1.23,
+   "registry_escalations": [
+    "Высокий суд Сеула вынес решение о компенсации против японского государства; Япония вызвала посла Республики Корея.",
+    "Верховный суд Республики Корея оставил в силе решения о компенсации по делам Mitsubishi и Nippon Steel; Япония заявила формальный протест.",
+    "Верховный суд Республики Корея подтвердил компенсации в других делах о принудительном труде; Япония вновь заявила протест."
+   ]
+  },
+  {
+   "month": "2024-11",
+   "conflict_share": 0.29,
+   "gap_sd": 1.51,
+   "registry_escalations": [
+    "Республика Корея отозвала делегацию с согласованной памятной церемонии на Садо; на следующий день делегация не участвовала."
+   ]
+  },
+  {
+   "month": "2025-12",
+   "conflict_share": 0.208,
+   "gap_sd": 1.78,
+   "registry_escalations": [
+    "Корейский суд вынес решение о компенсации по делу против Nippon Steel, вызвавшее официальный протест Японии.",
+    "Решение корейского суда по делу о принудительном труде против Nishimatsu Construction вызвало официальное обращение Японии."
+   ]
+  },
+  {
+   "month": "2026-08",
+   "conflict_share": 0.397,
+   "gap_sd": 2.76,
+   "registry_escalations": []
+  }
+ ],
+ "calm_months": 33,
+ "features": [
+  {
+   "feature": "Парламент РК: доля R3+",
+   "column": "kr_r3",
+   "pre_1-3": {
+    "elevated": 1,
+    "of": 14,
+    "p": 0.871,
+    "onset_mean": 0.069,
+    "calm_mean": 0.075
+   },
+   "pre_4-6": {
+    "elevated": 6,
+    "of": 14,
+    "p": 0.149,
+    "onset_mean": 0.088,
+    "calm_mean": 0.067
+   }
+  },
+  {
+   "feature": "Парламент РК: объём жёстких реплик",
+   "column": "kr_log_conf",
+   "pre_1-3": {
+    "elevated": 7,
+    "of": 14,
+    "p": 0.252,
+    "onset_mean": 1.243,
+    "calm_mean": 0.944
+   },
+   "pre_4-6": {
+    "elevated": 3,
+    "of": 14,
+    "p": 0.727,
+    "onset_mean": 1.198,
+    "calm_mean": 1.209
+   }
+  },
+  {
+   "feature": "Парламент РК: «слишком мягко»",
+   "column": "kr_too_soft",
+   "pre_1-3": {
+    "elevated": 1,
+    "of": 14,
+    "p": 0.903,
+    "onset_mean": 0.227,
+    "calm_mean": 0.249
+   },
+   "pre_4-6": {
+    "elevated": 1,
+    "of": 14,
+    "p": 0.899,
+    "onset_mean": 0.19,
+    "calm_mean": 0.293
+   }
+  },
+  {
+   "feature": "Парламент Японии: доля R3+",
+   "column": "jp_r3",
+   "pre_1-3": {
+    "elevated": 5,
+    "of": 14,
+    "p": 0.697,
+    "onset_mean": 0.118,
+    "calm_mean": 0.078
+   },
+   "pre_4-6": {
+    "elevated": 4,
+    "of": 14,
+    "p": 0.533,
+    "onset_mean": 0.14,
+    "calm_mean": 0.104
+   }
+  },
+  {
+   "feature": "Парламент Японии: объём жёстких реплик",
+   "column": "jp_log_conf",
+   "pre_1-3": {
+    "elevated": 4,
+    "of": 14,
+    "p": 0.588,
+    "onset_mean": 0.692,
+    "calm_mean": 0.885
+   },
+   "pre_4-6": {
+    "elevated": 4,
+    "of": 14,
+    "p": 0.473,
+    "onset_mean": 1.014,
+    "calm_mean": 0.964
+   }
+  },
+  {
+   "feature": "Зависимость от Японии (откл. от нормы)",
+   "column": "econ_dep_total_z12",
+   "pre_1-3": {
+    "elevated": 1,
+    "of": 14,
+    "p": 0.848,
+    "onset_mean": -0.367,
+    "calm_mean": 0.127
+   },
+   "pre_4-6": {
+    "elevated": 4,
+    "of": 14,
+    "p": 0.671,
+    "onset_mean": -0.254,
+    "calm_mean": -0.266
+   }
+  },
+  {
+   "feature": "Зависимость по крит. товарам (откл.)",
+   "column": "econ_dep_crit_z12",
+   "pre_1-3": {
+    "elevated": 2,
+    "of": 14,
+    "p": 0.677,
+    "onset_mean": -0.204,
+    "calm_mean": 0.314
+   },
+   "pre_4-6": {
+    "elevated": 1,
+    "of": 14,
+    "p": 0.963,
+    "onset_mean": -0.126,
+    "calm_mean": 0.036
+   }
+  },
+  {
+   "feature": "Торговый баланс (откл.)",
+   "column": "econ_balance_z12",
+   "pre_1-3": {
+    "elevated": 9,
+    "of": 14,
+    "p": 0.162,
+    "onset_mean": 0.209,
+    "calm_mean": -0.274
+   },
+   "pre_4-6": {
+    "elevated": 3,
+    "of": 14,
+    "p": 0.782,
+    "onset_mean": 0.092,
+    "calm_mean": 0.115
+   }
+  },
+  {
+   "feature": "Соперничество на рынках (импульс)",
+   "column": "riv_all",
+   "pre_1-3": {
+    "elevated": 5,
+    "of": 14,
+    "p": 0.419,
+    "onset_mean": 0.003,
+    "calm_mean": 0.002
+   },
+   "pre_4-6": {
+    "elevated": 1,
+    "of": 14,
+    "p": 0.89,
+    "onset_mean": -0.002,
+    "calm_mean": 0.008
+   }
+  },
+  {
+   "feature": "Япония теряет долю",
+   "column": "riv_jp_loss",
+   "pre_1-3": {
+    "elevated": 6,
+    "of": 14,
+    "p": 0.404,
+    "onset_mean": 0.002,
+    "calm_mean": 0.001
+   },
+   "pre_4-6": {
+    "elevated": 4,
+    "of": 14,
+    "p": 0.419,
+    "onset_mean": -0.001,
+    "calm_mean": 0.004
+   }
+  },
+  {
+   "feature": "Соперничество: чипы",
+   "column": "riv_chips_agg",
+   "pre_1-3": {
+    "elevated": 7,
+    "of": 14,
+    "p": 0.254,
+    "onset_mean": 0.001,
+    "calm_mean": -0.005
+   },
+   "pre_4-6": {
+    "elevated": 4,
+    "of": 14,
+    "p": 0.588,
+    "onset_mean": -0.005,
+    "calm_mean": 0.0
+   }
+  },
+  {
+   "feature": "Соперничество: оборуд. для чипов",
+   "column": "riv_chip_equipment_agg",
+   "pre_1-3": {
+    "elevated": 3,
+    "of": 14,
+    "p": 0.681,
+    "onset_mean": -0.004,
+    "calm_mean": -0.006
+   },
+   "pre_4-6": {
+    "elevated": 5,
+    "of": 14,
+    "p": 0.635,
+    "onset_mean": -0.006,
+    "calm_mean": -0.001
+   }
+  },
+  {
+   "feature": "Соперничество: авто",
+   "column": "riv_autos_agg",
+   "pre_1-3": {
+    "elevated": 5,
+    "of": 14,
+    "p": 0.499,
+    "onset_mean": 0.004,
+    "calm_mean": 0.007
+   },
+   "pre_4-6": {
+    "elevated": 1,
+    "of": 14,
+    "p": 0.897,
+    "onset_mean": -0.002,
+    "calm_mean": 0.012
+   }
+  },
+  {
+   "feature": "КНДР: враждебные действия",
+   "column": "x_prk_hostile",
+   "pre_1-3": {
+    "elevated": 2,
+    "of": 14,
+    "p": 0.945,
+    "onset_mean": 5.138,
+    "calm_mean": 5.321
+   },
+   "pre_4-6": {
+    "elevated": 3,
+    "of": 14,
+    "p": 0.551,
+    "onset_mean": 5.577,
+    "calm_mean": 5.576
+   }
+  },
+  {
+   "feature": "Китай: враждебные действия",
+   "column": "x_chn_hostile",
+   "pre_1-3": {
+    "elevated": 9,
+    "of": 14,
+    "p": 0.078,
+    "onset_mean": 4.315,
+    "calm_mean": 4.045
+   },
+   "pre_4-6": {
+    "elevated": 4,
+    "of": 14,
+    "p": 0.695,
+    "onset_mean": 4.237,
+    "calm_mean": 4.06
+   }
+  },
+  {
+   "feature": "Материальное давление (сводное)",
+   "column": "material_pressure",
+   "pre_1-3": {
+    "elevated": 4,
+    "of": 14,
+    "p": 0.759,
+    "onset_mean": -0.015,
+    "calm_mean": 0.066
+   },
+   "pre_4-6": {
+    "elevated": 2,
+    "of": 14,
+    "p": 0.775,
+    "onset_mean": -0.152,
+    "calm_mean": 0.14
+   }
+  },
+  {
+   "feature": "Рейтинг президента РК: падение за 3 мес.",
+   "column": "a_kr_fall3",
+   "pre_1-3": {
+    "elevated": 3,
+    "of": 12,
+    "p": 0.721,
+    "onset_mean": 4.86,
+    "calm_mean": 1.348
+   },
+   "pre_4-6": {
+    "elevated": 3,
+    "of": 12,
+    "p": 0.588,
+    "onset_mean": 4.652,
+    "calm_mean": 2.193
+   }
+  },
+  {
+   "feature": "Рейтинг президента РК: низкий уровень",
+   "column": "a_kr_low",
+   "pre_1-3": {
+    "elevated": 4,
+    "of": 13,
+    "p": 0.375,
+    "onset_mean": -43.696,
+    "calm_mean": -41.124
+   },
+   "pre_4-6": {
+    "elevated": 4,
+    "of": 13,
+    "p": 0.347,
+    "onset_mean": -42.504,
+    "calm_mean": -39.182
+   }
+  },
+  {
+   "feature": "Рейтинг кабинета Японии: падение за 3 мес.",
+   "column": "a_jp_fall3",
+   "pre_1-3": {
+    "elevated": 3,
+    "of": 11,
+    "p": 0.615,
+    "onset_mean": -3.014,
+    "calm_mean": 1.527
+   },
+   "pre_4-6": {
+    "elevated": 2,
+    "of": 11,
+    "p": 0.63,
+    "onset_mean": 0.892,
+    "calm_mean": -0.066
+   }
+  },
+  {
+   "feature": "Рейтинг кабинета Японии: низкий уровень",
+   "column": "a_jp_low",
+   "pre_1-3": {
+    "elevated": 2,
+    "of": 12,
+    "p": 0.597,
+    "onset_mean": -44.829,
+    "calm_mean": -37.101
+   },
+   "pre_4-6": {
+    "elevated": 1,
+    "of": 11,
+    "p": 0.935,
+    "onset_mean": -41.628,
+    "calm_mean": -38.629
+   }
+  },
+  {
+   "feature": "Спад промышленности Японии (за год)",
+   "column": "m2_jp_slow",
+   "pre_1-3": {
+    "elevated": 3,
+    "of": 14,
+    "p": 0.78,
+    "onset_mean": -0.004,
+    "calm_mean": 0.023
+   },
+   "pre_4-6": {
+    "elevated": 4,
+    "of": 14,
+    "p": 0.484,
+    "onset_mean": 0.002,
+    "calm_mean": 0.009
+   }
+  },
+  {
+   "feature": "Спад промышленности Японии (за 3 мес.)",
+   "column": "m2_jp_slow3",
+   "pre_1-3": {
+    "elevated": 2,
+    "of": 14,
+    "p": 0.522,
+    "onset_mean": -0.006,
+    "calm_mean": 0.017
+   },
+   "pre_4-6": {
+    "elevated": 3,
+    "of": 14,
+    "p": 0.552,
+    "onset_mean": 0.0,
+    "calm_mean": 0.001
+   }
+  },
+  {
+   "feature": "Корея растёт быстрее Японии (промпроизв.)",
+   "column": "m2_ip_gap",
+   "pre_1-3": {
+    "elevated": 2,
+    "of": 14,
+    "p": 0.842,
+    "onset_mean": 0.028,
+    "calm_mean": 0.025
+   },
+   "pre_4-6": {
+    "elevated": 3,
+    "of": 14,
+    "p": 0.752,
+    "onset_mean": 0.028,
+    "calm_mean": 0.019
+   }
+  },
+  {
+   "feature": "Спад экспорта Японии",
+   "column": "m2_jp_exports_drop",
+   "pre_1-3": {
+    "elevated": 2,
+    "of": 14,
+    "p": 0.65,
+    "onset_mean": -0.038,
+    "calm_mean": 0.01
+   },
+   "pre_4-6": {
+    "elevated": 3,
+    "of": 14,
+    "p": 0.746,
+    "onset_mean": -0.033,
+    "calm_mean": 0.003
+   }
+  },
+  {
+   "feature": "Спад экспорта Японии в Корею",
+   "column": "m2_jp_exports_kr_drop",
+   "pre_1-3": {
+    "elevated": 4,
+    "of": 14,
+    "p": 0.401,
+    "onset_mean": -0.021,
+    "calm_mean": 0.029
+   },
+   "pre_4-6": {
+    "elevated": 2,
+    "of": 14,
+    "p": 0.843,
+    "onset_mean": -0.025,
+    "calm_mean": 0.019
+   }
+  },
+  {
+   "feature": "Бум экспорта корейской памяти",
+   "column": "m2_kr_memory_yoy",
+   "pre_1-3": {
+    "elevated": 5,
+    "of": 13,
+    "p": 0.5,
+    "onset_mean": 0.137,
+    "calm_mean": 0.033
+   },
+   "pre_4-6": {
+    "elevated": 4,
+    "of": 14,
+    "p": 0.546,
+    "onset_mean": 0.137,
+    "calm_mean": 0.067
+   }
+  },
+  {
+   "feature": "Спад поставок японского оборуд. для чипов в Корею",
+   "column": "m2_jp_equip_kr_drop",
+   "pre_1-3": {
+    "elevated": 2,
+    "of": 14,
+    "p": 0.847,
+    "onset_mean": -0.1,
+    "calm_mean": -0.029
+   },
+   "pre_4-6": {
+    "elevated": 2,
+    "of": 14,
+    "p": 0.792,
+    "onset_mean": -0.183,
+    "calm_mean": 0.036
+   }
+  },
+  {
+   "feature": "Спад импорта морепродуктов Кореи из Японии",
+   "column": "m2_kr_seafood_drop",
+   "pre_1-3": {
+    "elevated": 5,
+    "of": 13,
+    "p": 0.361,
+    "onset_mean": -0.069,
+    "calm_mean": -0.067
+   },
+   "pre_4-6": {
+    "elevated": 2,
+    "of": 14,
+    "p": 0.774,
+    "onset_mean": -0.098,
+    "calm_mean": -0.05
+   }
+  },
+  {
+   "feature": "Спад импорта морепродуктов Китая из Японии",
+   "column": "m2_cn_seafood_drop",
+   "pre_1-3": {
+    "elevated": 3,
+    "of": 10,
+    "p": 0.475,
+    "onset_mean": -0.168,
+    "calm_mean": -0.08
+   },
+   "pre_4-6": {
+    "elevated": 1,
+    "of": 9,
+    "p": 0.952,
+    "onset_mean": -0.11,
+    "calm_mean": -0.135
+   }
+  },
+  {
+   "feature": "Спад экспорта морепродуктов Японии",
+   "column": "m2_jp_seafood_drop",
+   "pre_1-3": {
+    "elevated": 2,
+    "of": 14,
+    "p": 0.698,
+    "onset_mean": -0.057,
+    "calm_mean": 0.005
+   },
+   "pre_4-6": {
+    "elevated": 2,
+    "of": 14,
+    "p": 0.872,
+    "onset_mean": -0.045,
+    "calm_mean": 0.005
+   }
+  }
+ ]
+}

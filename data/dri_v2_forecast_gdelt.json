@@ -1,0 +1,69 @@
+{
+ "target": "GDELT KOR-JPN conflict share, t+1..t+3",
+ "test_years": [
+  2018,
+  2019,
+  2020,
+  2021,
+  2022,
+  2023,
+  2024,
+  2025,
+  2026
+ ],
+ "test_months": 91,
+ "spikes": 8,
+ "backtest": {
+  "gdelt_history": {
+   "spike_auc": 0.514,
+   "spike_brier": 0.0903,
+   "delta_corr": 0.687,
+   "delta_rmse": 0.0675
+  },
+  "parliament_only": {
+   "spike_auc": 0.479,
+   "spike_brier": 0.0879,
+   "delta_corr": 0.186,
+   "delta_rmse": 0.0986
+  },
+  "+parliament": {
+   "spike_auc": 0.488,
+   "spike_brier": 0.102,
+   "delta_corr": 0.636,
+   "delta_rmse": 0.0811
+  },
+  "+economy": {
+   "spike_auc": 0.416,
+   "spike_brier": 0.0947,
+   "delta_corr": 0.666,
+   "delta_rmse": 0.073
+  },
+  "+rivalry": {
+   "spike_auc": 0.592,
+   "spike_brier": 0.0896,
+   "delta_corr": 0.637,
+   "delta_rmse": 0.0759
+  },
+  "+external": {
+   "spike_auc": 0.464,
+   "spike_brier": 0.1006,
+   "delta_corr": 0.611,
+   "delta_rmse": 0.0736
+  },
+  "material_core": {
+   "spike_auc": 0.489,
+   "spike_brier": 0.0921,
+   "delta_corr": 0.563,
+   "delta_rmse": 0.0806
+  },
+  "all_layers": {
+   "spike_auc": 0.438,
+   "spike_brier": 0.1002,
+   "delta_corr": 0.432,
+   "delta_rmse": 0.0945
+  },
+  "no_change": {
+   "delta_rmse": 0.088
+  }
+ }
+}
