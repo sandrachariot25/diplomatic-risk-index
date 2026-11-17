@@ -634,8 +634,14 @@ function lineChart(svg, vals, o) {
   segs.forEach(p => { s += `<path d="${p}" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`; });
   (o.lines || []).forEach(l => {
     let d = '', on = false;
-    l.vals.forEach((v, i) => { if (v === null || v === undefined) { on = false; return; } d += (on ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(v).toFixed(1); on = true; });
-    s += `<path d="${d}" fill="none" stroke="${l.color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
+    const has = i => l.vals[i] !== null && l.vals[i] !== undefined;
+    l.vals.forEach((v, i) => {
+      if (!has(i)) { on = false; return; }
+      d += (on ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(v).toFixed(1); on = true;
+      // A month with no neighbours would be an invisible one-point path: draw it as a dot.
+      if (!has(i - 1) && !has(i + 1)) s += `<circle cx="${x(i).toFixed(1)}" cy="${y(v).toFixed(1)}" r="${l.faint ? 2 : 3}" fill="${l.color}" opacity="${l.faint ? .45 : 1}"/>`;
+    });
+    s += `<path d="${d}" fill="none" stroke="${l.color}" stroke-width="${l.faint ? 1.1 : 2}" stroke-opacity="${l.faint ? .35 : 1}" stroke-linejoin="round" stroke-linecap="round"/>`;
   });
   if (o.extra) s += o.extra({ x, y, mt, ph, base });
   s += `<line id="${svg.id}-hl" y1="${mt}" y2="${base}" stroke="var(--faint)" stroke-dasharray="3 3" style="display:none"/>`;
@@ -1028,12 +1034,26 @@ function renderEconomy() {
   // critical goods
   const G = E.goods, item = G.items.find(g => g.code === goodsCode) || G.items[0];
   $('e-goods').innerHTML = G.items.map(g => `<button type="button" data-g="${g.code}" aria-pressed="${g.code === item.code}">${esc(g[lang])}</button>`).join('');
-  const gl = [{ vals: item.KOR.map(x => x[0] === null ? null : 100 * x[0]), color: JP, label: ru ? 'Доля Японии в импорте Кореи' : "Japan's share of Korea's imports", usd: item.KOR.map(x => x[1]) },
-              { vals: item.JPN.map(x => x[0] === null ? null : 100 * x[0]), color: KR, label: ru ? 'Доля Кореи в импорте Японии' : "Korea's share of Japan's imports", usd: item.JPN.map(x => x[1]) }];
+  const pc = v => (v === null || v === undefined ? null : 100 * v);
+  const sides = [
+    { cells: item.KOR, color: JP, label: ru ? 'Доля Японии в импорте Кореи' : "Japan's share of Korea's imports" },
+    { cells: item.JPN, color: KR, label: ru ? 'Доля Кореи в импорте Японии' : "Korea's share of Japan's imports" },
+  ].map(sd => ({ ...sd, monthly: sd.cells.map(c => pc(c[0])), year: sd.cells.map(c => pc(c[2])), usd: sd.cells.map(c => c[1]),
+                 n: sd.cells.filter(c => c[0] !== null).length }));
+  // Thick line: share over the trailing 12 months (steady even for goods bought a few times a year); thin: monthly.
+  const gl = [];
+  // Monthly shares of lumpy goods (ships) jump between 0 and 100%, so only the 12-month share is drawn; the tooltip
+  // still shows the month. A side with no 12-month value at all (very rare trade) falls back to monthly dots.
+  sides.forEach(sd => { if (sd.n) gl.push(sd.year.some(v => v !== null) ? { vals: sd.year, color: sd.color } : { vals: sd.monthly, color: sd.color }); });
   const gsvg = $('gchart'), gtip = $('gtip');
-  lineChart(gsvg, G.periods.map(() => null), { months: G.periods, lines: gl, lo: 0, h: W => (W < 560 ? 200 : 250), ml: 40, tickFmt: g => dec(g, 0) });
-  $('g-legend').innerHTML = gl.map(l => `<span><i style="background:${l.color}"></i>${esc(l.label)}</span>`).join('') + `<span style="color:var(--faint)">%, HS ${item.code}</span>`;
-  gsvg.onmousemove = evt => { const i = hoverIndex(gsvg, evt); showTip(gsvg, gtip, i, `<span class="mono">${esc(pName(G.periods[i]))}</span>` + gl.map(l => `<br><span style="color:${l.color}">●</span> ${l.vals[i] === null ? '—' : dec(l.vals[i], 1) + '%'}${l.usd[i] !== null ? ` · ${dec(l.usd[i], 0)} ${ru ? 'млн $' : 'US$ m'}` : ''}`).join('')); };
+  const tick = g => dec(g, Math.abs(g % 1) < 1e-9 ? 0 : Math.abs((g * 10) % 1) < 1e-9 ? 1 : 2);
+  if (gl.length) lineChart(gsvg, G.periods.map(() => null), { months: G.periods, lines: gl, lo: 0, h: W => (W < 560 ? 200 : 250), ml: 44, tickFmt: tick });
+  else gsvg.innerHTML = '';
+  const sparse = sides.every(sd => sd.n < 24);
+  $('g-legend').innerHTML = sides.map(sd => `<span><i style="background:${sd.color}"></i>${esc(sd.label)}${sd.n ? '' : esc(ru ? ' — нет данных' : ' — no data')}</span>`).join('') +
+    `<span style="color:var(--faint)">${esc(ru ? `доля за последние 12 месяцев (по месяцам — в подсказке) · %, HS ${item.code}` : `share over the trailing 12 months (monthly in the tooltip) · %, HS ${item.code}`)}</span>` +
+    (sparse ? `<span style="color:var(--ink);flex-basis:100%">${esc(ru ? `Между Кореей и Японией этот товар почти не торгуется: данные есть только за ${Math.max(...sides.map(sd => sd.n))} мес., доли близки к нулю.` : `Korea and Japan barely trade this product: data exist for only ${Math.max(...sides.map(sd => sd.n))} months and shares are near zero.`)}</span>` : '');
+  gsvg.onmousemove = evt => { const i = hoverIndex(gsvg, evt); showTip(gsvg, gtip, i, `<span class="mono">${esc(pName(G.periods[i]))}</span>` + sides.filter(sd => sd.n).map(sd => `<br><span style="color:${sd.color}">●</span> ${sd.year[i] === null ? '—' : dec(sd.year[i], 1) + '%'} ${esc(ru ? 'за 12 мес.' : '12 mo')}; ${esc(ru ? 'за месяц' : 'month')} ${sd.monthly[i] === null ? '—' : dec(sd.monthly[i], 1) + '%'}${sd.usd[i] ? ` · ${dec(sd.usd[i], 0)} ${ru ? 'млн $' : 'US$ m'}` : ''}`).join('')); };
   gsvg.onmouseleave = () => hideTip(gsvg, gtip);
   renderFiles($('e-files'));
 }

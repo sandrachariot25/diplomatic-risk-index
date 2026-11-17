@@ -116,10 +116,22 @@ def load_economy():
     for r in rd('trade_dependency.csv'):
         if r['source'] == 'un_comtrade' and r['frequency'] == 'M':
             g = goods.setdefault(r['commodity'], dict(code=r['commodity'], ru=r['label'], en=GOODS_EN.get(r['commodity'], r['label']), KOR={}, JPN={}))
-            g[r['reporter']][r['period']] = [num(r['partner_share'], 1, 4), num(r['bilateral_usd'], 1e6, 1)]
+            g[r['reporter']][r['period']] = [num(r['partner_share'], 1, 4), num(r['bilateral_usd'], 1e6, 1),
+                                             num(r['world_usd'], 1e6, 1)]
     gp = sorted({p for g in goods.values() for rep in ('KOR', 'JPN') for p in g[rep]})
+
+    def series(cells):
+        """[monthly share, bilateral US$ m, 12-month share]; the 12-month share = sum of imports from the partner /
+        sum of all imports over the trailing year (needs >= 6 reported months) - steadier for lumpy goods like ships."""
+        out = []
+        for i, (sh, bil, world) in enumerate(cells):
+            win = [c for c in cells[max(0, i - 11): i + 1] if c[2]]
+            s12 = round(sum(c[1] or 0 for c in win) / sum(c[2] for c in win), 4) if len(win) >= 6 and sum(c[2] for c in win) else None
+            out.append([sh, bil, s12])
+        return out
     goods_out = [dict(code=g['code'], ru=g['ru'], en=g['en'],
-                      **{rep: [g[rep].get(p, [None, None]) for p in gp] for rep in ('KOR', 'JPN')}) for g in goods.values()]
+                      **{rep: series([g[rep].get(p, [None, None, None]) for p in gp]) for rep in ('KOR', 'JPN')})
+                 for g in goods.values()]
     return dict(trade=trade, sectors=sectors, goods=dict(periods=gp, items=goods_out))
 
 
@@ -153,12 +165,13 @@ def write_csvs(out):
     g = out['economy']['goods']
     with (d / 'trade_critical_goods.csv').open('w', encoding='utf-8', newline='') as f:
         w = csv.writer(f)
-        w.writerow(['hs6', 'product', 'importer', 'month', 'partner_share', 'imports_from_partner_mn_usd'])
+        w.writerow(['hs6', 'product', 'importer', 'month', 'partner_share', 'imports_from_partner_mn_usd',
+                    'partner_share_12m'])
         for it in g['items']:
             for rep in ('KOR', 'JPN'):
-                for p, (sh, u) in zip(g['periods'], it[rep]):
+                for p, (sh, u, s12) in zip(g['periods'], it[rep]):
                     if sh is not None or u is not None:
-                        w.writerow([it['code'], it['en'], rep, p, sh, u])
+                        w.writerow([it['code'], it['en'], rep, p, sh, u, s12])
     with (d / 'court_rulings.csv').open('w', encoding='utf-8', newline='') as f:
         src = list(csv.DictReader((DATA / 'court_rulings.csv').open(encoding='utf-8')))
         dfn = json.loads((SITE / 'content.json').read_text(encoding='utf-8'))['defendants']
