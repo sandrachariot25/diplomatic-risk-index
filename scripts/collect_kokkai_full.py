@@ -26,7 +26,7 @@ QUERY = '韓国'
 PAGE = 50            # well under the 4 MB transport cap; falls back to SMALL_PAGE if exceeded
 SMALL_PAGE = 10
 INTERVAL = 6.0
-END = '2026-10-31'
+END = '2026-11-17'  # extended 18.11.2026 for the monthly update
 FIELDS = ('speechID', 'issueID', 'date', 'nameOfHouse', 'nameOfMeeting', 'issue', 'speechOrder', 'speaker',
           'speakerYomi', 'speakerGroup', 'speakerPosition', 'speakerRole', 'speech', 'speechURL', 'meetingURL')
 
