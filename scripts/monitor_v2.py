@@ -54,7 +54,9 @@ def month_add(m, k):
 
 
 def main():
-    rows = build()
+    # Only complete months: the current calendar month is still being collected (partial news, no trade data).
+    from datetime import date
+    rows = [r for r in build() if r['month'] < date.today().strftime('%Y-%m')]
     add_approval(rows)
     add_material(rows)
     add_material2(rows)

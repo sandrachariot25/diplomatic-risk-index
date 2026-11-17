@@ -58,8 +58,11 @@ def score(text):
 
 
 def load_candidates():
-    for term in ('t19', 't20', 't21', 't22'):
-        with (DATA / f'kr_hearings_candidates_{term}.jsonl').open(encoding='utf-8') as stream:
+    for term in ('t19', 't20', 't21', 't22', 't22_live'):  # t22_live: scripts/collect_assembly_records.py
+        path = DATA / f'kr_hearings_candidates_{term}.jsonl'
+        if not path.exists():
+            continue
+        with path.open(encoding='utf-8') as stream:
             for line in stream:
                 row = json.loads(line)
                 if row['role_group'] == 'excluded' or not row['speech_date'] or len(row['text']) < 80:

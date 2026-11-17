@@ -115,14 +115,14 @@
    "pre_1-3": {
     "elevated": 1,
     "of": 14,
-    "p": 0.871,
+    "p": 0.867,
     "onset_mean": 0.069,
     "calm_mean": 0.075
    },
    "pre_4-6": {
     "elevated": 6,
     "of": 14,
-    "p": 0.149,
+    "p": 0.15,
     "onset_mean": 0.088,
     "calm_mean": 0.067
    }
@@ -133,14 +133,14 @@
    "pre_1-3": {
     "elevated": 7,
     "of": 14,
-    "p": 0.252,
+    "p": 0.241,
     "onset_mean": 1.243,
     "calm_mean": 0.944
    },
    "pre_4-6": {
     "elevated": 3,
     "of": 14,
-    "p": 0.727,
+    "p": 0.713,
     "onset_mean": 1.198,
     "calm_mean": 1.209
    }
@@ -151,14 +151,14 @@
    "pre_1-3": {
     "elevated": 1,
     "of": 14,
-    "p": 0.903,
+    "p": 0.907,
     "onset_mean": 0.227,
     "calm_mean": 0.249
    },
    "pre_4-6": {
     "elevated": 1,
     "of": 14,
-    "p": 0.899,
+    "p": 0.906,
     "onset_mean": 0.19,
     "calm_mean": 0.293
    }
@@ -169,14 +169,14 @@
    "pre_1-3": {
     "elevated": 5,
     "of": 14,
-    "p": 0.697,
+    "p": 0.685,
     "onset_mean": 0.118,
     "calm_mean": 0.078
    },
    "pre_4-6": {
     "elevated": 4,
     "of": 14,
-    "p": 0.533,
+    "p": 0.526,
     "onset_mean": 0.14,
     "calm_mean": 0.104
    }
@@ -187,14 +187,14 @@
    "pre_1-3": {
     "elevated": 4,
     "of": 14,
-    "p": 0.588,
+    "p": 0.574,
     "onset_mean": 0.692,
     "calm_mean": 0.885
    },
    "pre_4-6": {
     "elevated": 4,
     "of": 14,
-    "p": 0.473,
+    "p": 0.469,
     "onset_mean": 1.014,
     "calm_mean": 0.964
    }
@@ -205,14 +205,14 @@
    "pre_1-3": {
     "elevated": 1,
     "of": 14,
-    "p": 0.848,
+    "p": 0.836,
     "onset_mean": -0.367,
     "calm_mean": 0.127
    },
    "pre_4-6": {
     "elevated": 4,
     "of": 14,
-    "p": 0.671,
+    "p": 0.658,
     "onset_mean": -0.254,
     "calm_mean": -0.266
    }
@@ -223,14 +223,14 @@
    "pre_1-3": {
     "elevated": 2,
     "of": 14,
-    "p": 0.677,
+    "p": 0.674,
     "onset_mean": -0.204,
     "calm_mean": 0.314
    },
    "pre_4-6": {
     "elevated": 1,
     "of": 14,
-    "p": 0.963,
+    "p": 0.962,
     "onset_mean": -0.126,
     "calm_mean": 0.036
    }
@@ -241,14 +241,14 @@
    "pre_1-3": {
     "elevated": 9,
     "of": 14,
-    "p": 0.162,
+    "p": 0.155,
     "onset_mean": 0.209,
     "calm_mean": -0.274
    },
    "pre_4-6": {
     "elevated": 3,
     "of": 14,
-    "p": 0.782,
+    "p": 0.776,
     "onset_mean": 0.092,
     "calm_mean": 0.115
    }
@@ -259,14 +259,14 @@
    "pre_1-3": {
     "elevated": 5,
     "of": 14,
-    "p": 0.419,
+    "p": 0.415,
     "onset_mean": 0.003,
     "calm_mean": 0.002
    },
    "pre_4-6": {
     "elevated": 1,
     "of": 14,
-    "p": 0.89,
+    "p": 0.887,
     "onset_mean": -0.002,
     "calm_mean": 0.008
    }
@@ -277,14 +277,14 @@
    "pre_1-3": {
     "elevated": 6,
     "of": 14,
-    "p": 0.404,
+    "p": 0.413,
     "onset_mean": 0.002,
     "calm_mean": 0.001
    },
    "pre_4-6": {
     "elevated": 4,
     "of": 14,
-    "p": 0.419,
+    "p": 0.421,
     "onset_mean": -0.001,
     "calm_mean": 0.004
    }
@@ -295,14 +295,14 @@
    "pre_1-3": {
     "elevated": 7,
     "of": 14,
-    "p": 0.254,
+    "p": 0.271,
     "onset_mean": 0.001,
     "calm_mean": -0.005
    },
    "pre_4-6": {
     "elevated": 4,
     "of": 14,
-    "p": 0.588,
+    "p": 0.595,
     "onset_mean": -0.005,
     "calm_mean": 0.0
    }
@@ -313,14 +313,14 @@
    "pre_1-3": {
     "elevated": 3,
     "of": 14,
-    "p": 0.681,
+    "p": 0.704,
     "onset_mean": -0.004,
     "calm_mean": -0.006
    },
    "pre_4-6": {
     "elevated": 5,
     "of": 14,
-    "p": 0.635,
+    "p": 0.624,
     "onset_mean": -0.006,
     "calm_mean": -0.001
    }
@@ -331,14 +331,14 @@
    "pre_1-3": {
     "elevated": 5,
     "of": 14,
-    "p": 0.499,
+    "p": 0.484,
     "onset_mean": 0.004,
     "calm_mean": 0.007
    },
    "pre_4-6": {
     "elevated": 1,
     "of": 14,
-    "p": 0.897,
+    "p": 0.899,
     "onset_mean": -0.002,
     "calm_mean": 0.012
    }
@@ -349,14 +349,14 @@
    "pre_1-3": {
     "elevated": 2,
     "of": 14,
-    "p": 0.945,
+    "p": 0.946,
     "onset_mean": 5.138,
     "calm_mean": 5.321
    },
    "pre_4-6": {
     "elevated": 3,
     "of": 14,
-    "p": 0.551,
+    "p": 0.539,
     "onset_mean": 5.577,
     "calm_mean": 5.576
    }
@@ -367,14 +367,14 @@
    "pre_1-3": {
     "elevated": 9,
     "of": 14,
-    "p": 0.078,
+    "p": 0.072,
     "onset_mean": 4.315,
     "calm_mean": 4.045
    },
    "pre_4-6": {
     "elevated": 4,
     "of": 14,
-    "p": 0.695,
+    "p": 0.684,
     "onset_mean": 4.237,
     "calm_mean": 4.06
    }
@@ -385,16 +385,16 @@
    "pre_1-3": {
     "elevated": 4,
     "of": 14,
-    "p": 0.759,
+    "p": 0.767,
     "onset_mean": -0.015,
-    "calm_mean": 0.066
+    "calm_mean": 0.067
    },
    "pre_4-6": {
     "elevated": 2,
     "of": 14,
-    "p": 0.775,
+    "p": 0.771,
     "onset_mean": -0.152,
-    "calm_mean": 0.14
+    "calm_mean": 0.141
    }
   },
   {
@@ -439,14 +439,14 @@
    "pre_1-3": {
     "elevated": 3,
     "of": 11,
-    "p": 0.615,
+    "p": 0.639,
     "onset_mean": -3.014,
     "calm_mean": 1.527
    },
    "pre_4-6": {
     "elevated": 2,
     "of": 11,
-    "p": 0.63,
+    "p": 0.619,
     "onset_mean": 0.892,
     "calm_mean": -0.066
    }
@@ -457,14 +457,14 @@
    "pre_1-3": {
     "elevated": 2,
     "of": 12,
-    "p": 0.597,
+    "p": 0.594,
     "onset_mean": -44.829,
     "calm_mean": -37.101
    },
    "pre_4-6": {
     "elevated": 1,
     "of": 11,
-    "p": 0.935,
+    "p": 0.927,
     "onset_mean": -41.628,
     "calm_mean": -38.629
    }
@@ -475,14 +475,14 @@
    "pre_1-3": {
     "elevated": 3,
     "of": 14,
-    "p": 0.78,
+    "p": 0.773,
     "onset_mean": -0.004,
     "calm_mean": 0.023
    },
    "pre_4-6": {
     "elevated": 4,
     "of": 14,
-    "p": 0.484,
+    "p": 0.483,
     "onset_mean": 0.002,
     "calm_mean": 0.009
    }
@@ -493,14 +493,14 @@
    "pre_1-3": {
     "elevated": 2,
     "of": 14,
-    "p": 0.522,
+    "p": 0.517,
     "onset_mean": -0.006,
     "calm_mean": 0.017
    },
    "pre_4-6": {
     "elevated": 3,
     "of": 14,
-    "p": 0.552,
+    "p": 0.551,
     "onset_mean": 0.0,
     "calm_mean": 0.001
    }
@@ -511,14 +511,14 @@
    "pre_1-3": {
     "elevated": 2,
     "of": 14,
-    "p": 0.842,
+    "p": 0.836,
     "onset_mean": 0.028,
     "calm_mean": 0.025
    },
    "pre_4-6": {
     "elevated": 3,
     "of": 14,
-    "p": 0.752,
+    "p": 0.738,
     "onset_mean": 0.028,
     "calm_mean": 0.019
    }
@@ -529,14 +529,14 @@
    "pre_1-3": {
     "elevated": 2,
     "of": 14,
-    "p": 0.65,
+    "p": 0.638,
     "onset_mean": -0.038,
     "calm_mean": 0.01
    },
    "pre_4-6": {
     "elevated": 3,
     "of": 14,
-    "p": 0.746,
+    "p": 0.736,
     "onset_mean": -0.033,
     "calm_mean": 0.003
    }
@@ -547,14 +547,14 @@
    "pre_1-3": {
     "elevated": 4,
     "of": 14,
-    "p": 0.401,
+    "p": 0.393,
     "onset_mean": -0.021,
     "calm_mean": 0.029
    },
    "pre_4-6": {
     "elevated": 2,
     "of": 14,
-    "p": 0.843,
+    "p": 0.838,
     "onset_mean": -0.025,
     "calm_mean": 0.019
    }
@@ -583,14 +583,14 @@
    "pre_1-3": {
     "elevated": 2,
     "of": 14,
-    "p": 0.847,
+    "p": 0.848,
     "onset_mean": -0.1,
     "calm_mean": -0.029
    },
    "pre_4-6": {
     "elevated": 2,
     "of": 14,
-    "p": 0.792,
+    "p": 0.784,
     "onset_mean": -0.183,
     "calm_mean": 0.036
    }
@@ -637,14 +637,14 @@
    "pre_1-3": {
     "elevated": 2,
     "of": 14,
-    "p": 0.698,
+    "p": 0.702,
     "onset_mean": -0.057,
     "calm_mean": 0.005
    },
    "pre_4-6": {
     "elevated": 2,
     "of": 14,
-    "p": 0.872,
+    "p": 0.871,
     "onset_mean": -0.045,
     "calm_mean": 0.005
    }

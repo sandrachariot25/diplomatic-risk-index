@@ -17,7 +17,7 @@ from scripts.pilot_v2 import DATA, FIELDS, validate  # noqa: E402
 
 QUEUES = {'kr': DATA / 'dri_v2_queue_kr.jsonl', 'jp': DATA / 'dri_v2_queue_jp.jsonl'}
 OUT = DATA / 'dri_v2_annotations.jsonl'
-VERSION = 'DRI-v2.1'
+VERSION = 'DRI-v2.2'  # rules of docs/CODEBOOK_v2.md v2.2 (from 13.11.2026)
 ANNOTATOR = 'claude-opus-5-5 (Claude Code session, no API)'
 
 
